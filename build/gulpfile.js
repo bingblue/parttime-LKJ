@@ -121,7 +121,7 @@ gulp.task('css', () => {
 
 gulp.task('build', ['dev', 'html'])
 
-gulp.task('del', ['devHtml', 'delFile'])
+gulp.task('del', ['delHtml', 'delFile'])
 /*
  * 默认执行
  */
