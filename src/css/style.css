@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import 'main_xc.css';
+@import 'main_wj.css';
 .btn {
   display: inline-block;
   width: 100%;
@@ -116,5 +118,3 @@ audio {
   }
 }
 
-@import 'main_xc.css';
-@import 'main_wj.css';
