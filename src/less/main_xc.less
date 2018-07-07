@@ -1,5 +1,88 @@
 @charset "UTF-8";
 
-.yourBodyClass {
-  color: #111;
+.xc-body {
+  color: #000;
+  font-size: 0.7rem;
+  line-height: 1.5rem;
+
+  .btn {
+    height: 2.65rem;
+    line-height: 2.65rem;
+    border-radius: 2.65rem;
+    padding: 0;
+    background-color: #fff;
+    color: #3895fe;
+    -webkit-box-shadow: #3895fe 0 0 30px -5px;
+    box-shadow: #3895fe 0 0 30px -5px;
+  }
+
+  .btn.primary {
+    background-color: #3895fe;
+    color: #fff;
+  }
+
+  .wrap {
+    background-color: #fff;
+  }
+
+  .wrap.login-wrap {
+    background: #fff url('/img/login-bg.png') bottom no-repeat;
+    background-size: contain;
+
+    .login-logo {
+      width: 5.5rem;
+      margin: 2.7rem auto;
+    }
+
+    .login-form {
+      padding: 0 2rem;
+
+      .form-group {
+        position: relative;
+      }
+
+      label,
+      input {
+        width: 100%;
+        display: inline-block;
+      }
+
+      label {
+        color: #7a7a7a;
+        margin-top: 1rem;
+      }
+
+      input {
+        color: #000;
+        height: 1.05rem;
+        line-height: 1.05rem;
+        border: none;
+        border-bottom: 0.1rem solid #eee;
+      }
+
+      input.active {
+        -webkit-border-image: -webkit-linear-gradient(#8968f6, #49c1fe) 30 30;
+        border-image: -webkit-linear-gradient(#8968f6, #49c1fe) 30 30;
+        -o-border-image: -o-linear-gradient(#8968f6, #49c1fe) 30 30;
+        border-image: -webkit-gradient(linear, left top, left bottom, from(#8968f6), to(#49c1fe)) 30 30;
+        border-image: linear-gradient(#8968f6, #49c1fe) 30 30;
+      }
+
+      .login-input-close {
+        position: absolute;
+        width: 0.8rem;
+        right: 0;
+        bottom: 0.4rem;
+        display: none;
+      }
+
+      .btn-group {
+        margin-top: 1rem;
+
+        .btn {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
 }

@@ -13,34 +13,72 @@
   <meta content="telephone=no, address=no" name="format-detection">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <!-- 注意：请务必按照注释步骤来写，并删除注释！！！ -->
-  <!-- 注意：请务必按照注释步骤来写，并删除注释！！！ -->
-  <!-- 注意：请务必按照注释步骤来写，并删除注释！！！ -->
-  <!-- 第一步：
-     默认引入reset.css和style.css、
-     请在 main_xc.less 里面写css代码,会自动编译到css文件夹下,不要新建css！  -->
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<!-- 第二步：
-  	 请给body设置一个class,建议设置为你的名字简写+页面名,每次都要唯一 -->
-<body class="<!-- 你的bodyClass -->">
-  <!-- build:head -->
-  
-  <!-- endbuild -->
-  <div class="wrap">
-    <div class="main">
-      <!-- 第三步：
-	         在此处设置写“页面内容” -->
+
+<body class="xc-body">
+  <!-- build:slidebar -->
+  <div class="slider-bar">
+  <div class="slider-bar-inner">
+    <div class="slider-bar-item">
+      <a href="javascript:void(0)">
+        <img src="/img/sliderbar-set.png" alt="设置">设置
+      </a>
+    </div>
+    <div class="slider-bar-item">
+      <a href="javascript:void(0)">
+        <img src="/img/sliderbar-time.png" alt="校时">校时
+      </a>
+    </div>
+    <div class="slider-bar-item sign-out">
+      <a href="javascript:void(0)">
+        <img src="/img/sliderbar-signOut.png" alt="退出登录">退出登录
+      </a>
     </div>
   </div>
-  <!-- 第四步：
-	  	 可以有多个.wrap 和 .main、
-	  	 如果不需要，请忽视第四步-->
-
-  <!-- 第五步：
-			 默认引入JQuery.js、
-			 请在main_xc.js里面写js代码  -->
+</div>
+  <!-- endbuild -->
+  <div class="wrap">
+    <div class="main padding-main">
+      <div class="markBg"></div>
+      <!-- build:head -->
+      <header class="comm-header">
+  <div class="comm-operating comm-btn">
+    <img src="/img/operating.png" alt="操作">
+  </div>
+  <div class="comm-des">
+      <p>配合手持机测试201611sssss</p>
+      <img class="comm-selcet" src="/img/select.png" alt="下拉"/>
+  </div>
+  <div class="comm-more comm-btn">
+    <img src="/img/more.png" alt="更多">
+  </div>
+</header>
+      <!-- endbuild -->
+      <!-- build:footer -->      <footer class="comm-footer">
+  <div class="footer-item">
+    <img src="/img/footer-version.png" alt="版本复核">
+    <p>版本复核</p>
+  </div>
+  <div class="footer-item">
+    <img src="/img/footer-dress.png" alt="远程换装">
+    <p>远程换装</p>
+  </div>
+  <div class="footer-item">
+    <img src="/img/footer-search.png" alt="查询">
+    <p>查询</p>
+  </div>
+  <div class="footer-item">
+    <img src="/img/footer-task.png" alt="紧急任务">
+    <p>紧急任务</p>
+  </div>
+  <div class="footer-item">
+    <img src="/img/footer-message.png" alt="消息">
+    <p>消息</p>
+  </div>
+</footer>       <!-- endbuild -->    </div>
+  </div>
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script src="/js/main_xc.js"></script>
 </body>
