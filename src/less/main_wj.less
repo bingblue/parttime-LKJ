@@ -1,5 +1,103 @@
 @charset "UTF-8";
 
-body {
-  background: #fff;
+html{
+  font-size: 62.5%;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: " "; 
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.wj-msg {
+  .date-txt {
+    height: 35px;
+    line-height: 35px;
+    background: #f8f9fc;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .msg-ul {
+    width: 100%;
+    background: #fff;
+
+    li {
+      font-size: 1.4rem;
+      overflow: hidden;
+      width: 100%;
+      border-bottom: 1px solid #eee;
+      position: relative;
+    }
+
+    .left-title {
+      margin-bottom: 1.4rem;
+      color: #3a3a3a;
+    }
+
+    .right-date {
+      float: right;
+      font-size: 1.2rem;
+      color: #727272;
+    }
+
+    .warn-txt {
+      font-size: 1.4rem;
+      color: #727272;
+    }
+  }
+
+  .warn-icon {
+    width: 1.4rem;
+    vertical-align: text-top;
+  }
+
+  .li-wp-fa {
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    position: relative;
+    height: 7.5rem;
+    z-index: 1;
+  }
+
+  .list-wp {
+    width: 92%;
+    padding-top: 1.7rem;
+    margin: 0 auto;
+  }
+
+  .delete-btn {
+    width: 8.9rem;
+    text-align: center;
+    background: #ff3b30;
+    color: #fff;
+    font-size: 1.4rem;
+    height: 7.5rem;
+    line-height: 7.5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .kown{
+    .left-title,
+    .warn-txt,
+    .right-date {
+      color: #c0bfbf;
+    }
+  }
 }
