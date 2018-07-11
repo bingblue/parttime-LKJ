@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-html{
+html {
   font-size: 62.5%;
 }
 
 .clearfix::before,
 .clearfix::after {
-  content: " "; 
+  content: "";
   display: table;
 }
 
@@ -93,11 +93,94 @@ html{
     top: 0;
   }
 
-  .kown{
+  .kown {
     .left-title,
     .warn-txt,
     .right-date {
       color: #c0bfbf;
+    }
+  }
+}
+
+.bomb-wp {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+
+  .bomb-ct {
+    width: 73.33%;
+    background: #fff;
+    margin: -16.6rem auto 0;
+    padding-top: 2rem;
+    border-radius: 2px;
+    position: relative;
+    top: 50%;
+  }
+
+  .bomb-title {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1.7rem;
+  }
+
+  .bomb-icon {
+    display: block;
+    width: 19.26%;
+    margin: 0 auto 1.5rem;
+  }
+
+  .btn-wp {
+    width: 100%;
+    position: relative;
+    border-top: 1px solid #eee;
+
+    .line {
+      position: absolute;
+      border-right: 1px solid #eee;
+      left: 50%;
+      top: 0;
+      height: 100%;
+    }
+
+    a {
+      float: left;
+      width: 50%;
+      height: 5rem;
+      line-height: 5rem;
+      text-align: center;
+    }
+
+    .cancle-btn {
+      color: #727272;
+    }
+
+    .sure-btn {
+      color: #ff3b30;
+    }
+  }
+}
+
+.wj-schooltime {
+  .headtab-wp {
+    .delete-btn {
+      width: 1.55rem;
+    }
+
+    .left-tab,
+    .right-tab {
+      font-size: 1.4rem;
+      color: #fff;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .left-tab {
+      width: 25.93%;
     }
   }
 }
