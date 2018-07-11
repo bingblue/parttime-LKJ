@@ -48,7 +48,8 @@
       "unit-whitelist": [
         "rem",
         "%",
-        "px"
+        "px",
+        "s"
       ]
     }
   },

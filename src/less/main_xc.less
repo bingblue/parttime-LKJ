@@ -77,10 +77,6 @@
       }
 
       input.active {
-        -webkit-border-image: -webkit-linear-gradient(#8968f6, #49c1fe) 30 30;
-        border-image: -webkit-linear-gradient(#8968f6, #49c1fe) 30 30;
-        -o-border-image: -o-linear-gradient(#8968f6, #49c1fe) 30 30;
-        border-image: -webkit-gradient(linear, left top, left bottom, from(#8968f6), to(#49c1fe)) 30 30;
         border-image: linear-gradient(#8968f6, #49c1fe) 30 30;
       }
 
@@ -106,6 +102,11 @@
     background-color: #f8f9fc;
     height: 100%;
     overflow-y: scroll;
+
+    img {
+      margin-bottom: 0.2rem;
+      width: 1.5rem;
+    }
 
     .signal-bluetooth-box {
       display: flex;
@@ -210,11 +211,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
-
-      img {
-        margin-bottom: 0.2rem;
-        width: 1.5rem;
-      }
     }
 
     .review-info-box {
@@ -302,7 +298,7 @@
       position: fixed;
       width: 100%;
       height: 100%;
-      top:0;
+      top: 0;
       left: 0;
       z-index: 1100;
       display: none;
@@ -312,16 +308,15 @@
         position: absolute;
         width: 13.5rem;
         height: 7.5rem;
-        position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         z-index: 1200;
         background-color: #fff;
         border-radius: 0.2rem;
 
         .review-confirm-body {
-          padding:  1.475rem 2.45rem;
+          padding: 1.475rem 2.45rem;
           line-height: 1rem;
           text-align: center;
         }
@@ -351,22 +346,48 @@
       }
     }
 
+    .review-data,
+    .review-personnel {
+      padding: 0 0.75rem;
+
+      .review-data-item,
+      .review-personnel-item {
+        display: flex;
+        justify-content: space-between;
+        line-height: 2.5rem;
+        color: #3a3a3a;
+
+        .review-data-time,
+        .review-personnel-info {
+          color: #727272;
+        }
+      }
+
+      .review-data-item + .review-data-item {
+        border-top: 1px solid #eee;
+      }
+
+      .review-personnel-item + .review-personnel-item {
+        border-top: 1px solid #eee;
+      }
+    }
+
     .review-data-items {
       padding: 0 0.75rem;
 
-      .review-data-item {
+      .review-data-ex {
         display: flex;
         justify-content: space-between;
         line-height: 2.5rem;
         color: #727272;
 
-        &.head{
+        &.head {
           font-size: 0.8rem;
           font-weight: 400;
           color: #3a3a3a;
         }
 
-        & + .review-data-item {
+        & + .review-data-ex {
           border-top: 1px solid #eee;
         }
 
@@ -383,11 +404,10 @@
     }
 
     .review-error-btn {
-      display: inline-block;
       position: fixed;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       width: 6.3rem;
       line-height: 2rem;
       color: #fff;
@@ -411,29 +431,6 @@
 
       .review-status {
         font-size: 0.85rem;
-      }
-    }
-
-    .review-data,
-    .review-personnel {
-      padding: 0 0.75rem;
-
-      .review-data-item,
-      .review-personnel-item {
-        display: flex;
-        justify-content: space-between;
-        line-height: 2.5rem;
-        color: #3a3a3a;
-
-        .review-data-time,
-        .review-personnel-info {
-          color: #727272;
-        }
-
-        & + .review-data-item,
-        & + .review-personnel-item {
-          border-top: 1px solid #eee;
-        }
       }
     }
 
@@ -475,10 +472,9 @@
   }
 }
 
-.review-error {
-  .review-head,
-  .comm-header {
-    background-color: #f35964 !important
+.xc-body.review-error {
+  .comm-header,
+  .review-head {
+    background-color: #f35964 !important;
   }
-
 }
