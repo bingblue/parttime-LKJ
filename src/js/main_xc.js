@@ -28,7 +28,7 @@ $(function () {
       $('.review-box .review-error-btn').on('click', function () {
         $(this).hide()
       })
-      $confirm = $('.review-box .review-confirm')
+      var $confirm = $('.review-box .review-confirm')
       $('.review-footer .btn-default').on('click', function () {
         $confirm.show()
       })
@@ -108,9 +108,9 @@ $(function () {
      * 添加登录页面的一些事件
      */
     addLoginEvent () {
-      var $reviewDom = $('#review'),
-        $user = $('#user'),
-        $close = $reviewDom.siblings('.login-input-close')
+      var $reviewDom = $('#review')
+      var $user = $('#user')
+      var $close = $reviewDom.siblings('.login-input-close')
       $reviewDom.keyup(function () {
         var $review = $(this).val().trim()
         if ($review) {
@@ -124,8 +124,8 @@ $(function () {
         $(this).hide(200)
       })
       $user.keyup(function () {
-        var $this = $(this),
-          user = $this.val().trim()
+        var $this = $(this)
+        var user = $this.val().trim()
         if (user) {
           $this.addClass('active')
         } else {
