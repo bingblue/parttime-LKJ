@@ -62,15 +62,24 @@ $(function () {
       $('.msg-ul .li-wp-fa').animate({
         marginLeft: '0'
       }, 500)
-    } else if (distanceX < 0 && Math.abs(distanceX) > 50 && $(this).parent('li').index() !== lastindex) { // 右滑
-      $('.msg-ul li').eq(lastindex).find('.li-wp-fa').animate({
-        marginLeft: '0'
-      }, 500)
-      lastindex = $(this).parent('li').index()
-      // console.log('lastindex' + lastindex)
-      $(this).animate({
-        marginLeft: '-8.9rem'
-      }, 500)
+      if ($(this).parent('li').index() === lastindex) {
+        $(this).addClass('candelete')
+      }
+    } else if (distanceX < 0 && Math.abs(distanceX) > 50) { // 右滑
+      if ($(this).parent('li').index() !== lastindex) {
+        $('.msg-ul li').eq(lastindex).find('.li-wp-fa').animate({
+          marginLeft: '0'
+        }, 500)
+        lastindex = $(this).parent('li').index()
+        // console.log('lastindex' + lastindex)
+        $(this).animate({
+          marginLeft: '-8.9rem'
+        }, 500)
+      } else if ($(this).hasClass('candelete')) {
+        $(this).animate({
+          marginLeft: '-8.9rem'
+        }, 500)
+      }
     }
   })
   /**

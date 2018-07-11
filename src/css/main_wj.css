@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-html {
-  font-size: 62.5%;
-}
-
 .clearfix::before,
 .clearfix::after {
   content: "";
@@ -27,7 +23,7 @@ html {
     line-height: 35px;
     background: #f8f9fc;
     text-align: center;
-    font-size: 12px;
+    font-size: 19.2px;
     font-size: 1.2rem;
   }
 
@@ -37,7 +33,7 @@ html {
   }
 
 .wj-msg .msg-ul li {
-      font-size: 14px;
+      font-size: 22.4px;
       font-size: 1.4rem;
       overflow: hidden;
       width: 100%;
@@ -46,26 +42,26 @@ html {
     }
 
 .wj-msg .msg-ul .left-title {
-      margin-bottom: 14px;
+      margin-bottom: 22.4px;
       margin-bottom: 1.4rem;
       color: #3a3a3a;
     }
 
 .wj-msg .msg-ul .right-date {
       float: right;
-      font-size: 12px;
+      font-size: 19.2px;
       font-size: 1.2rem;
       color: #727272;
     }
 
 .wj-msg .msg-ul .warn-txt {
-      font-size: 14px;
+      font-size: 22.4px;
       font-size: 1.4rem;
       color: #727272;
     }
 
 .wj-msg .warn-icon {
-    width: 14px;
+    width: 22.4px;
     width: 1.4rem;
     vertical-align: text-top;
   }
@@ -75,29 +71,29 @@ html {
     width: 100%;
     background: #fff;
     position: relative;
-    height: 75px;
+    height: 120px;
     height: 7.5rem;
     z-index: 1;
   }
 
 .wj-msg .list-wp {
     width: 92%;
-    padding-top: 17px;
+    padding-top: 27.2px;
     padding-top: 1.7rem;
     margin: 0 auto;
   }
 
 .wj-msg .delete-btn {
-    width: 89px;
+    width: 142.4px;
     width: 8.9rem;
     text-align: center;
     background: #ff3b30;
     color: #fff;
-    font-size: 14px;
+    font-size: 22.4px;
     font-size: 1.4rem;
-    height: 75px;
+    height: 120px;
     height: 7.5rem;
-    line-height: 75px;
+    line-height: 120px;
     line-height: 7.5rem;
     position: absolute;
     right: 0;
@@ -123,9 +119,9 @@ html {
 .bomb-wp .bomb-ct {
     width: 73.33%;
     background: #fff;
-    margin: -166px auto 0;
+    margin: -265.6px auto 0;
     margin: -16.6rem auto 0;
-    padding-top: 20px;
+    padding-top: 32px;
     padding-top: 2rem;
     border-radius: 2px;
     position: relative;
@@ -134,17 +130,17 @@ html {
 
 .bomb-wp .bomb-title {
     text-align: center;
-    font-size: 14px;
+    font-size: 22.4px;
     font-size: 1.4rem;
     color: #333;
-    margin-bottom: 17px;
+    margin-bottom: 27.2px;
     margin-bottom: 1.7rem;
   }
 
 .bomb-wp .bomb-icon {
     display: block;
     width: 19.26%;
-    margin: 0 auto 15px;
+    margin: 0 auto 24px;
     margin: 0 auto 1.5rem;
   }
 
@@ -165,9 +161,9 @@ html {
 .bomb-wp .btn-wp a {
       float: left;
       width: 50%;
-      height: 50px;
+      height: 80px;
       height: 5rem;
-      line-height: 50px;
+      line-height: 80px;
       line-height: 5rem;
       text-align: center;
     }
@@ -181,13 +177,13 @@ html {
     }
 
 .wj-schooltime .headtab-wp .delete-btn {
-      width: 15.5px;
+      width: 24.8px;
       width: 1.55rem;
     }
 
 .wj-schooltime .headtab-wp .left-tab,
     .wj-schooltime .headtab-wp .right-tab {
-      font-size: 14px;
+      font-size: 22.4px;
       font-size: 1.4rem;
       color: #fff;
       display: inline-block;

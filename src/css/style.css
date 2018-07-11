@@ -258,6 +258,7 @@ audio {
 }
 html{
   overflow-x: hidden;
+  font-size: 62.5%;
 }
 .slider-bar-open .markBg {
   display: block;
