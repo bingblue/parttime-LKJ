@@ -176,9 +176,17 @@
       color: #ff3b30;
     }
 
+.wj-schooltime .headtab-wp {
+    background: #3f79ee;
+    height: 72px;
+    height: 4.5rem;
+    line-height: 72px;
+    line-height: 4.5rem;
+  }
+
 .wj-schooltime .headtab-wp .delete-btn {
-      width: 24.8px;
-      width: 1.55rem;
+      /* width: 1.55rem; */
+      width: 4.26%;
     }
 
 .wj-schooltime .headtab-wp .left-tab,
@@ -192,4 +200,38 @@
 
 .wj-schooltime .headtab-wp .left-tab {
       width: 25.93%;
+    }
+
+.wj-schooltime .connecting {
+    height: 70.4px;
+    height: 4.4rem;
+    line-height: 70.4px;
+    line-height: 4.4rem;
+    text-align: center;
+    font-size: 22.4px;
+    font-size: 1.4rem;
+    color: #7a7a7a;
+    background: #ebf1fb;
+  }
+
+.wj-schooltime .connect-icon {
+    width: 2.93%;
+    margin-right: 16px;
+    margin-right: 1rem;
+    position: relative;
+    top: -2px;
+  }
+
+.wj-schooltime .cnonnect-body {
+    height: 176px;
+    height: 11rem;
+    background: #fff;
+  }
+
+.wj-schooltime .clock-ul .li-title {
+      float: left;
+    }
+
+.wj-schooltime .clock-ul .li-time {
+      float: right;
     }
