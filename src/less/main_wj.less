@@ -18,6 +18,10 @@
   float: right;
 }
 
+.none {
+  display: none;
+}
+
 .wj-msg {
   .date-txt {
     height: 35px;
@@ -162,14 +166,21 @@
 }
 
 .wj-schooltime {
+  .wrap {
+    background: #fff;
+  }
+
   .headtab-wp {
     background: #3f79ee;
     height: 4.5rem;
     line-height: 4.5rem;
+    position: relative;
 
     .delete-btn {
       /* width: 1.55rem; */
+      position: absolute;
       width: 4.26%;
+      left: 4%;
     }
 
     .left-tab,
@@ -182,6 +193,17 @@
 
     .left-tab {
       width: 25.93%;
+      margin-left: 19%;
+      margin-right: 2.5rem;
+    }
+
+    .right-tab {
+      width: 26.93%;
+    }
+
+    .tab-active {
+      border-bottom: 1px solid #fff;
+      height: 4.4rem;
     }
   }
 
@@ -202,17 +224,80 @@
   }
 
   .cnonnect-body {
-    height: 11rem;
+    padding-top: 2.5rem;
+    height: 8.5rem;
     background: #fff;
+
+    .schooltime-icon {
+      display: block;
+      width: 43.46%;
+      margin: 0 auto 0.5rem;
+    }
+
+    .left-txt,
+    .right-txt {
+      display: inline-block;
+      font-size: 1.4rem;
+      text-align: center;
+      color: #3a3a3a;
+    }
+
+    .left-txt {
+      width: 33.33%;
+      margin-left: 15.8%;
+    }
+
+    .right-txt {
+      width: 32.53%;
+    }
+  }
+
+  .connecting-wp {
+    margin-bottom: 1rem;
+    box-shadow: #e8eaed 0 0 30px -5px;
   }
 
   .clock-ul {
+    background: #fff;
+    margin-bottom: 3.5rem;
+    box-shadow: #e8eaed 0 0 30px -5px;
+
+    li {
+      width: 92%;
+      padding-top: 2.5rem;
+      margin: 0 auto;
+      border-bottom: 1px solid #eee;
+    }
+
     .li-title {
       float: left;
+      font-size: 1.4rem;
+      color: #3a3a3a;
     }
 
     .li-time {
       float: right;
+      font-size: 2.4rem;
     }
+
+    .li-date {
+      font-size: 1.2rem;
+      color: #727272;
+      text-align: right;
+      padding: 2rem 0;
+    }
+  }
+
+  .time-btn {
+    display: block;
+    width: 78.93%;
+    height: 4.9rem;
+    line-height: 4.9rem;
+    color: #fff;
+    background: #3895fe;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 4px;
+    font-size: 1.6rem;
   }
 }

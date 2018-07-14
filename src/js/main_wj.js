@@ -115,4 +115,19 @@ $(function () {
       }
     })
   })
+  /**
+   * 校时页面切换tab
+   */
+  $('.left-tab').click(function () {
+    $(this).addClass('tab-active')
+    $('.leftside').removeClass('none')
+    $('.rightside').addClass('none')
+    $('.right-tab').removeClass('tab-active')
+  })
+  $('.right-tab').click(function () {
+    $(this).addClass('tab-active')
+    $('.rightside').removeClass('none')
+    $('.leftside').addClass('none')
+    $('.left-tab').removeClass('tab-active')
+  })
 })
