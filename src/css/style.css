@@ -146,6 +146,12 @@ audio {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+.comm-header .comm-btn.carry {
+  width: auto;
+}
+.comm-header .comm-btn:first-child {
+  width: 0.5rem;
+}
 .comm-header .comm-operating {
   left: 0.75rem;
 }
@@ -197,6 +203,7 @@ audio {
   display: -ms-flexbox;
   display: flex;
   z-index: 900;
+  box-shadow: 0 2px 2px 3px #d5d7e1;
 }
 .comm-footer .footer-item {
   width: 20%;

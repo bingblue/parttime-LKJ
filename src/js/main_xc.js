@@ -20,7 +20,83 @@ $(function () {
       this.addReviewDelete()
       this.addScrollPrev()
       this.addReviewBtn()
+      this.addMachinesAllcheck()
+      this.searchInputClose()
     },
+    /**
+     * 搜索页面表单清除
+     */
+    searchInputClose () {
+      var $close = $('.search-header .search-close')
+      var $input = $('.search-header .search-input')
+      $input.on('keyup', function () {
+        if ($(this).val().trim()) {
+          $close.show()
+        } else {
+          $close.hide()
+        }
+      })
+      $close.on('click', function () {
+        $(this).hide()
+        $input.val('')
+      })
+    },
+    /**
+     * 机车列表全选
+     */
+    addMachinesAllcheck () {
+      var $infoItem = $('.machines .machines-info-item')
+      var $allBtn = $('.machines-footer .all-btn')
+      $infoItem.on('click', function () {
+        var $this = $(this)
+        if ($this.hasClass('disabled')) {
+          return false
+        }
+        if ($this.hasClass('active')) {
+          $this.removeClass('active')
+          checkIsAll()
+        } else {
+          $this.addClass('active')
+          checkIsAll()
+        }
+      })
+      $allBtn.on('click', function () {
+        var $notDisabled = $('.machines .machines-info-item:not(.disabled)')
+        var $this = $(this)
+        if ($this.hasClass('active')) {
+          $(this).removeClass('active')
+          $notDisabled.removeClass('active')
+        } else {
+          $(this).addClass('active')
+          $notDisabled.addClass('active')
+        }
+      })
+      checkIsAll()
+      function checkIsAll () {
+        var $active = $('.machines .machines-info-items .active')
+        var $notDisabled = $('.machines .machines-info-item:not(.disabled)')
+        if ($active.length === $notDisabled.length) {
+          $allBtn.addClass('active')
+        } else {
+          $allBtn.removeClass('active')
+        }
+      }
+      $('.machines-changeType-box, .machines-changeType-box .machines-change-btn').on('click', function () {
+        $('.machines-changeType-box').hide()
+      })
+      $('.machines-changeType-box .machines-change-type').on('click', function (event) {
+        event.stopPropagation()
+      })
+      $('.machines-footer .machines-start').on('click', function () {
+        $('.machines-start-comfirm').show()
+      })
+      $('.machines-start-comfirm').on('click', function () {
+        $(this).hide()
+      })
+    },
+    /**
+     * 复核 confirm 弹窗
+     */
     addReviewBtn () {
       $('.review-footer .btn-primary').on('click', function () {
         $('.review-box .review-error-btn').show()
@@ -153,7 +229,7 @@ $(function () {
       window.addEventListener('DOMContentLoaded', change, false)
     },
     addScrollPrev: function () {
-      $('.version-review,.review-info-box,.review-box').on('scroll', function (event) {
+      $('.version-review,.review-info-box,.review-box,.padding-machines').on('scroll', function (event) {
         event.stopPropagation()
       })
     }
