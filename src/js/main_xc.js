@@ -43,7 +43,7 @@ $(function () {
         var $ele = $(ele)
         var $str = $ele.text()
         var $Initials = ''
-        if ($str == '长沙') {
+        if ($str === '长沙') {
           $Initials = HanZi_PinYin.get($str).charAt(2)
         } else {
           $Initials = HanZi_PinYin.get($str).charAt(0)
