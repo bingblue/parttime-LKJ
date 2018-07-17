@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>离线机车</title>
+    <title>选择换装地点</title>
     <meta name="Keywords" content="">
     <meta name="Description" content="">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
@@ -18,9 +18,10 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body class="xc-body machinesdetail-body">
+<body class="xc-body">
+    <!-- 非错错误状态去掉  review-error-->
     <div class="wrap">
-        <div class="main padding-machinesdetail color">
+        <div class="main">
             <header class="comm-header">
                 <div class="comm-btn">
                     <a href="javascript:history.go(-1)">
@@ -28,28 +29,29 @@
                     </a>
                 </div>
                 <div class="comm-des">
-                    <p>未安装机车</p>
-                </div>
-                <div class="comm-more comm-btn">
-                    <img src="/img/sreach-nodress-header.png" alt="更多">
+                    <p>选择换装地点</p>
                 </div>
             </header>
-            <div class="search-nodress">
-                <div class="search-nodress-item">
-                    <p class="search-nodress-name">DF8B-5412</p>
-                    <p class="search-nodress-time">20180501</p>
-                </div>
-                <div class="search-nodress-item">
-                    <p class="search-nodress-name">DF8B-5412</p>
-                    <p class="search-nodress-time">20180501</p>
-                </div>
-                <div class="search-nodress-item">
-                    <p class="search-nodress-name">DF8B-5412</p>
-                    <p class="search-nodress-time">20180501</p>
-                </div>
+            <div class="setting">
+              <div class="setting-locations">
+                <div class="setting-location">巴中</div>
+                <div class="setting-location">长沙</div>
+                <div class="setting-location">涪陵</div>
+                <div class="setting-location">福州</div>
+                <div class="setting-location">广顺场</div>
+                <div class="setting-location">怀化</div>
+                <div class="setting-location">青岛四方厂</div>
+                <div class="setting-location">石柱县</div>
+                <div class="setting-location">厦门</div>
+                <div class="setting-location">兴隆场机务库内</div>
+                <div class="setting-location">宜昌东</div>
+              </div>
+              <div class="setting-location-letters" id="setting-location-letters">
+              </div>
             </div>
         </div>
     </div>
+    <script src="/js/pinyin.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="/js/main_xc.js"></script>
 </body>

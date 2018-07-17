@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>版本复核</title>
+  <title>紧急任务-读取</title>
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
@@ -44,32 +44,24 @@
   <div class="wrap">
     <div class="main padding-main">
       <div class="markBg"></div>
-      <!-- build:head -->
       <header class="comm-header">
   <div class="comm-operating comm-btn">
     <img src="/img/operating.png" alt="操作">
   </div>
   <div class="comm-des">
-      <p>配合手持机测试201611sssss</p>
-      <img class="comm-selcet" src="/img/select.png" alt="下拉"/>
-  </div>
-  <div class="comm-more comm-btn">
-    <img src="/img/more.png" alt="更多">
+      <p>紧急任务</p>
   </div>
 </header>
-      <!-- endbuild -->
-
-      <!-- 版本复核start -->
       <div class="version-review">
-          <div class="signal-bluetooth-box">
+        <div class="signal-bluetooth-box">
           <!-- 网络通畅 -->
-          <!-- <div class="signal clear">
+          <div class="signal clear">
             <img src="/img/signal-clear.png" alt="网络状态"><span class="status signal-status">通畅</span>
-          </div> -->
-          <!-- 网络很差 -->
-          <div class="signal danger">
-            <img src="/img/signal-danger.png" alt="网络状态"><span class="status signal-status">很差</span>
           </div>
+          <!-- 网络很差 -->
+          <!-- <div class="signal danger">
+            <img src="/img/signal-danger.png" alt="网络状态"><span class="status signal-status">很差</span>
+          </div> -->
           <!-- 网络无信号 -->
           <!-- <div class="signal no">
             <img src="/img/signal-no.png" alt="网络状态"><span class="status signal-status">无信号</span>
@@ -79,56 +71,22 @@
             <img src="/img/signal-weekClear.png" alt="网络状态"><span class="status signal-status">较通畅</span>
           </div> -->
           <!-- 蓝牙已经链接 -->
-          <!-- <div class="bluetooth perfection">
+          <div class="bluetooth perfection">
             <img src="/img/bluetooth-perfection.png" alt="蓝牙状态"><span class="status bluetooth-status">已链接</span>
-          </div> -->
+          </div>
           <!-- 蓝牙链接中 -->
           <!-- <div class="bluetooth processing">
             <img src="/img/bluetooth-processing.png" alt="蓝牙状态"><span class="status bluetooth-status">链接中</span>
           </div> -->
           <!-- 蓝牙未链接 -->
-          <div class="bluetooth undone">
+          <!-- <div class="bluetooth undone">
             <img src="/img/bluetooth-undone.png" alt="蓝牙状态"><span class="status bluetooth-status">未连接</span>
-          </div>
+          </div> -->
         </div>
         <div class="read-box">
-          <img class="read" src="/img/read.png" alt="读取">
-        </div>
-        <!-- loading -->
-        <div class="read-loading-box">
-          <div class="read-loading">
-            <img class="music-ani" src="/img/read-loading.png" alt="读取中">
-            <p>读取中</p>
-          </div>
-        </div>
-        <!-- loading end -->
-        <div class="review-info-box">
-          <div class="review-info">
-            <div class="review-info-item">
-              <div class="item-name">DF11-0335</div>
-              <div class="item-time">05-16</div>
-              <div class="item-oper no">未复核</div>
-              <div class="item-delete">删除</div>
-            </div>
-            <div class="review-info-item">
-              <div class="item-name">DF11-0300</div>
-              <div class="item-time">05-16</div>
-              <div class="item-oper primary">复核正确</div>
-              <div class="item-delete">删除</div>
-            </div>
-            <div class="review-info-item">
-              <div class="item-name">DF11-0311</div>
-              <div class="item-time">05-16</div>
-              <div class="item-oper error">复核错误</div>
-              <div class="item-delete">删除</div>
-            </div>
-          </div>
-          <div class="review-info-mark mk">
-          </div>
-          <div class="review-clearBtn">全部清除</div>
+          <img class="read" id="read" src="/img/read.png" alt="读取">
         </div>
       </div>
-      <!-- 版本复核end -->
       <!-- build:footer -->
       <footer class="comm-footer">
   <div class="footer-item">

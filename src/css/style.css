@@ -149,7 +149,7 @@ audio {
 .comm-header .comm-btn.carry {
   width: auto;
 }
-.comm-header .comm-btn:first-child {
+.comm-header .comm-btn .return {
   width: 0.5rem;
 }
 .comm-header .comm-operating {

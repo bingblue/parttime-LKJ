@@ -22,6 +22,99 @@ $(function () {
       this.addReviewBtn()
       this.addMachinesAllcheck()
       this.searchInputClose()
+      this.settingSwitch()
+      this.settingServer()
+      this.settingReview()
+      this.locations()
+    },
+    /**
+     * 选择换装地点
+     */
+    locations () {
+      var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+      var $letters = $('#setting-location-letters')
+      var $letterStr = []
+      letters.forEach(function (Initials) {
+        $letterStr.push("<p class='setting-location-letter'>" + Initials + '</p>')
+      })
+      $letterStr = $letterStr.join('')
+      $letters.append($letterStr)
+      $('.setting-locations .setting-location').each(function (index, ele) {
+        var $ele = $(ele)
+        var $str = $ele.text()
+        var $Initials = ''
+        if ($str == '长沙') {
+          $Initials = HanZi_PinYin.get($str).charAt(2)
+        } else {
+          $Initials = HanZi_PinYin.get($str).charAt(0)
+        }
+        $ele.addClass($Initials)
+      })
+      $letters.find('.setting-location-letter').on('click', function () {
+        var $this = $(this)
+        var $letter = $this.text()
+        var $ele = $('.setting-locations').find('.' + $letter).eq(0)
+        var $top = $ele.length ? $ele.position().top : 0
+        var $paddingTop = $('.setting-locations').css('paddingTop')
+        $paddingTop = Number($paddingTop.substring(0, $paddingTop.length - 2))
+        $('html,body').animate({'scrollTop': ($top - $paddingTop)}, 200)
+      })
+    },
+    /**
+     * 版本复核
+     */
+    settingReview () {
+      var $box = $('.setting-review-locals-box')
+      var $locals = $('.setting-review-locals-box .setting-review-locals')
+      $box.on('click', function () {
+        $(this).hide()
+      })
+      $locals.on('click', function (event) {
+        event.stopPropagation()
+      })
+      $('.setting-review-locals-box .setting-review-local').on('click', function () {
+        var $this = $(this)
+        if (!$this.hasClass('cancel')) {
+          $('#setting-review-local').text($this.text())
+        }
+        $box.hide()
+      })
+      $('.setting').on('click', function () {
+        $box.show()
+      })
+    },
+    // 密码维护表单清空
+    settingServer () {
+      $('.setting-password-item input').on('keyup', function () {
+        var $this = $(this)
+        var $close = $this.siblings('.close-btn')
+        if ($this.val().trim()) {
+          $close.show()
+        } else {
+          $close.show()
+        }
+      })
+      $('.setting-password-item .close-btn').on('click', function () {
+        var $this = $(this)
+        $this.siblings('input').val('')
+        $this.hide()
+      })
+      $('.setting-server .setting-server-error').on('click', function () {
+        $(this).hide()
+      })
+    },
+    /**
+     * 设置的侧边开关
+     */
+    settingSwitch () {
+      $('.setting .name-box .btn-wrap').on('click', function () {
+        var $this = $(this)
+        if ($this.hasClass('active')) {
+          $this.removeClass('active')
+        } else {
+          $this.addClass('active')
+        }
+      })
     },
     /**
      * 搜索页面表单清除

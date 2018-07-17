@@ -26,11 +26,16 @@
     position: absolute;
   }
 
-  .padding-machines {
+  .padding-machines,.setting-main {
     position: absolute;
     top: 2.2rem;
     bottom: 3rem;
     overflow-y: scroll;
+  }
+
+  .setting-main {
+    bottom: 0;
+    background-color: #f8f9fc;
   }
 
   .padding-machinesdetail {
@@ -1124,5 +1129,246 @@
       text-align: right;
       flex: 1;
     }
+  }
+}
+
+.setting {
+  background-color: #f8f9fc;
+  font-size: 0.7rem;
+
+  .setting-items {
+    margin-bottom: 0.5rem;
+  }
+
+  .setting-item {
+    padding: 0 0.75rem;
+    line-height: 2.5rem;
+    display: flex;
+    background-color: #fff;
+    overflow-y: scroll;
+
+    a {
+      display: flex;
+      color: #3a3a3a;
+    }
+
+    .name-box {
+      width: 15.3rem;
+      position: relative;
+
+      .btn-wrap {
+        position: absolute;
+        width: 2.55rem;
+        height: 1.4rem;
+        border: 0.075px solid #dbdbdb;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 0.7rem;
+        z-index: 999;
+        transition: all linear 0.2s;
+
+        .btn-inner {
+          width: 1.4rem;
+          height: 1.4rem;
+          border-radius: 50%;
+          background-color: #fff;
+          box-shadow: 3px 0 2px -1px #e7e7e7;
+          position: absolute;
+          right: 1.15rem;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 998;
+          transition: all linear 0.2s;
+        }
+
+        &.active {
+          background-color: #4cd864;
+          border-color: #4cd864;
+
+          .btn-inner {
+            right: 0.075rem;
+          }
+        }
+      }
+
+      .right {
+        width: 0.45rem;
+        float: right;
+        padding: 0.65rem 0;
+      }
+    }
+
+    & + .setting-item {
+      .name-box {
+        border-top: 1px solid #eee;
+      }
+    }
+
+    .setting-item-img {
+      width: 1.2rem;
+      margin-right: 0.75rem;
+    }
+  }
+
+  .setting-server {
+    .setting-server-items {
+      background-color: #fff;
+      margin-bottom: 0.5rem;
+
+      .setting-server-item {
+        padding: 0.75rem;
+
+        .setting-server-key {
+          font-size: 0.65rem;
+          line-height: 1;
+          color: #727272;
+        }
+
+        .setting-server-val {
+          line-height: 2.15rem;
+          color: #3a3a3a;
+
+          .close,
+          .review-select {
+            float: right;
+            width: 0.75rem;
+            margin-top: 0.7rem;
+          }
+        }
+      }
+
+      .setting-review {
+        position: relative;
+
+        .setting-review-btn {
+          position: absolute;
+          width: 3.75rem;
+          line-height: 1rem;
+          color: #3895fe;
+          border-radius: 1rem;
+          text-align: center;
+          border: 0.05rem solid #3895fe;
+          font-size: 0.65rem;
+          right: 0.75rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    .setting-server-error {
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      width: 14.85rem;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.85rem;
+      padding: 0 1.5rem;
+      box-sizing: border-box;
+      line-height: 1.5rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .setting-review-locals-box {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+      display: none;
+
+      .setting-review-locals {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        line-height: 3rem;
+
+        .setting-review-local {
+          padding: 0 0.75rem;
+          background-color: #fff;
+
+          & + .setting-review-local {
+            border-top: 1px solid #eee;
+          }
+
+          &.cancel {
+            margin-top: 0.5rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .setting-password {
+    background-color: #fff;
+    padding: 0 0.75rem;
+
+    .setting-password-item {
+      padding: 0.75rem 0 0 0;
+      position: relative;
+
+      .close-btn {
+        position: absolute;
+        right: 0;
+        width: 0.5rem;
+        bottom: 0.5rem;
+        display: none;
+      }
+
+      & + .setting-password-item {
+        border-top: 1px solid #eee;
+      }
+
+      .label {
+        display: block;
+        line-height: 1;
+        color: #727272;
+      }
+
+      .input {
+        border: none;
+        background: none;
+        line-height: 1.5rem;
+        height: 1.5rem;
+        width: 100%;
+        color: #3a3a3a;
+      }
+    }
+  }
+
+  .setting-locations {
+    background-color: #fff;
+    padding: 2.2rem 0.75rem 0;
+
+    .setting-location {
+      line-height: 2.5rem;
+      color: #3a3a3a;
+      font-size: 0.7rem;
+
+      & + .setting-location {
+        border-top: #eee solid 1px;
+      }
+      
+    }
+  }
+
+  .setting-location-letters {
+    position: fixed;
+    top: 50%;
+    width: 0.6rem;
+    right: 0.2rem;
+    transform: translateY(-50%);
+    font-size: 0.6rem;
+    line-height: 0.75rem;
+    color: #007aff;
+    font-weight: 400;
+    text-align: center;
   }
 }
