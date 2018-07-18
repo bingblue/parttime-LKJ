@@ -26,6 +26,15 @@ $(function () {
       this.settingServer()
       this.settingReview()
       this.locations()
+      this.settingPlan()
+    },
+    /**
+     * 导入计划
+     */
+    settingPlan () {
+      $('.setting-plan .tit').on('click', function () {
+        $(this).hide()
+      })
     },
     /**
      * 选择换装地点
@@ -79,7 +88,7 @@ $(function () {
         }
         $box.hide()
       })
-      $('.setting').on('click', function () {
+      $('.setting .review-select').on('click', function () {
         $box.show()
       })
     },
@@ -91,14 +100,35 @@ $(function () {
         if ($this.val().trim()) {
           $close.show()
         } else {
-          $close.show()
+          $close.hide()
         }
+        $this.siblings('.error-msg').hide()
       })
       $('.setting-password-item .close-btn').on('click', function () {
         var $this = $(this)
         $this.siblings('input').val('')
         $this.hide()
       })
+      /**
+       * 密码修改保存
+       */
+      $('#passwordSave').on('click', function () {
+        var $confrimpassword = $('#confrimpassword').val()
+        var $password = $('#password').val()
+        if ($confrimpassword.length !== 6 || $password.length !== 6) {
+          alert('请设置6位密码！')
+          return false
+        }
+        if ($confrimpassword !== $password) {
+          $('#comfirm-error-msg').show().siblings('.close-btn').hide()
+        } else {
+          // 请求数据判断旧密码是否正确
+        }
+        $('#old-error-msg').show().siblings('.close-btn').hide()
+      })
+      /**
+       * 服务器设置错误弹窗
+       */
       $('.setting-server .setting-server-error').on('click', function () {
         $(this).hide()
       })

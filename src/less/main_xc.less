@@ -1340,6 +1340,14 @@
         width: 100%;
         color: #3a3a3a;
       }
+
+      .error-msg {
+        position: absolute;
+        right: 0;
+        color: #fd5881;
+        top: 1.45rem;
+        display: none;
+      }
     }
   }
 
@@ -1355,7 +1363,6 @@
       & + .setting-location {
         border-top: #eee solid 1px;
       }
-      
     }
   }
 
@@ -1370,5 +1377,118 @@
     color: #007aff;
     font-weight: 400;
     text-align: center;
+  }
+
+  .setting-plan {
+    .setting-plan-choose {
+      background-color: #fff;
+      margin-bottom: 0.5rem;
+      padding: 0.75rem;
+
+      .plan-choose-head {
+        font-size: 0.65rem;
+        color: #727272;
+      }
+
+      .plan-choose-body {
+        display: flex;
+        justify-content: space-between;
+
+        .plan-choose-name {
+          color: #3a3a3a;
+          font-weight: 400;
+        }
+
+        .plan-choose-select {
+          width: 0.7rem;
+        }
+      }
+    }
+
+    .plan-choose-btn {
+      background-color: #fff;
+      line-height: 2rem;
+      text-align: center;
+      color: #3895fe;
+    }
+
+    .tit {
+      background-color: #7c7c7e;
+      display: inline-block;
+      white-space: nowrap;
+      position: fixed;
+      line-height: 2rem;
+      border-radius: 2rem;
+      color: #fff;
+      padding: 0 1.55rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.setting-version {
+  .setting-version-logo {
+    width: 3.25rem;
+    margin: 4.9rem auto 1rem;
+  }
+
+  .setting-version-name {
+    text-align: center;
+    color: #3a3a3a;
+    line-height: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .setting-version-des {
+    width: 15rem;
+    margin: 0 auto;
+    font-size: 0.7rem;
+    color: #727272;
+    line-height: 1rem;
+  }
+
+  .setting-version-codes {
+    position: fixed;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    color: #d5d5d5;
+    font-size: 0.55rem;
+    text-align: center;
+    line-height: 1rem;
+
+    .company {
+      color: #727272;
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+
+.setting-help {
+  padding: 2.95rem 0.75rem 0.75rem;
+  color: #3a3a3a;
+  font-size: 0.7rem;
+  line-height: 1rem;
+
+  .setting-help-item {
+    margin-top: 0.75rem;
+
+    .setting-help-step {
+      line-height: 1.2rem;
+
+      .head {
+        font-weight: 700;
+      }
+    }
+
+    .hold {
+      color: #3895fe;
+    }
+
+    &.des {
+      color: #727272;
+    }
   }
 }

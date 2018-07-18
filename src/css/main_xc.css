@@ -1650,6 +1650,15 @@
         color: #3a3a3a;
 }
 
+.setting .setting-password .setting-password-item .error-msg {
+        position: absolute;
+        right: 0;
+        color: #fd5881;
+        top: 23.2px;
+        top: 1.45rem;
+        display: none;
+}
+
 .setting .setting-locations {
     background-color: #fff;
     padding: 35.2px 12px 0;
@@ -1662,7 +1671,6 @@
       color: #3a3a3a;
       font-size: 11.2px;
       font-size: 0.7rem
-      
     }
 
 .setting .setting-locations .setting-location + .setting-location {
@@ -1686,3 +1694,140 @@
     font-weight: 400;
     text-align: center;
   }
+
+.setting .setting-plan .setting-plan-choose {
+      background-color: #fff;
+      margin-bottom: 8px;
+      margin-bottom: 0.5rem;
+      padding: 12px;
+      padding: 0.75rem;
+    }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-head {
+        font-size: 10.4px;
+        font-size: 0.65rem;
+        color: #727272;
+      }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-body {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+      }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-body .plan-choose-name {
+          color: #3a3a3a;
+          font-weight: 400;
+        }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-body .plan-choose-select {
+          width: 11.2px;
+          width: 0.7rem;
+        }
+
+.setting .setting-plan .plan-choose-btn {
+      background-color: #fff;
+      line-height: 32px;
+      line-height: 2rem;
+      text-align: center;
+      color: #3895fe;
+    }
+
+.setting .setting-plan .tit {
+      background-color: #7c7c7e;
+      display: inline-block;
+      white-space: nowrap;
+      position: fixed;
+      line-height: 32px;
+      line-height: 2rem;
+      border-radius: 2rem;
+      color: #fff;
+      padding: 0 24.8px;
+      padding: 0 1.55rem;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+
+.setting-version .setting-version-logo {
+    width: 52px;
+    width: 3.25rem;
+    margin: 78.4px auto 16px;
+    margin: 4.9rem auto 1rem;
+  }
+
+.setting-version .setting-version-name {
+    text-align: center;
+    color: #3a3a3a;
+    line-height: 16px;
+    line-height: 1rem;
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+  }
+
+.setting-version .setting-version-des {
+    width: 240px;
+    width: 15rem;
+    margin: 0 auto;
+    font-size: 11.2px;
+    font-size: 0.7rem;
+    color: #727272;
+    line-height: 16px;
+    line-height: 1rem;
+  }
+
+.setting-version .setting-version-codes {
+    position: fixed;
+    bottom: 32px;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    color: #d5d5d5;
+    font-size: 8.8px;
+    font-size: 0.55rem;
+    text-align: center;
+    line-height: 16px;
+    line-height: 1rem;
+  }
+
+.setting-version .setting-version-codes .company {
+      color: #727272;
+      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
+    }
+
+.setting-help {
+  padding: 47.2px 12px 12px;
+  padding: 2.95rem 0.75rem 0.75rem;
+  color: #3a3a3a;
+  font-size: 11.2px;
+  font-size: 0.7rem;
+  line-height: 16px;
+  line-height: 1rem;
+}
+
+.setting-help .setting-help-item {
+    margin-top: 12px;
+    margin-top: 0.75rem;
+  }
+
+.setting-help .setting-help-item .setting-help-step {
+      line-height: 19.2px;
+      line-height: 1.2rem;
+    }
+
+.setting-help .setting-help-item .setting-help-step .head {
+        font-weight: 700;
+      }
+
+.setting-help .setting-help-item .hold {
+      color: #3895fe;
+    }
+
+.setting-help .setting-help-item.des {
+  color: #727272;
+}
