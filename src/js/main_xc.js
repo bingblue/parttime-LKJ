@@ -134,16 +134,78 @@ $(function () {
       })
     },
     /**
-     * 设置的侧边开关
+     * 验证授权
+     */
+    reviewPassWord ($name, func) {
+      var fn = func || ''
+      var $verificationBox = $('.setting .verification-password-box')
+      $('#verification-password #verification-name').text($name)
+      $verificationBox.show()
+      $('#verification-password-input').focus()
+      $('#verification-password-input').on('keyup', function () {
+        var $length = $(this).val().length
+        $('#verification-password .verification-password-item').removeClass('active')
+        $('#verification-password .verification-password-item:lt(' + $length + ')').addClass('active')
+        if ($length === 6) {
+          // 进行验证 这里未进行验证直接进入下一步
+          $('.verification-cancel').click()
+          $('#verification-password-input').off('keyup')
+          fn && fn()
+        }
+      })
+    },
+    /**
+     * 设置页面相关事件
      */
     settingSwitch () {
+      var that = this
+      // 右侧开关
       $('.setting .name-box .btn-wrap').on('click', function () {
         var $this = $(this)
-        if ($this.hasClass('active')) {
-          $this.removeClass('active')
+        if ($this.hasClass('verification')) {
+          var $name = $this.siblings('span').text()
+          that.reviewPassWord($name, function () {
+            if ($this.hasClass('active')) {
+              $this.removeClass('active')
+            } else {
+              $this.addClass('active')
+            }
+          })
         } else {
-          $this.addClass('active')
+          if ($this.hasClass('active')) {
+            $this.removeClass('active')
+          } else {
+            $this.addClass('active')
+          }
         }
+      })
+      // 链接的验证
+      var $verificationBox = $('.setting .verification-password-box')
+      $('.setting .setting-items .href').on('click', function (event) {
+        event.preventDefault()
+        var $this = $(this)
+        var $href = $this.attr('href') // 记录应该跳转的链接
+        if (!$this.hasClass('verification')) {
+          window.location.href = $href
+        } else {
+          var $name = $this.find('.name-box span').text()
+          that.reviewPassWord($name, function () {
+            window.location.href = $href
+          })
+        }
+      })
+      $verificationBox.on('click', function () {
+        $(this).hide()
+        $('#verification-password .verification-password-item').removeClass('active')
+        $('#verification-password-input').val('').blur()
+      })
+      $('.verification-cancel').on('click', function () {
+        $verificationBox.hide()
+        $('#verification-password .verification-password-item').removeClass('active')
+        $('#verification-password-input').val('').blur()
+      })
+      $('.verification-password').on('click', function (event) {
+        event.stopPropagation()
       })
     },
     /**

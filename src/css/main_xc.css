@@ -1402,6 +1402,10 @@
     margin-bottom: 0.5rem;
   }
 
+.setting .setting-items .href {
+      color: #3a3a3a;
+    }
+
 .setting .setting-item {
     padding: 0 12px;
     padding: 0 0.75rem;
@@ -1830,4 +1834,88 @@
 
 .setting-help .setting-help-item.des {
   color: #727272;
+}
+
+.verification-password-box {
+  position: fixed;
+  background-color: rgba(0, 0, 0, .2);
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 99999;
+  display: none;
+}
+
+.verification-password-box .verification-password {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 0 12px;
+    padding: 0 0.75rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+.verification-password-box .verification-password .verification-head {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      line-height: 40px;
+      line-height: 2.5rem;
+    }
+
+.verification-password-box .verification-password .verification-head .verification-name {
+        font-weight: 700;
+        font-size: 12px;
+        font-size: 0.75rem;
+        color: #3a3a3a;
+      }
+
+.verification-password-box .verification-password .verification-des {
+      text-align: center;
+      line-height: 16px;
+      line-height: 1rem;
+      margin-top: 28px;
+      margin-top: 1.75rem;
+    }
+
+.verification-password-box .verification-password .verification-password-items {
+      margin: 16px auto 32px;
+      margin: 1rem auto 2rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+
+.verification-password-box .verification-password .verification-password-items .verification-password-item {
+        width: 12px;
+        width: 0.75rem;
+        height: 12px;
+        height: 0.75rem;
+        display: inline-block;
+        border: 1px solid #000;
+        border-radius: 50%
+      }
+
+.verification-password-box .verification-password .verification-password-items .verification-password-item + .verification-password-item {
+  margin-left: 19.2px;
+  margin-left: 1.2rem;
+}
+
+.verification-password-box .verification-password .verification-password-items .verification-password-item.active {
+  background-color: #000;
+}
+
+.verification-password-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }

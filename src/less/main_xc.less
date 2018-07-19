@@ -1138,6 +1138,10 @@
 
   .setting-items {
     margin-bottom: 0.5rem;
+
+    .href {
+      color: #3a3a3a;
+    }
   }
 
   .setting-item {
@@ -1491,4 +1495,71 @@
       color: #727272;
     }
   }
+}
+
+.verification-password-box {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 99999;
+  display: none;
+  
+  .verification-password {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 0 0.75rem;
+    box-sizing: border-box;
+    
+
+    .verification-head {
+      display: flex;
+      justify-content: space-between;
+      line-height: 2.5rem;
+
+      .verification-name {
+        font-weight: 700;
+        font-size: 0.75rem;
+        color: #3a3a3a;
+      }
+    }
+
+    .verification-des {
+      text-align: center;
+      line-height: 1rem;
+      margin-top: 1.75rem;
+    }
+
+    .verification-password-items {
+      margin: 1rem auto 2rem;
+      display: flex;
+      justify-content: center;
+
+      .verification-password-item {
+        width: 0.75rem;
+        height: 0.75rem;
+        display: inline-block;
+        border: 1px solid #000;
+        border-radius: 50%;
+
+        & + .verification-password-item {
+          margin-left: 1.2rem;
+        }
+
+        &.active {
+          background-color: #000;
+        }
+      }
+    }
+  }
+}
+
+.verification-password-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
