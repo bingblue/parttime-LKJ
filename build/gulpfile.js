@@ -137,6 +137,16 @@ gulp.task('server', ['dev'], () => {
       directory: true,
       index: 'index.html'
     },
+    // middleware: function (req, res, next) {
+    //   if(req.url.indexOf('lkj') < 0){
+    //     res.writeHead(302, {
+    //       'Location': '/lkj' + req.url
+    //     })
+    //     res.end()
+    //   }else {
+    //     next()
+    //   }
+    // },
     logPrefix: 'Browser Sync'
   })
   gulp.watch(config.css.src, (event)=> {
