@@ -1,4 +1,20 @@
 $(function () {
+  (function () {
+    function change () {
+      var cWidth
+      if (document.documentElement.clientWidth < 320) {
+        cWidth = 320
+      } else if (document.documentElement.clientWidth > 750) {
+        cWidth = 750
+      } else {
+        cWidth = document.documentElement.clientWidth
+      };
+      document.documentElement.style.fontSize = cWidth / 18.75 + 'px'
+    }
+    change()
+    window.addEventListener('resize', change, false)
+    window.addEventListener('DOMContentLoaded', change, false)
+  })()
   /**
    * 功能介绍,每个方法请写注释，按下面模板来写.
    * @author <作者>
@@ -12,7 +28,6 @@ $(function () {
      * 初始化
      */
     init: function () {
-      this.initFontSize()
       this.addLoginEvent()
       this.addSliderBarEvent()
       this.addReadEvent()
@@ -116,7 +131,7 @@ $(function () {
         var $confrimpassword = $('#confrimpassword').val()
         var $password = $('#password').val()
         if ($confrimpassword.length !== 6 || $password.length !== 6) {
-          alert('请设置6位密码！')
+          console.log('请设置6位密码！')
           return false
         }
         if ($confrimpassword !== $password) {
@@ -312,14 +327,34 @@ $(function () {
      * 添加复核删除确认删除事件
      */
     addReviewDelete () {
-      $('.review-info-box .review-info-item').click(function () {
-        var $this = $(this)
-        if ($this.hasClass('active')) {
-          $this.removeClass('active').find('.item-delete').removeClass('active').html('删除')
-        } else {
-          $this.addClass('active').siblings().removeClass('active').find('.item-delete').removeClass('active').html('删除')
+      var $ele = $('.review-info-box .review-info-item')
+      var startX = 0
+      var startY = 0
+      var endX = 0
+      var endY = 0
+      var distanceX = 0
+      var distanceY
+      $ele.bind('touchstart', function (e) {
+        startX = e.originalEvent.changedTouches[0].pageX
+        startY = e.originalEvent.changedTouches[0].pageY
+      })
+      $ele.bind('touchend', function (e) {
+        // 获取滑动屏幕时的X,Y
+        endX = e.originalEvent.changedTouches[0].pageX
+        endY = e.originalEvent.changedTouches[0].pageY
+        // 获取滑动距离
+        distanceX = endX - startX
+        distanceY = endY - startY
+        // 判断滑动方向
+        if (Math.abs(distanceX) > Math.abs(distanceY) && distanceX > 50) {
+          $(this).removeClass('active').find('.item-delete').removeClass('active').html('删除')
+        } else if (Math.abs(distanceX) > Math.abs(distanceY) && distanceX < -50) {
+          $(this).addClass('active').siblings().removeClass('active').find('.item-delete').removeClass('active').html('删除')
         }
       })
+      /**
+       * 确认删除
+       */
       $('.review-info-box .review-info-item .item-delete').click(function () {
         var $this = $(this)
         if ($this.hasClass('active')) {
@@ -393,25 +428,6 @@ $(function () {
           $this.removeClass('active')
         }
       })
-    },
-    /**
-     * 初始化根目录节点
-     */
-    initFontSize: function () {
-      function change () {
-        var cWidth
-        if (document.documentElement.clientWidth < 320) {
-          cWidth = 320
-        } else if (document.documentElement.clientWidth > 750) {
-          cWidth = 750
-        } else {
-          cWidth = document.documentElement.clientWidth
-        };
-        document.documentElement.style.fontSize = cWidth / 18.75 + 'px'
-      }
-      change()
-      window.addEventListener('resize', change, false)
-      window.addEventListener('DOMContentLoaded', change, false)
     },
     addScrollPrev: function () {
       $('.version-review,.review-info-box,.review-box,.padding-machines').on('scroll', function (event) {

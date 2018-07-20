@@ -205,6 +205,10 @@ audio {
   z-index: 900;
   box-shadow: 0 2px 2px 3px #d5d7e1;
 }
+.comm-footer.wj {
+  font-size: 0.916rem;
+  padding: 0.35rem 1.25rem;
+}
 .comm-footer .footer-item {
   width: 20%;
   text-align: center;
@@ -214,10 +218,52 @@ audio {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  position: relative;
+}
+.comm-footer .footer-item .tit{
+  width: 0.25rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.15rem;
+  height: auto;
 }
 .comm-footer .footer-item img {
   width: 1rem;
   height: 1rem;
+}
+.comm-footer.wj .footer-item {
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+.comm-footer.wj .footer-item .tit{
+  width: 0.415rem;
+  position: absolute;
+  right: 1.66rem;
+  top: 0.25rem;
+  height: auto;
+}
+.comm-footer.wj .footer-item img {
+  width: 1.66rem;
+  height: 1.66rem;
+}
+.comm-footer .footer-item a {
+  color: #a0a9ae;
+}
+.comm-footer .footer-item.active a {
+  color: #3895fe;
+}
+.comm-footer .footer-item a {
+  color: #a0a9ae;
+}
+.comm-footer .footer-item.active a {
+  color: #3895fe;
 }
 .slider-bar-open .slider-bar {
   display: block;
@@ -265,7 +311,6 @@ audio {
 }
 html{
   overflow-x: hidden;
-  font-size: 62.5%;
 }
 .slider-bar-open .markBg {
   display: block;
