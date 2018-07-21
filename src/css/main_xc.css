@@ -349,8 +349,8 @@
       }
 
 .xc-body .version-review .review-info-box .review-info-item .item-time {
-          width: 108px;
-          width: 6.75rem;
+          width: 100px;
+          width: 6.25rem;
         }
 
 .xc-body .version-review .review-info-box .review-info-item .item-name {
@@ -359,8 +359,8 @@
         }
 
 .xc-body .version-review .review-info-box .review-info-item .item-oper {
-          width: 48px;
-          width: 3rem;
+          width: 56px;
+          width: 3.5rem;
           text-align: right;
           margin-right: 12px;
           margin-right: 0.75rem;
