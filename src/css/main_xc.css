@@ -1923,11 +1923,10 @@
   position: absolute;
   bottom: 32px;
   bottom: 2rem;
-  width: 100%;
+  width: 200%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  left: 12px;
-  left: 0.75rem;
+  left: -100%;
   height: 16px;
   height: 1rem;
   z-index: 1002;
