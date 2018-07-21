@@ -152,6 +152,10 @@ $(function () {
      * 验证授权
      */
     reviewPassWord ($name, func) {
+      var h = $('.setting').height() - $('.xc-body .setting-main').height()
+      if (h > 0) {
+        $('.xc-body .setting').css('marginTop', -h)
+      }
       var fn = func || ''
       var $verificationBox = $('.setting .verification-password-box')
       $('#verification-password #verification-name').text($name)
@@ -213,11 +217,13 @@ $(function () {
         $(this).hide()
         $('#verification-password .verification-password-item').removeClass('active')
         $('#verification-password-input').val('').blur()
+        $('.xc-body .setting').css('marginTop', 0)
       })
       $('.verification-cancel').on('click', function () {
         $verificationBox.hide()
         $('#verification-password .verification-password-item').removeClass('active')
         $('#verification-password-input').val('').blur()
+        $('.xc-body .setting').css('marginTop', 0)
       })
       $('.verification-password').on('click', function (event) {
         event.stopPropagation()
