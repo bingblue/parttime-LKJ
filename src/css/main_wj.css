@@ -22,6 +22,11 @@
   display: none;
 }
 
+.wj-msg .main {
+    padding-bottom: 96px;
+    padding-bottom: 6rem;
+  }
+
 .wj-msg .date-txt {
     height: 35px;
     line-height: 35px;
@@ -198,7 +203,6 @@
   }
 
 .wj-schooltime .headtab-wp .delete-btn {
-      /* width: 1.55rem; */
       position: absolute;
       width: 4.26%;
       left: 4%;
