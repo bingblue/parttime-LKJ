@@ -123,6 +123,8 @@ audio {
   bottom: 2.5rem;
 }
 .comm-header {
+  background: -webkit-gradient(linear, left top, right top, from(#68aef1), to(#3b74ee));
+  background: linear-gradient(to right, #68aef1, #3b74ee);
   position: fixed;
   top:0;
   left: 0;
@@ -173,6 +175,9 @@ audio {
   margin: 0 auto;
   height: 100%;
   display: inline-block;
+}
+.comm-header .comm-des.nopadding {
+  padding: 0;
 }
 .comm-header  .comm-selcet {
   width: 0.6rem;
@@ -229,6 +234,9 @@ audio {
 .comm-footer .footer-item img {
   width: 1rem;
   height: 1rem;
+}
+.comm-footer .footer-item img.cw {
+  width: 0.8rem
 }
 .comm-footer.wj .footer-item {
   width: 20%;

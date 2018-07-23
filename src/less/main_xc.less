@@ -11,7 +11,7 @@
 
   &.dressup {
     .wrap {
-      background: #f8f9fc url('/img/dressup-bg.png') no-repeat;
+      background: #f8f9fc url('../img/dressup-bg.png') no-repeat;
       background-size: 100% 8rem;
     }
 
@@ -21,7 +21,7 @@
   }
 
   .padding-review {
-    top: 2.2rem;
+    top: 2.17rem;
     bottom: 4.75rem;
     position: absolute;
   }
@@ -76,7 +76,7 @@
   }
 
   .wrap.login-wrap {
-    background: #fff url('/img/login-bg.png') bottom no-repeat;
+    background: #fff url('../img/login-bg.png') bottom no-repeat;
     background-size: contain;
 
     .login-logo {
@@ -95,6 +95,8 @@
       input {
         width: 100%;
         display: inline-block;
+        background-color: none;
+        outline: none;
       }
 
       label {
@@ -602,7 +604,7 @@
 
         &.on,
         &.no {
-          background: url(/img/footer-dress.png) no-repeat 2.6rem 1.4rem;
+          background: url(../img/footer-dress.png) no-repeat 2.6rem 1.4rem;
           background-size: 0.5rem 0.65rem;
         }
 
@@ -684,7 +686,11 @@
 .xc-body.review-error {
   .comm-header,
   .review-head {
-    background-color: #f35964 !important;
+    background: #f35964 !important;
+  }
+
+  .padding-review {
+    top: 2.17rem;
   }
 }
 
@@ -700,7 +706,7 @@
       line-height: 3rem;
       color: #3a3a3a;
       font-size: 0.7rem;
-      background: url('/img/machines-nocheck.png') no-repeat left center;
+      background: url('../img/machines-nocheck.png') no-repeat left center;
       background-size: 0.75rem 0.75rem;
 
       & + .machines-info-item {
@@ -717,7 +723,7 @@
       }
 
       &.active {
-        background-image: url('/img/machines-check.png');
+        background-image: url('../img/machines-check.png');
       }
 
       .machines-info-name {
@@ -835,6 +841,10 @@
         padding: 0 0.75rem;
         background-color: #fff;
         margin-bottom: 0.5rem;
+
+        h2 {
+          color: #727272;
+        }
       }
 
       ul {
@@ -892,11 +902,11 @@
     color: #3a3a3a;
     padding-left: 1.1rem;
     display: inline-block;
-    background: url('/img/machines-nocheck.png') no-repeat left center;
+    background: url('../img/machines-nocheck.png') no-repeat left center;
     background-size: 0.75rem 0.75rem;
 
     &.active {
-      background-image: url('/img/machines-check.png');
+      background-image: url('../img/machines-check.png');
     }
   }
 
@@ -992,12 +1002,13 @@
     margin-bottom: 0.5rem;
 
     &.active {
-      background-color: #3990ff;
+      background: url('../img/search-item.png') no-repeat;
+      background-size: cover;
       color: #fff;
     }
 
     &.condition {
-      background: url('/img/search-condition.png') no-repeat;
+      background: url('../img/search-condition.png') no-repeat;
       background-size: cover;
       color: #3895fe;
     }
@@ -1024,7 +1035,7 @@
       color: #3a3a3a;
       font-size: 0.85rem;
       padding-right: 1.3rem;
-      background: url('/img/search-link.png') no-repeat right center;
+      background: url('../img/search-link.png') no-repeat right center;
       background-size: 0.7rem 0.85rem;
     }
 
@@ -1037,12 +1048,12 @@
     }
 
     &.active {
-      background: url('/img/search-item-bg.png') -0.75rem -0.75rem no-repeat;
+      background: url('../img/search-item-bg.png') -0.75rem -0.75rem no-repeat;
       position: relative;
 
       .search-link-name {
         color: #fff;
-        background-image: url('/img/search-link-active.png');
+        background-image: url('../img/search-link-active.png');
       }
 
       .search-link-tip {
@@ -1142,6 +1153,10 @@
     .href {
       color: #3a3a3a;
     }
+
+    .name-box.first {
+      border: none;
+    }
   }
 
   .setting-item {
@@ -1159,6 +1174,7 @@
     .name-box {
       width: 15.3rem;
       position: relative;
+      border-top: 1px solid #eee;
 
       .btn-wrap {
         position: absolute;
@@ -1203,12 +1219,6 @@
       }
     }
 
-    & + .setting-item {
-      .name-box {
-        border-top: 1px solid #eee;
-      }
-    }
-
     .setting-item-img {
       width: 1.2rem;
       margin-right: 0.75rem;
@@ -1218,10 +1228,10 @@
   .setting-server {
     .setting-server-items {
       background-color: #fff;
-      margin-bottom: 0.5rem;
+      padding: 0 0.75rem;
 
       .setting-server-item {
-        padding: 0.75rem;
+        padding-top: 0.75rem;
 
         .setting-server-key {
           font-size: 0.65rem;
@@ -1239,6 +1249,10 @@
             width: 0.75rem;
             margin-top: 0.7rem;
           }
+        }
+
+        & + .setting-server-item {
+          border-top: 1px solid #eee;
         }
       }
 
