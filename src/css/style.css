@@ -332,3 +332,8 @@ html{
   background-color: #000;
   z-index: 1000; 
 }
+
+.ios-fixed {
+  -webkit-appearance: none;
+  border-radius: 0;
+}

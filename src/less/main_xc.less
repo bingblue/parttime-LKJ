@@ -26,7 +26,8 @@
     position: absolute;
   }
 
-  .padding-machines,.setting-main {
+  .padding-machines,
+  .setting-main {
     position: absolute;
     top: 2.2rem;
     bottom: 3rem;
@@ -134,6 +135,17 @@
     }
   }
 
+  .read-box {
+    width: 3.5rem;
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.75rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
   .version-review {
     background-color: #f8f9fc;
     height: 100%;
@@ -188,17 +200,6 @@
         img {
           width: 0.6rem;
         }
-      }
-    }
-
-    .read-box {
-      width: 3.5rem;
-      position: absolute;
-      right: 0.75rem;
-      bottom: 0.75rem;
-
-      img {
-        width: 100%;
       }
     }
 
@@ -1528,7 +1529,7 @@
     background-color: #fff;
     position: fixed;
     width: 100%;
-    top: 2.2rem;
+    bottom: 0;
     padding: 0 0.75rem;
     box-sizing: border-box;
     z-index: 1000;

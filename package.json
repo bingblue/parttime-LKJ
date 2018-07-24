@@ -54,6 +54,10 @@
       ]
     }
   },
+  "browserslist": [
+    "Android > 7",
+    "iOS > 10"
+  ],
   "readme": "ERROR: No README data found!",
   "devDependencies": {
     "browser-sync": "^2.24.5",
