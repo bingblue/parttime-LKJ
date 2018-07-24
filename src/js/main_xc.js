@@ -385,14 +385,27 @@ $(function () {
     addReadEvent () {
       var $read = $('#read')
       $read.click(function () {
-        $(this).parent().siblings('.version-info,.version-mark').show()
+        if ($(this).hasClass('active')) {
+          close()
+          $(this).removeClass('active')
+        } else {
+          open()
+          $(this).addClass('active')
+        }
+      })
+      var open = function () {
+        $('.version-info,.version-mark').show()
         $('.comm-des img').addClass('active')
         $('.signal-bluetooth-box').hide()
-      })
-      $('.version-mark,.comm-des').click(function () {
+      }
+      var close = function () {
         $('.version-mark, .version-info').hide()
         $('.comm-des img').removeClass('active')
         $('.signal-bluetooth-box').show()
+        $('#read').removeClass('active')
+      }
+      $('.version-mark').click(function () {
+        close()
       })
     },
     /**

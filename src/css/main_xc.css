@@ -13,7 +13,7 @@
   }
 
 .xc-body.dressup .wrap {
-      background: #f8f9fc url('/img/dressup-bg.png') no-repeat;
+      background: #f8f9fc url('../img/dressup-bg.png') no-repeat;
       background-size: 100% 8rem;
 }
 
@@ -22,8 +22,8 @@
 }
 
 .xc-body .padding-review {
-    top: 35.2px;
-    top: 2.2rem;
+    top: 34.72px;
+    top: 2.17rem;
     bottom: 76px;
     bottom: 4.75rem;
     position: absolute;
@@ -84,7 +84,7 @@
 }
 
 .xc-body .wrap.login-wrap {
-    background: #fff url('/img/login-bg.png') bottom no-repeat;
+    background: #fff url('../img/login-bg.png') bottom no-repeat;
     background-size: contain;
 }
 
@@ -108,6 +108,8 @@
       .xc-body .wrap.login-wrap .login-form input {
         width: 100%;
         display: inline-block;
+        background-color: none;
+        outline: none;
       }
 
 .xc-body .wrap.login-wrap .login-form label {
@@ -746,8 +748,8 @@
 
 .xc-body .dressup-index-box .tips .tip.on,
         .xc-body .dressup-index-box .tips .tip.no {
-  background: url(/img/footer-dress.png) no-repeat 41.6px 22.4px;
-  background: url(/img/footer-dress.png) no-repeat 2.6rem 1.4rem;
+  background: url(../img/footer-dress.png) no-repeat 41.6px 22.4px;
+  background: url(../img/footer-dress.png) no-repeat 2.6rem 1.4rem;
   background-size: 0.5rem 0.65rem;
 }
 
@@ -832,7 +834,12 @@
 
 .xc-body.review-error .comm-header,
   .xc-body.review-error .review-head {
-    background-color: #f35964 !important;
+    background: #f35964 !important;
+  }
+
+.xc-body.review-error .padding-review {
+    top: 34.72px;
+    top: 2.17rem;
   }
 
 .machines {
@@ -856,7 +863,7 @@
       color: #3a3a3a;
       font-size: 11.2px;
       font-size: 0.7rem;
-      background: url('/img/machines-nocheck.png') no-repeat left center;
+      background: url('../img/machines-nocheck.png') no-repeat left center;
       background-size: 0.75rem 0.75rem
     }
 
@@ -874,7 +881,7 @@
 }
 
 .machines .machines-info-items .machines-info-item.active {
-  background-image: url('/img/machines-check.png');
+  background-image: url('../img/machines-check.png');
 }
 
 .machines .machines-info-items .machines-info-item .machines-info-name {
@@ -1014,6 +1021,10 @@
         margin-bottom: 0.5rem;
       }
 
+.machines .machines-changeType-box .machines-change-type .machines-change-types h2 {
+          color: #727272;
+        }
+
 .machines .machines-changeType-box .machines-change-type ul li {
           border-top: 1px solid #eee;
         }
@@ -1080,12 +1091,12 @@
     padding-left: 17.6px;
     padding-left: 1.1rem;
     display: inline-block;
-    background: url('/img/machines-nocheck.png') no-repeat left center;
+    background: url('../img/machines-nocheck.png') no-repeat left center;
     background-size: 0.75rem 0.75rem
   }
 
 .machines-footer .all-btn.active {
-  background-image: url('/img/machines-check.png');
+  background-image: url('../img/machines-check.png');
 }
 
 .machines-footer .machines-btns {
@@ -1215,12 +1226,13 @@
   }
 
 .search-body .search-item.active {
-  background-color: #3990ff;
+  background: url('../img/search-item.png') no-repeat;
+  background-size: cover;
   color: #fff;
 }
 
 .search-body .search-item.condition {
-  background: url('/img/search-condition.png') no-repeat;
+  background: url('../img/search-condition.png') no-repeat;
   background-size: cover;
   color: #3895fe;
 }
@@ -1258,7 +1270,7 @@
       font-size: 0.85rem;
       padding-right: 20.8px;
       padding-right: 1.3rem;
-      background: url('/img/search-link.png') no-repeat right center;
+      background: url('../img/search-link.png') no-repeat right center;
       background-size: 0.7rem 0.85rem;
     }
 
@@ -1272,14 +1284,14 @@
     }
 
 .search-link .search-link-item.active {
-  background: url('/img/search-item-bg.png') -12px -12px no-repeat;
-  background: url('/img/search-item-bg.png') -0.75rem -0.75rem no-repeat;
+  background: url('../img/search-item-bg.png') -12px -12px no-repeat;
+  background: url('../img/search-item-bg.png') -0.75rem -0.75rem no-repeat;
   position: relative;
 }
 
 .search-link .search-link-item.active .search-link-name {
         color: #fff;
-        background-image: url('/img/search-link-active.png');
+        background-image: url('../img/search-link-active.png');
 }
 
 .search-link .search-link-item.active .search-link-tip {
@@ -1406,6 +1418,10 @@
       color: #3a3a3a;
     }
 
+.setting .setting-items .name-box.first {
+      border: none;
+    }
+
 .setting .setting-item {
     padding: 0 12px;
     padding: 0 0.75rem;
@@ -1429,6 +1445,7 @@
       width: 244.8px;
       width: 15.3rem;
       position: relative;
+      border-top: 1px solid #eee;
     }
 
 .setting .setting-item .name-box .btn-wrap {
@@ -1486,26 +1503,22 @@
         padding: 0.65rem 0;
       }
 
-.setting .setting-item + .setting-item .name-box {
-        border-top: 1px solid #eee;
-}
-
 .setting .setting-item .setting-item-img {
       width: 19.2px;
       width: 1.2rem;
       margin-right: 12px;
       margin-right: 0.75rem;
-}
+    }
 
 .setting .setting-server .setting-server-items {
       background-color: #fff;
-      margin-bottom: 8px;
-      margin-bottom: 0.5rem;
+      padding: 0 12px;
+      padding: 0 0.75rem;
     }
 
 .setting .setting-server .setting-server-items .setting-server-item {
-        padding: 12px;
-        padding: 0.75rem;
+        padding-top: 12px;
+        padding-top: 0.75rem;
       }
 
 .setting .setting-server .setting-server-items .setting-server-item .setting-server-key {
@@ -1529,6 +1542,10 @@
             margin-top: 11.2px;
             margin-top: 0.7rem;
           }
+
+.setting .setting-server .setting-server-items .setting-server-item + .setting-server-item {
+  border-top: 1px solid #eee;
+}
 
 .setting .setting-server .setting-server-items .setting-review {
         position: relative;
