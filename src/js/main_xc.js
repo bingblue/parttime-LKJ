@@ -1,4 +1,20 @@
 $(function () {
+  (function () {
+    function change () {
+      var cWidth
+      if (document.documentElement.clientWidth < 320) {
+        cWidth = 320
+      } else if (document.documentElement.clientWidth > 750) {
+        cWidth = 750
+      } else {
+        cWidth = document.documentElement.clientWidth
+      };
+      document.documentElement.style.fontSize = cWidth / 18.75 + 'px'
+    }
+    change()
+    window.addEventListener('resize', change, false)
+    window.addEventListener('DOMContentLoaded', change, false)
+  })()
   /**
    * 功能介绍,每个方法请写注释，按下面模板来写.
    * @author <作者>
@@ -12,7 +28,6 @@ $(function () {
      * 初始化
      */
     init: function () {
-      this.initFontSize()
       this.addLoginEvent()
       this.addSliderBarEvent()
       this.addReadEvent()
@@ -22,6 +37,197 @@ $(function () {
       this.addReviewBtn()
       this.addMachinesAllcheck()
       this.searchInputClose()
+      this.settingSwitch()
+      this.settingServer()
+      this.settingReview()
+      this.locations()
+      this.settingPlan()
+    },
+    /**
+     * 导入计划
+     */
+    settingPlan () {
+      $('.setting-plan .tit').on('click', function () {
+        $(this).hide()
+      })
+    },
+    /**
+     * 选择换装地点
+     */
+    locations () {
+      var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+      var $letters = $('#setting-location-letters')
+      var $letterStr = []
+      letters.forEach(function (Initials) {
+        $letterStr.push("<p class='setting-location-letter'>" + Initials + '</p>')
+      })
+      $letterStr = $letterStr.join('')
+      $letters.append($letterStr)
+      $('.setting-locations .setting-location').each(function (index, ele) {
+        var $ele = $(ele)
+        var $str = $ele.text()
+        var $Initials = ''
+        if ($str === '长沙') {
+          $Initials = HanZi_PinYin.get($str).charAt(2)
+        } else {
+          $Initials = HanZi_PinYin.get($str).charAt(0)
+        }
+        $ele.addClass($Initials)
+      })
+      $letters.find('.setting-location-letter').on('click', function () {
+        var $this = $(this)
+        var $letter = $this.text()
+        var $ele = $('.setting-locations').find('.' + $letter).eq(0)
+        var $top = $ele.length ? $ele.position().top : 0
+        var $paddingTop = $('.setting-locations').css('paddingTop')
+        $paddingTop = Number($paddingTop.substring(0, $paddingTop.length - 2))
+        $('html,body').animate({'scrollTop': ($top - $paddingTop)}, 200)
+      })
+    },
+    /**
+     * 版本复核
+     */
+    settingReview () {
+      var $box = $('.setting-review-locals-box')
+      var $locals = $('.setting-review-locals-box .setting-review-locals')
+      $box.on('click', function () {
+        $(this).hide()
+      })
+      $locals.on('click', function (event) {
+        event.stopPropagation()
+      })
+      $('.setting-review-locals-box .setting-review-local').on('click', function () {
+        var $this = $(this)
+        if (!$this.hasClass('cancel')) {
+          $('#setting-review-local').text($this.text())
+        }
+        $box.hide()
+      })
+      $('.setting .review-select').on('click', function () {
+        $box.show()
+      })
+    },
+    // 密码维护表单清空
+    settingServer () {
+      $('.setting-password-item input').on('keyup', function () {
+        var $this = $(this)
+        var $close = $this.siblings('.close-btn')
+        if ($this.val().trim()) {
+          $close.show()
+        } else {
+          $close.hide()
+        }
+        $this.siblings('.error-msg').hide()
+      })
+      $('.setting-password-item .close-btn').on('click', function () {
+        var $this = $(this)
+        $this.siblings('input').val('')
+        $this.hide()
+      })
+      /**
+       * 密码修改保存
+       */
+      $('#passwordSave').on('click', function () {
+        var $confrimpassword = $('#confrimpassword').val()
+        var $password = $('#password').val()
+        if ($confrimpassword.length !== 6 || $password.length !== 6) {
+          console.log('请设置6位密码！')
+          return false
+        }
+        if ($confrimpassword !== $password) {
+          $('#comfirm-error-msg').show().siblings('.close-btn').hide()
+        } else {
+          // 请求数据判断旧密码是否正确
+        }
+        $('#old-error-msg').show().siblings('.close-btn').hide()
+      })
+      /**
+       * 服务器设置错误弹窗
+       */
+      $('.setting-server .setting-server-error').on('click', function () {
+        $(this).hide()
+      })
+    },
+    /**
+     * 验证授权
+     */
+    reviewPassWord ($name, func) {
+      var h = $('.setting').height() - $('.xc-body .setting-main').height()
+      if (h > 0) {
+        $('.xc-body .setting').css('marginTop', -h)
+      }
+      var fn = func || ''
+      var $verificationBox = $('.setting .verification-password-box')
+      $('#verification-password #verification-name').text($name)
+      $verificationBox.show()
+      $('#verification-password-input').focus()
+      $('#verification-password-input').on('keyup', function () {
+        var $length = $(this).val().length
+        $('#verification-password .verification-password-item').removeClass('active')
+        $('#verification-password .verification-password-item:lt(' + $length + ')').addClass('active')
+        if ($length === 6) {
+          // 进行验证 这里未进行验证直接进入下一步
+          $('.verification-cancel').click()
+          $('#verification-password-input').off('keyup')
+          fn && fn()
+        }
+      })
+    },
+    /**
+     * 设置页面相关事件
+     */
+    settingSwitch () {
+      var that = this
+      // 右侧开关
+      $('.setting .name-box .btn-wrap').on('click', function () {
+        var $this = $(this)
+        if ($this.hasClass('verification')) {
+          var $name = $this.siblings('span').text()
+          that.reviewPassWord($name, function () {
+            if ($this.hasClass('active')) {
+              $this.removeClass('active')
+            } else {
+              $this.addClass('active')
+            }
+          })
+        } else {
+          if ($this.hasClass('active')) {
+            $this.removeClass('active')
+          } else {
+            $this.addClass('active')
+          }
+        }
+      })
+      // 链接的验证
+      var $verificationBox = $('.setting .verification-password-box')
+      $('.setting .setting-items .href').on('click', function (event) {
+        event.preventDefault()
+        var $this = $(this)
+        var $href = $this.attr('href') // 记录应该跳转的链接
+        if (!$this.hasClass('verification')) {
+          window.location.href = $href
+        } else {
+          var $name = $this.find('.name-box span').text()
+          that.reviewPassWord($name, function () {
+            window.location.href = $href
+          })
+        }
+      })
+      $verificationBox.on('click', function () {
+        $(this).hide()
+        $('#verification-password .verification-password-item').removeClass('active')
+        $('#verification-password-input').val('').blur()
+        $('.xc-body .setting').css('marginTop', 0)
+      })
+      $('.verification-cancel').on('click', function () {
+        $verificationBox.hide()
+        $('#verification-password .verification-password-item').removeClass('active')
+        $('#verification-password-input').val('').blur()
+        $('.xc-body .setting').css('marginTop', 0)
+      })
+      $('.verification-password').on('click', function (event) {
+        event.stopPropagation()
+      })
     },
     /**
      * 搜索页面表单清除
@@ -127,14 +333,34 @@ $(function () {
      * 添加复核删除确认删除事件
      */
     addReviewDelete () {
-      $('.review-info-box .review-info-item').click(function () {
-        var $this = $(this)
-        if ($this.hasClass('active')) {
-          $this.removeClass('active').find('.item-delete').removeClass('active').html('删除')
-        } else {
-          $this.addClass('active').siblings().removeClass('active').find('.item-delete').removeClass('active').html('删除')
+      var $ele = $('.review-info-box .review-info-item')
+      var startX = 0
+      var startY = 0
+      var endX = 0
+      var endY = 0
+      var distanceX = 0
+      var distanceY
+      $ele.bind('touchstart', function (e) {
+        startX = e.originalEvent.changedTouches[0].pageX
+        startY = e.originalEvent.changedTouches[0].pageY
+      })
+      $ele.bind('touchend', function (e) {
+        // 获取滑动屏幕时的X,Y
+        endX = e.originalEvent.changedTouches[0].pageX
+        endY = e.originalEvent.changedTouches[0].pageY
+        // 获取滑动距离
+        distanceX = endX - startX
+        distanceY = endY - startY
+        // 判断滑动方向
+        if (Math.abs(distanceX) > Math.abs(distanceY) && distanceX > 50) {
+          $(this).removeClass('active').find('.item-delete').removeClass('active').html('删除')
+        } else if (Math.abs(distanceX) > Math.abs(distanceY) && distanceX < -50) {
+          $(this).addClass('active').siblings().removeClass('active').find('.item-delete').removeClass('active').html('删除')
         }
       })
+      /**
+       * 确认删除
+       */
       $('.review-info-box .review-info-item .item-delete').click(function () {
         var $this = $(this)
         if ($this.hasClass('active')) {
@@ -159,14 +385,27 @@ $(function () {
     addReadEvent () {
       var $read = $('#read')
       $read.click(function () {
-        $(this).parent().siblings('.version-info,.version-mark').show()
+        if ($(this).hasClass('active')) {
+          close()
+          $(this).removeClass('active')
+        } else {
+          open()
+          $(this).addClass('active')
+        }
+      })
+      var open = function () {
+        $('.version-info,.version-mark').show()
         $('.comm-des img').addClass('active')
         $('.signal-bluetooth-box').hide()
-      })
-      $('.version-mark,.comm-des').click(function () {
+      }
+      var close = function () {
         $('.version-mark, .version-info').hide()
         $('.comm-des img').removeClass('active')
         $('.signal-bluetooth-box').show()
+        $('#read').removeClass('active')
+      }
+      $('.version-mark').click(function () {
+        close()
       })
     },
     /**
@@ -208,25 +447,6 @@ $(function () {
           $this.removeClass('active')
         }
       })
-    },
-    /**
-     * 初始化根目录节点
-     */
-    initFontSize: function () {
-      function change () {
-        var cWidth
-        if (document.documentElement.clientWidth < 320) {
-          cWidth = 320
-        } else if (document.documentElement.clientWidth > 750) {
-          cWidth = 750
-        } else {
-          cWidth = document.documentElement.clientWidth
-        };
-        document.documentElement.style.fontSize = cWidth / 18.75 + 'px'
-      }
-      change()
-      window.addEventListener('resize', change, false)
-      window.addEventListener('DOMContentLoaded', change, false)
     },
     addScrollPrev: function () {
       $('.version-review,.review-info-box,.review-box,.padding-machines').on('scroll', function (event) {

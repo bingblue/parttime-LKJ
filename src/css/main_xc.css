@@ -13,7 +13,7 @@
   }
 
 .xc-body.dressup .wrap {
-      background: #f8f9fc url('/img/dressup-bg.png') no-repeat;
+      background: #f8f9fc url('../img/dressup-bg.png') no-repeat;
       background-size: 100% 8rem;
 }
 
@@ -22,20 +22,25 @@
 }
 
 .xc-body .padding-review {
-    top: 35.2px;
-    top: 2.2rem;
+    top: 34.72px;
+    top: 2.17rem;
     bottom: 76px;
     bottom: 4.75rem;
     position: absolute;
 }
 
-.xc-body .padding-machines {
+.xc-body .padding-machines,.xc-body .setting-main {
     position: absolute;
     top: 35.2px;
     top: 2.2rem;
     bottom: 48px;
     bottom: 3rem;
     overflow-y: scroll;
+}
+
+.xc-body .setting-main {
+    bottom: 0;
+    background-color: #f8f9fc;
 }
 
 .xc-body .padding-machinesdetail {
@@ -79,7 +84,7 @@
 }
 
 .xc-body .wrap.login-wrap {
-    background: #fff url('/img/login-bg.png') bottom no-repeat;
+    background: #fff url('../img/login-bg.png') bottom no-repeat;
     background-size: contain;
 }
 
@@ -103,6 +108,8 @@
       .xc-body .wrap.login-wrap .login-form input {
         width: 100%;
         display: inline-block;
+        background-color: none;
+        outline: none;
       }
 
 .xc-body .wrap.login-wrap .login-form label {
@@ -344,8 +351,8 @@
       }
 
 .xc-body .version-review .review-info-box .review-info-item .item-time {
-          width: 108px;
-          width: 6.75rem;
+          width: 100px;
+          width: 6.25rem;
         }
 
 .xc-body .version-review .review-info-box .review-info-item .item-name {
@@ -354,8 +361,8 @@
         }
 
 .xc-body .version-review .review-info-box .review-info-item .item-oper {
-          width: 48px;
-          width: 3rem;
+          width: 56px;
+          width: 3.5rem;
           text-align: right;
           margin-right: 12px;
           margin-right: 0.75rem;
@@ -741,8 +748,8 @@
 
 .xc-body .dressup-index-box .tips .tip.on,
         .xc-body .dressup-index-box .tips .tip.no {
-  background: url(/img/footer-dress.png) no-repeat 41.6px 22.4px;
-  background: url(/img/footer-dress.png) no-repeat 2.6rem 1.4rem;
+  background: url(../img/footer-dress.png) no-repeat 41.6px 22.4px;
+  background: url(../img/footer-dress.png) no-repeat 2.6rem 1.4rem;
   background-size: 0.5rem 0.65rem;
 }
 
@@ -827,7 +834,12 @@
 
 .xc-body.review-error .comm-header,
   .xc-body.review-error .review-head {
-    background-color: #f35964 !important;
+    background: #f35964 !important;
+  }
+
+.xc-body.review-error .padding-review {
+    top: 34.72px;
+    top: 2.17rem;
   }
 
 .machines {
@@ -851,7 +863,7 @@
       color: #3a3a3a;
       font-size: 11.2px;
       font-size: 0.7rem;
-      background: url('/img/machines-nocheck.png') no-repeat left center;
+      background: url('../img/machines-nocheck.png') no-repeat left center;
       background-size: 0.75rem 0.75rem
     }
 
@@ -869,7 +881,7 @@
 }
 
 .machines .machines-info-items .machines-info-item.active {
-  background-image: url('/img/machines-check.png');
+  background-image: url('../img/machines-check.png');
 }
 
 .machines .machines-info-items .machines-info-item .machines-info-name {
@@ -1009,6 +1021,10 @@
         margin-bottom: 0.5rem;
       }
 
+.machines .machines-changeType-box .machines-change-type .machines-change-types h2 {
+          color: #727272;
+        }
+
 .machines .machines-changeType-box .machines-change-type ul li {
           border-top: 1px solid #eee;
         }
@@ -1075,12 +1091,12 @@
     padding-left: 17.6px;
     padding-left: 1.1rem;
     display: inline-block;
-    background: url('/img/machines-nocheck.png') no-repeat left center;
+    background: url('../img/machines-nocheck.png') no-repeat left center;
     background-size: 0.75rem 0.75rem
   }
 
 .machines-footer .all-btn.active {
-  background-image: url('/img/machines-check.png');
+  background-image: url('../img/machines-check.png');
 }
 
 .machines-footer .machines-btns {
@@ -1210,12 +1226,13 @@
   }
 
 .search-body .search-item.active {
-  background-color: #3990ff;
+  background: url('../img/search-item.png') no-repeat;
+  background-size: cover;
   color: #fff;
 }
 
 .search-body .search-item.condition {
-  background: url('/img/search-condition.png') no-repeat;
+  background: url('../img/search-condition.png') no-repeat;
   background-size: cover;
   color: #3895fe;
 }
@@ -1253,7 +1270,7 @@
       font-size: 0.85rem;
       padding-right: 20.8px;
       padding-right: 1.3rem;
-      background: url('/img/search-link.png') no-repeat right center;
+      background: url('../img/search-link.png') no-repeat right center;
       background-size: 0.7rem 0.85rem;
     }
 
@@ -1267,14 +1284,14 @@
     }
 
 .search-link .search-link-item.active {
-  background: url('/img/search-item-bg.png') -12px -12px no-repeat;
-  background: url('/img/search-item-bg.png') -0.75rem -0.75rem no-repeat;
+  background: url('../img/search-item-bg.png') -12px -12px no-repeat;
+  background: url('../img/search-item-bg.png') -0.75rem -0.75rem no-repeat;
   position: relative;
 }
 
 .search-link .search-link-item.active .search-link-name {
         color: #fff;
-        background-image: url('/img/search-link-active.png');
+        background-image: url('../img/search-link-active.png');
 }
 
 .search-link .search-link-item.active .search-link-tip {
@@ -1384,4 +1401,551 @@
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1;
+}
+
+.setting {
+  background-color: #f8f9fc;
+  font-size: 11.2px;
+  font-size: 0.7rem;
+}
+
+.setting .setting-items {
+    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+  }
+
+.setting .setting-items .href {
+      color: #3a3a3a;
+    }
+
+.setting .setting-items .name-box.first {
+      border: none;
+    }
+
+.setting .setting-item {
+    padding: 0 12px;
+    padding: 0 0.75rem;
+    line-height: 40px;
+    line-height: 2.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #fff;
+    overflow-y: scroll;
+  }
+
+.setting .setting-item a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      color: #3a3a3a;
+    }
+
+.setting .setting-item .name-box {
+      width: 244.8px;
+      width: 15.3rem;
+      position: relative;
+      border-top: 1px solid #eee;
+    }
+
+.setting .setting-item .name-box .btn-wrap {
+        position: absolute;
+        width: 40.8px;
+        width: 2.55rem;
+        height: 22.4px;
+        height: 1.4rem;
+        border: 0.075px solid #dbdbdb;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        border-radius: 0.7rem;
+        z-index: 999;
+        -webkit-transition: all linear 0.2s;
+        transition: all linear 0.2s;
+      }
+
+.setting .setting-item .name-box .btn-wrap .btn-inner {
+          width: 22.4px;
+          width: 1.4rem;
+          height: 22.4px;
+          height: 1.4rem;
+          border-radius: 50%;
+          background-color: #fff;
+          -webkit-box-shadow: 3px 0 2px -1px #e7e7e7;
+                  box-shadow: 3px 0 2px -1px #e7e7e7;
+          position: absolute;
+          right: 18.4px;
+          right: 1.15rem;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          z-index: 998;
+          -webkit-transition: all linear 0.2s;
+          transition: all linear 0.2s;
+        }
+
+.setting .setting-item .name-box .btn-wrap.active {
+  background-color: #4cd864;
+  border-color: #4cd864;
+}
+
+.setting .setting-item .name-box .btn-wrap.active .btn-inner {
+            right: 1.2px;
+            right: 0.075rem;
+}
+
+.setting .setting-item .name-box .right {
+        width: 7.2px;
+        width: 0.45rem;
+        float: right;
+        padding: 10.4px 0;
+        padding: 0.65rem 0;
+      }
+
+.setting .setting-item .setting-item-img {
+      width: 19.2px;
+      width: 1.2rem;
+      margin-right: 12px;
+      margin-right: 0.75rem;
+    }
+
+.setting .setting-server .setting-server-items {
+      background-color: #fff;
+      padding: 0 12px;
+      padding: 0 0.75rem;
+    }
+
+.setting .setting-server .setting-server-items .setting-server-item {
+        padding-top: 12px;
+        padding-top: 0.75rem;
+      }
+
+.setting .setting-server .setting-server-items .setting-server-item .setting-server-key {
+          font-size: 10.4px;
+          font-size: 0.65rem;
+          line-height: 1;
+          color: #727272;
+        }
+
+.setting .setting-server .setting-server-items .setting-server-item .setting-server-val {
+          line-height: 34.4px;
+          line-height: 2.15rem;
+          color: #3a3a3a;
+        }
+
+.setting .setting-server .setting-server-items .setting-server-item .setting-server-val .close,
+          .setting .setting-server .setting-server-items .setting-server-item .setting-server-val .review-select {
+            float: right;
+            width: 12px;
+            width: 0.75rem;
+            margin-top: 11.2px;
+            margin-top: 0.7rem;
+          }
+
+.setting .setting-server .setting-server-items .setting-server-item + .setting-server-item {
+  border-top: 1px solid #eee;
+}
+
+.setting .setting-server .setting-server-items .setting-review {
+        position: relative;
+      }
+
+.setting .setting-server .setting-server-items .setting-review .setting-review-btn {
+          position: absolute;
+          width: 60px;
+          width: 3.75rem;
+          line-height: 16px;
+          line-height: 1rem;
+          color: #3895fe;
+          border-radius: 1rem;
+          text-align: center;
+          border: 0.8px solid #3895fe;
+          border: 0.05rem solid #3895fe;
+          font-size: 10.4px;
+          font-size: 0.65rem;
+          right: 12px;
+          right: 0.75rem;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%);
+        }
+
+.setting .setting-server .setting-server-items .setting-review .setting-review-btn a {
+            color: #3895fe;
+          }
+
+.setting .setting-server .setting-server-error {
+      position: fixed;
+      background-color: rgba(0, 0, 0, .6);
+      color: #fff;
+      width: 237.6px;
+      width: 14.85rem;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      font-size: 13.6px;
+      font-size: 0.85rem;
+      padding: 0 24px;
+      padding: 0 1.5rem;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      line-height: 24px;
+      line-height: 1.5rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+.setting .setting-server .setting-review-locals-box {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, .2);
+      display: none;
+    }
+
+.setting .setting-server .setting-review-locals-box .setting-review-locals {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        line-height: 48px;
+        line-height: 3rem;
+      }
+
+.setting .setting-server .setting-review-locals-box .setting-review-locals .setting-review-local {
+          padding: 0 12px;
+          padding: 0 0.75rem;
+          background-color: #fff
+        }
+
+.setting .setting-server .setting-review-locals-box .setting-review-locals .setting-review-local + .setting-review-local {
+  border-top: 1px solid #eee;
+}
+
+.setting .setting-server .setting-review-locals-box .setting-review-locals .setting-review-local.cancel {
+  margin-top: 8px;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.setting .setting-password {
+    background-color: #fff;
+    padding: 0 12px;
+    padding: 0 0.75rem;
+  }
+
+.setting .setting-password .setting-password-item {
+      padding: 12px 0 0 0;
+      padding: 0.75rem 0 0 0;
+      position: relative;
+    }
+
+.setting .setting-password .setting-password-item .close-btn {
+        position: absolute;
+        right: 0;
+        width: 8px;
+        width: 0.5rem;
+        bottom: 8px;
+        bottom: 0.5rem;
+        display: none;
+      }
+
+.setting .setting-password .setting-password-item + .setting-password-item {
+  border-top: 1px solid #eee;
+}
+
+.setting .setting-password .setting-password-item .label {
+        display: block;
+        line-height: 1;
+        color: #727272;
+}
+
+.setting .setting-password .setting-password-item .input {
+        border: none;
+        background: none;
+        line-height: 24px;
+        line-height: 1.5rem;
+        height: 24px;
+        height: 1.5rem;
+        width: 100%;
+        color: #3a3a3a;
+}
+
+.setting .setting-password .setting-password-item .error-msg {
+        position: absolute;
+        right: 0;
+        color: #fd5881;
+        top: 23.2px;
+        top: 1.45rem;
+        display: none;
+}
+
+.setting .setting-locations {
+    background-color: #fff;
+    padding: 35.2px 12px 0;
+    padding: 2.2rem 0.75rem 0;
+  }
+
+.setting .setting-locations .setting-location {
+      line-height: 40px;
+      line-height: 2.5rem;
+      color: #3a3a3a;
+      font-size: 11.2px;
+      font-size: 0.7rem
+    }
+
+.setting .setting-locations .setting-location + .setting-location {
+  border-top: #eee solid 1px;
+}
+
+.setting .setting-location-letters {
+    position: fixed;
+    top: 50%;
+    width: 9.6px;
+    width: 0.6rem;
+    right: 3.2px;
+    right: 0.2rem;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    font-size: 9.6px;
+    font-size: 0.6rem;
+    line-height: 12px;
+    line-height: 0.75rem;
+    color: #007aff;
+    font-weight: 400;
+    text-align: center;
+  }
+
+.setting .setting-plan .setting-plan-choose {
+      background-color: #fff;
+      margin-bottom: 8px;
+      margin-bottom: 0.5rem;
+      padding: 12px;
+      padding: 0.75rem;
+    }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-head {
+        font-size: 10.4px;
+        font-size: 0.65rem;
+        color: #727272;
+      }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-body {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+      }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-body .plan-choose-name {
+          color: #3a3a3a;
+          font-weight: 400;
+        }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-body .plan-choose-select {
+          width: 11.2px;
+          width: 0.7rem;
+        }
+
+.setting .setting-plan .plan-choose-btn {
+      background-color: #fff;
+      line-height: 32px;
+      line-height: 2rem;
+      text-align: center;
+      color: #3895fe;
+    }
+
+.setting .setting-plan .tit {
+      background-color: #7c7c7e;
+      display: inline-block;
+      white-space: nowrap;
+      position: fixed;
+      line-height: 32px;
+      line-height: 2rem;
+      border-radius: 2rem;
+      color: #fff;
+      padding: 0 24.8px;
+      padding: 0 1.55rem;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+
+.setting-version .setting-version-logo {
+    width: 52px;
+    width: 3.25rem;
+    margin: 78.4px auto 16px;
+    margin: 4.9rem auto 1rem;
+  }
+
+.setting-version .setting-version-name {
+    text-align: center;
+    color: #3a3a3a;
+    line-height: 16px;
+    line-height: 1rem;
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+  }
+
+.setting-version .setting-version-des {
+    width: 240px;
+    width: 15rem;
+    margin: 0 auto;
+    font-size: 11.2px;
+    font-size: 0.7rem;
+    color: #727272;
+    line-height: 16px;
+    line-height: 1rem;
+  }
+
+.setting-version .setting-version-codes {
+    position: fixed;
+    bottom: 32px;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    color: #d5d5d5;
+    font-size: 8.8px;
+    font-size: 0.55rem;
+    text-align: center;
+    line-height: 16px;
+    line-height: 1rem;
+  }
+
+.setting-version .setting-version-codes .company {
+      color: #727272;
+      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
+    }
+
+.setting-help {
+  padding: 47.2px 12px 12px;
+  padding: 2.95rem 0.75rem 0.75rem;
+  color: #3a3a3a;
+  font-size: 11.2px;
+  font-size: 0.7rem;
+  line-height: 16px;
+  line-height: 1rem;
+}
+
+.setting-help .setting-help-item {
+    margin-top: 12px;
+    margin-top: 0.75rem;
+  }
+
+.setting-help .setting-help-item .setting-help-step {
+      line-height: 19.2px;
+      line-height: 1.2rem;
+    }
+
+.setting-help .setting-help-item .setting-help-step .head {
+        font-weight: 700;
+      }
+
+.setting-help .setting-help-item .hold {
+      color: #3895fe;
+    }
+
+.setting-help .setting-help-item.des {
+  color: #727272;
+}
+
+.verification-password-box {
+  position: fixed;
+  background-color: rgba(0, 0, 0, .2);
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 99999;
+  display: none;
+}
+
+.verification-password-box .verification-password {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 35.2px;
+    top: 2.2rem;
+    padding: 0 12px;
+    padding: 0 0.75rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 1000;
+  }
+
+.verification-password-box .verification-password .verification-head {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      line-height: 40px;
+      line-height: 2.5rem;
+    }
+
+.verification-password-box .verification-password .verification-head .verification-name {
+        font-weight: 700;
+        font-size: 12px;
+        font-size: 0.75rem;
+        color: #3a3a3a;
+      }
+
+.verification-password-box .verification-password .verification-des {
+      text-align: center;
+      line-height: 16px;
+      line-height: 1rem;
+      margin-top: 28px;
+      margin-top: 1.75rem;
+    }
+
+.verification-password-box .verification-password .verification-password-items {
+      margin: 16px auto 32px;
+      margin: 1rem auto 2rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+
+.verification-password-box .verification-password .verification-password-items .verification-password-item {
+        width: 12px;
+        width: 0.75rem;
+        height: 12px;
+        height: 0.75rem;
+        display: inline-block;
+        border: 1px solid #000;
+        border-radius: 50%
+      }
+
+.verification-password-box .verification-password .verification-password-items .verification-password-item + .verification-password-item {
+  margin-left: 19.2px;
+  margin-left: 1.2rem;
+}
+
+.verification-password-box .verification-password .verification-password-items .verification-password-item.active {
+  background-color: #000;
+}
+
+.verification-password-input {
+  position: absolute;
+  bottom: 32px;
+  bottom: 2rem;
+  width: 200%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  left: -100%;
+  height: 16px;
+  height: 1rem;
+  z-index: 1002;
+  opacity: 0;
 }

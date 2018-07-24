@@ -48,6 +48,7 @@ $(function () {
     $(el).on('touchend', function (event) {
       touchendX = event.changedTouches[0].pageX
       let distanceX = touchendX - touchstartX
+      $('.delete-btn').html('删除')
       if (distanceX > 0) { // 左滑
         $(el).animate({
           marginLeft: '0'
@@ -108,10 +109,16 @@ $(function () {
    */
   $('.delete-btn').on('click', function () {
     let _this = this
+    $(_this).html('确认删除')
+  })
+  /**
+   * 清空消息
+   */
+  $('.deleteall-btn').click(function () {
     bomb({}, function (data) {
       console.log(data)
       if (data === '1') {
-        $(_this).parent('li').remove()
+        $('.date-txt, .msg-ul').remove()
       }
     })
   })
@@ -129,5 +136,11 @@ $(function () {
     $('.rightside').removeClass('none')
     $('.leftside').addClass('none')
     $('.left-tab').removeClass('tab-active')
+  })
+  /**
+   * 返回上一页
+   */
+  $('.deletepage-btn, .return-img').click(function () {
+    history.go(-1)
   })
 })

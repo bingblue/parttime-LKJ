@@ -22,6 +22,40 @@
   display: none;
 }
 
+.wj-msg .main {
+    padding-bottom: 68.64px;
+    padding-bottom: 4.29rem;
+  }
+
+.wj-msg .header {
+    background: -webkit-gradient(linear, left top, right top, from(#68aef1), to(#3b74ee));
+    background: linear-gradient(to right, #68aef1, #3b74ee);
+    height: 44px;
+    line-height: 44px;
+    position: relative;
+    text-align: center;
+    font-size: 27.2px;
+    font-size: 1.7rem;
+    color: #fff;
+  }
+
+.wj-msg .header .return-img {
+      width: 4%;
+      position: absolute;
+      left: 3.45%;
+      top: 8px;
+    }
+
+.wj-msg .header .deleteall-btn {
+      position: absolute;
+      right: 3.45%;
+      width: 5.3%;
+    }
+
+.wj-msg .header .deleteall-btn img {
+        width: 100%;
+      }
+
 .wj-msg .date-txt {
     height: 35px;
     line-height: 35px;
@@ -174,10 +208,14 @@
 
 .bomb-wp .btn-wp .cancle-btn {
       color: #727272;
+      font-size: 22.4px;
+      font-size: 1.4rem;
     }
 
 .bomb-wp .btn-wp .sure-btn {
       color: #ff3b30;
+      font-size: 22.4px;
+      font-size: 1.4rem;
     }
 
 .wj-schooltime .wrap {
@@ -185,7 +223,8 @@
   }
 
 .wj-schooltime .headtab-wp {
-    background: #3f79ee;
+    background: -webkit-gradient(linear, left top, right top, from(#68aef1), to(#3b74ee));
+    background: linear-gradient(to right, #68aef1, #3b74ee);
     height: 72px;
     height: 4.5rem;
     line-height: 72px;
@@ -193,8 +232,7 @@
     position: relative;
   }
 
-.wj-schooltime .headtab-wp .delete-btn {
-      /* width: 1.55rem; */
+.wj-schooltime .headtab-wp .deletepage-btn {
       position: absolute;
       width: 4.26%;
       left: 4%;
