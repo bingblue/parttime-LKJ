@@ -108,6 +108,9 @@ $(function () {
    * 点击删除
    */
   $('.delete-btn').on('click', function () {
+    if ($(this).html() === '确认删除') {
+      $(this).parents('li').remove()
+    }
     let _this = this
     $(_this).html('确认删除')
   })
