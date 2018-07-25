@@ -113,6 +113,10 @@ $(function () {
         var $this = $(this)
         var $close = $this.siblings('.close-btn')
         if ($this.val().trim()) {
+          if ($this.hasClass('in') && $this.val().length === 6) {
+            $close.hide()
+            return false
+          }
           $close.show()
         } else {
           $close.hide()
@@ -135,11 +139,12 @@ $(function () {
           return false
         }
         if ($confrimpassword !== $password) {
-          $('#comfirm-error-msg').show().siblings('.close-btn').hide()
+          $('#comfirm-error-msg').show()
         } else {
           // 请求数据判断旧密码是否正确
         }
-        $('#old-error-msg').show().siblings('.close-btn').hide()
+        $('#old-error-msg').show()
+        $('.close-btn').hide()
       })
       /**
        * 服务器设置错误弹窗
@@ -244,7 +249,7 @@ $(function () {
       })
       $close.on('click', function () {
         $(this).hide()
-        $input.val('')
+        $input.val('').focus()
       })
     },
     /**
@@ -435,7 +440,7 @@ $(function () {
         }
       })
       $close.click(function () {
-        $reviewDom.val('')
+        $reviewDom.val('').focus()
         $(this).hide(200)
       })
       $user.keyup(function () {
