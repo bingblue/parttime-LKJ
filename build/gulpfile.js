@@ -49,13 +49,13 @@ gulp.task('standard', () => {
 gulp.task('stylelint', ()=> {
   return gulp.src(config.css.src)
     .pipe(stylelint({
-      fix: true,
+      fix: false,
       failAfterError: false,
       reporters: [
         {formatter: 'string', console: true}
       ]
     }))
-    .pipe(gulp.dest('../src/less'))
+    //.pipe(gulp.dest('../src/less'))
 })
 /*
  * 生成HTML
