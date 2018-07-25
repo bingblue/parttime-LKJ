@@ -37,16 +37,16 @@
     color: #fff;
 
     .return-img {
-      width: 4%;
+      width: 3%;
       position: absolute;
       left: 3.45%;
-      top: 8px;
+      top: 12px;
     }
 
     .deleteall-btn {
       position: absolute;
       right: 3.45%;
-      width: 5.3%;
+      width: 4.3%;
 
       img {
         width: 100%;
@@ -60,6 +60,7 @@
     background: #f8f9fc;
     text-align: center;
     font-size: 1.2rem;
+    color: #c0bfbf;
   }
 
   .msg-ul {
@@ -70,12 +71,11 @@
       font-size: 1.4rem;
       overflow: hidden;
       width: 100%;
-      border-bottom: 1px solid #eee;
       position: relative;
     }
 
     .left-title {
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.2rem;
       color: #3a3a3a;
     }
 
@@ -96,19 +96,25 @@
     vertical-align: text-top;
   }
 
+  .warn2-icon {
+    width: 1.4rem;
+  }
+
   .li-wp-fa {
     display: inline-block;
     width: 100%;
     background: #fff;
     position: relative;
-    height: 7.5rem;
+    /* height: 7.5rem; */
     z-index: 1;
   }
 
   .list-wp {
     width: 92%;
-    padding-top: 1.7rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     margin: 0 auto;
+    border-bottom: 1px solid #eee;
   }
 
   .delete-btn {
@@ -299,6 +305,10 @@
       padding-top: 2.5rem;
       margin: 0 auto;
       border-bottom: 1px solid #eee;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
     }
 
     .li-title {
