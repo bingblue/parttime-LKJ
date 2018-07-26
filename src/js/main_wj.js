@@ -66,7 +66,7 @@ $(function () {
             }
           })
           $(this).animate({
-            marginLeft: '-8.9rem'
+            marginLeft: '-4.45rem'
           }, 500)
           $(this).data('canslide', 2)
         } else if (canslide === 2) {
