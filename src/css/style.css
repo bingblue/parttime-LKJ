@@ -209,10 +209,10 @@ audio {
   z-index: 900;
   box-shadow: 0 2px 2px 3px #f5f5f5;
 }
-.comm-footer.wj {
+/* .comm-footer.wj {
   font-size: 0.916rem;
   padding: 0.35rem 1.25rem;
-}
+} */
 .comm-footer .footer-item {
   width: 20%;
   text-align: center;
@@ -241,7 +241,7 @@ audio {
 .comm-footer .footer-item img.cw {
   width: 0.8rem
 }
-.comm-footer.wj .footer-item {
+/* .comm-footer.wj .footer-item {
   width: 20%;
   text-align: center;
   display: inline-block;
@@ -251,8 +251,8 @@ audio {
       -ms-flex: 1;
           flex: 1;
   position: relative;
-}
-.comm-footer.wj .footer-item .tit{
+} */
+/* .comm-footer.wj .footer-item .tit{
   width: 0.415rem;
   position: absolute;
   right: 1.66rem;
@@ -262,7 +262,7 @@ audio {
 .comm-footer.wj .footer-item img {
   width: 1.66rem;
   height: 1.66rem;
-}
+} */
 .comm-footer .footer-item a {
   color: #a0a9ae;
 }
