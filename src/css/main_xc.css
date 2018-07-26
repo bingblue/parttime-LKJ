@@ -1237,12 +1237,16 @@
 
 .setting .setting-server .setting-server-items {
       background-color: #fff;
-      padding: 0 0.75rem;
+      padding: 0 0.75rem
     }
+
+.setting .setting-server .setting-server-items.one {
+  margin-bottom: 0.5rem;
+}
 
 .setting .setting-server .setting-server-items .setting-server-item {
         padding-top: 0.75rem;
-      }
+}
 
 .setting .setting-server .setting-server-items .setting-server-item .setting-server-key {
           font-size: 0.65rem;
@@ -1268,7 +1272,7 @@
 
 .setting .setting-server .setting-server-items .setting-review {
         position: relative;
-      }
+}
 
 .setting .setting-server .setting-server-items .setting-review .setting-review-btn {
           position: absolute;
