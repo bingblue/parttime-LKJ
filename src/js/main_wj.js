@@ -76,39 +76,17 @@ $(function () {
     })
   }
   leftslideDelete('.msg-ul .li-wp-fa')
-  // $('.msg-ul .li-wp-fa').on('touchend', function (event) {
-  //   touchendX = event.changedTouches[0].pageX
-  //   let distanceX = touchendX - touchstartX
-  //   if (distanceX > 0) { // 左滑
-  //     $('.msg-ul .li-wp-fa').animate({
-  //       marginLeft: '0'
-  //     }, 500)
-  //     if ($(this).parent('li').index() === lastindex) {
-  //       $(this).addClass('candelete')
-  //     }
-  //   } else if (distanceX < 0 && Math.abs(distanceX) > 50) { // 右滑
-  //     if ($(this).parent('li').index() !== lastindex) {
-  //       $('.msg-ul li').eq(lastindex).find('.li-wp-fa').animate({
-  //         marginLeft: '0'
-  //       }, 500)
-  //       lastindex = $(this).parent('li').index()
-  //       // console.log('lastindex' + lastindex)
-  //       $(this).animate({
-  //         marginLeft: '-8.9rem'
-  //       }, 500)
-  //     } else if ($(this).hasClass('candelete')) {
-  //       $(this).animate({
-  //         marginLeft: '-8.9rem'
-  //       }, 500)
-  //     }
-  //   }
-  // })
 
   /**
    * 点击删除
    */
   $('.delete-btn').on('click', function () {
     if ($(this).html() === '确认删除') {
+      let len = $(this).parents('.msg-ul').find('li').length
+      len = len - 1
+      if (!len) {
+        $(this).parents('ul').prev('.date-txt').remove()
+      }
       $(this).parents('li').remove()
     }
     let _this = this
