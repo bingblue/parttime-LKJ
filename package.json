@@ -17,7 +17,8 @@
       "JQuery",
       "methods",
       "utils",
-      "FileReader"
+      "FileReader",
+      "HanZi_PinYin"
     ],
     "ignore": [
       "src/js/jquery-2.1.4.min.js"

@@ -144,6 +144,6 @@ $(function () {
    * 返回上一页
    */
   $('.deletepage-btn, .return-img').click(function () {
-    history.go(-1)
+    window.history.go(-1)
   })
 })
