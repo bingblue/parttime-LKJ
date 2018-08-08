@@ -42,11 +42,53 @@ $(function () {
       this.settingReview()
       this.locations()
       this.settingPlan()
+      this.selectLoad()
+    },
+    selectLoad: function () {
+      var startX = 0
+      var startY = 0
+      var endX = 0
+      var endY = 0
+      var distanceX = 0
+      var distanceY = 0
+      var isAjax = false
+      $('#machines').bind('touchstart', function (e) {
+        startX = e.originalEvent.changedTouches[0].pageX
+        startY = e.originalEvent.changedTouches[0].pageY
+      })
+      $('#machines').bind('touchmove', function (e) {
+        if (isAjax) {
+          return false
+        }
+        var $this = $(this)
+        endX = e.originalEvent.changedTouches[0].pageX
+        endY = e.originalEvent.changedTouches[0].pageY
+        distanceX = endX - startX
+        distanceY = endY - startY
+        if (Math.abs(distanceX) > Math.abs(distanceY) && distanceX > 100) {
+        } else if (Math.abs(distanceX) > Math.abs(distanceY) && distanceX < -100) {
+        } else if (Math.abs(distanceX) < Math.abs(distanceY) && distanceY < 0) {
+        } else if (Math.abs(distanceX) < Math.abs(distanceY) && distanceY > 0) {
+          var scrollHeight =
+          document.body.scrollTop || document.documentElement.scrollTop
+          var mscrollHeight = $this.scrollTop()
+          console.log(scrollHeight, mscrollHeight)
+          if (!scrollHeight && !mscrollHeight) {
+            var $loading = $this.find('.machines-loading')
+            $loading.show()
+            isAjax = true
+            setTimeout(function () {
+              $loading.hide()
+              isAjax = false
+            }, 1000)
+          }
+        }
+      })
     },
     /**
      * 导入计划
      */
-    settingPlan () {
+    settingPlan: function () {
       $('.setting-plan .tit').on('click', function () {
         $(this).hide()
       })
@@ -54,7 +96,7 @@ $(function () {
     /**
      * 选择换装地点
      */
-    locations () {
+    locations: function () {
       var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
       var $letters = $('#setting-location-letters')
       var $letterStr = []
@@ -87,7 +129,7 @@ $(function () {
     /**
      * 版本复核
      */
-    settingReview () {
+    settingReview: function () {
       var $box = $('.setting-review-locals-box')
       var $locals = $('.setting-review-locals-box .setting-review-locals')
       $box.on('click', function () {
@@ -108,7 +150,7 @@ $(function () {
       })
     },
     // 密码维护表单清空
-    settingServer () {
+    settingServer: function () {
       $('.setting-password-item input').on('keyup', function () {
         var $this = $(this)
         var $close = $this.siblings('.close-btn')
@@ -156,7 +198,7 @@ $(function () {
     /**
      * 验证授权
      */
-    reviewPassWord ($name, func) {
+    reviewPassWord: function ($name, func) {
       var h = $('.setting').height() - $('.xc-body .setting-main').height()
       if (h > 0) {
         $('.xc-body .setting').css('marginTop', -h)
@@ -181,7 +223,7 @@ $(function () {
     /**
      * 设置页面相关事件
      */
-    settingSwitch () {
+    settingSwitch: function () {
       var that = this
       // 右侧开关
       $('.setting .name-box .btn-wrap').on('click', function () {
@@ -237,7 +279,7 @@ $(function () {
     /**
      * 搜索页面表单清除
      */
-    searchInputClose () {
+    searchInputClose: function () {
       var $close = $('.search-header .search-close')
       var $input = $('.search-header .search-input')
       $input.on('keyup', function () {
@@ -255,7 +297,7 @@ $(function () {
     /**
      * 机车列表全选
      */
-    addMachinesAllcheck () {
+    addMachinesAllcheck: function () {
       var $infoItem = $('.machines .machines-info-item')
       var $allBtn = $('.machines-footer .all-btn')
       $infoItem.on('click', function () {
@@ -308,7 +350,7 @@ $(function () {
     /**
      * 复核 confirm 弹窗
      */
-    addReviewBtn () {
+    addReviewBtn: function () {
       $('.review-footer .btn-primary').on('click', function () {
         $('.review-box .review-error-btn').show()
       })
@@ -337,7 +379,7 @@ $(function () {
     /**
      * 添加复核删除确认删除事件
      */
-    addReviewDelete () {
+    addReviewDelete: function () {
       var $ele = $('.review-info-box .review-info-item')
       var startX = 0
       var startY = 0
@@ -379,7 +421,7 @@ $(function () {
     /**
      * 关闭清空版本复核阴影
      */
-    addReviewmkEvent () {
+    addReviewmkEvent: function () {
       $('.review-info-mark').click(function () {
         $(this).hide().siblings('.review-clearBtn').hide()
       })
@@ -387,7 +429,7 @@ $(function () {
     /**
      * 添加读取事件
      */
-    addReadEvent () {
+    addReadEvent: function () {
       var $read = $('#read')
       $read.click(function () {
         if ($(this).hasClass('active')) {
@@ -416,7 +458,7 @@ $(function () {
     /**
      * 添加侧边栏事件
      */
-    addSliderBarEvent () {
+    addSliderBarEvent: function () {
       $('.comm-header .comm-operating').click(function () {
         $('body').addClass('slider-bar-open')
       })
@@ -427,7 +469,7 @@ $(function () {
     /**
      * 添加登录页面的一些事件
      */
-    addLoginEvent () {
+    addLoginEvent: function () {
       var $reviewDom = $('#review')
       var $user = $('#user')
       var $close = $reviewDom.siblings('.login-input-close')
