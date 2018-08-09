@@ -1,20 +1,4 @@
 $(function () {
-  (function () {
-    function change () {
-      var cWidth
-      if (document.documentElement.clientWidth < 320) {
-        cWidth = 320
-      } else if (document.documentElement.clientWidth > 750) {
-        cWidth = 750
-      } else {
-        cWidth = document.documentElement.clientWidth
-      };
-      document.documentElement.style.fontSize = cWidth / 18.75 + 'px'
-    }
-    change()
-    window.addEventListener('resize', change, false)
-    window.addEventListener('DOMContentLoaded', change, false)
-  })()
   /**
    * 功能介绍,每个方法请写注释，按下面模板来写.
    * @author <作者>
