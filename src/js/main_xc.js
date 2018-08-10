@@ -286,6 +286,9 @@ $(function () {
       var $allBtn = $('.machines-footer .all-btn')
       $infoItem.on('click', function () {
         var $this = $(this)
+        if ($this.hasClass('not')) {
+          return false
+        }
         if ($this.hasClass('disabled')) {
           return false
         }
