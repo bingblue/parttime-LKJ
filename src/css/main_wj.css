@@ -27,6 +27,8 @@
   }
 
 .wj-msg .header {
+    background: -webkit-gradient(linear, left top, right top, from(#68aef1), to(#3b74ee));
+    background: -webkit-linear-gradient(left, #68aef1, #3b74ee);
     background: linear-gradient(to right, #68aef1, #3b74ee);
     height: 2.2rem;
     line-height: 2.2rem;
@@ -204,6 +206,8 @@
   }
 
 .wj-schooltime .headtab-wp {
+    background: -webkit-gradient(linear, left top, right top, from(#68aef1), to(#3b74ee));
+    background: -webkit-linear-gradient(left, #68aef1, #3b74ee);
     background: linear-gradient(to right, #68aef1, #3b74ee);
     height: 2.2rem;
     line-height: 2.2rem;

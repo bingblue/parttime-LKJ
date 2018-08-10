@@ -35,6 +35,8 @@
   font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
   overflow: hidden;
   position: relative;
+  -webkit-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
   transition: all linear 0.2s;
 }
 .wrap-color{
@@ -95,7 +97,8 @@ audio {
 .music-ani {
   -webkit-transform-origin: 50% 50%;
   /*linear,ease,ease-in,ease-in-out,ease-out*/
-  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-name: "music-ani";
   /*动画持续时间*/
   -webkit-animation-duration: 100s;
@@ -124,6 +127,8 @@ audio {
 }
 .comm-header {
   background: -webkit-gradient(linear, left top, right top, from(#68aef1), to(#3b74ee));
+  background: -webkit-linear-gradient(left, #68aef1, #3b74ee);
+  background: -o-linear-gradient(left, #68aef1, #3b74ee);
   background: linear-gradient(to right, #68aef1, #3b74ee);
   position: fixed;
   top:0;
@@ -207,7 +212,8 @@ audio {
   display: -ms-flexbox;
   display: flex;
   z-index: 900;
-  box-shadow: 0 2px 2px 3px #f5f5f5;
+  -webkit-box-shadow: 0 2px 2px 3px #f5f5f5;
+          box-shadow: 0 2px 2px 3px #f5f5f5;
 }
 /* .comm-footer.wj {
   font-size: 0.916rem;
@@ -270,7 +276,7 @@ audio {
   color: #3895fe;
 }
 .comm-footer .footer-item a {
-  color: #a0a9ae;
+  color: #8289ad;
 }
 .comm-footer .footer-item.active a {
   color: #3895fe;

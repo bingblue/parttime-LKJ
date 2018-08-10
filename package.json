@@ -56,7 +56,7 @@
     }
   },
   "browserslist": [
-    "Android > 7",
+    "Android > 4.1",
     "iOS > 10"
   ],
   "readme": "ERROR: No README data found!",
