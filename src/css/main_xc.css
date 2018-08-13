@@ -161,16 +161,21 @@
     }
 
 .xc-body .version-review .signal-bluetooth-box {
-      display: -webkit-box;
-      display: flex;
       line-height: 2.2rem;
       text-align: center;
       font-size: 0.7rem;
       box-sizing: border-box;
       padding: 0 2.75rem;
-      justify-content: space-around;
       background-color: #e9f1fc;
     }
+
+.xc-body .version-review .signal-bluetooth-box > div {
+        display: inline-block;
+      }
+
+.xc-body .version-review .signal-bluetooth-box > div:first-child {
+        margin-right: 4rem;
+      }
 
 .xc-body .version-review .signal-bluetooth-box .perfection,
       .xc-body .version-review .signal-bluetooth-box .clear {
@@ -1610,10 +1615,6 @@
 
 .verification-password-box .verification-password .verification-head {
       padding: 0 0.75rem;
-      display: -webkit-box;
-      display: flex;
-      -webkit-box-pack: justify;
-              justify-content: space-between;
       line-height: 2.5rem;
       border-bottom: 1px solid #eee;
     }
@@ -1622,6 +1623,10 @@
         font-weight: 700;
         font-size: 0.75rem;
         color: #3a3a3a;
+      }
+
+.verification-password-box .verification-password .verification-head .verification-cancel {
+        float: right;
       }
 
 .verification-password-box .verification-password .verification-des {

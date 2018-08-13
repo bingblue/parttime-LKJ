@@ -163,19 +163,19 @@
     }
 
     .signal-bluetooth-box {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
       line-height: 2.2rem;
       text-align: center;
       font-size: 0.7rem;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       padding: 0 2.75rem;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
       background-color: #e9f1fc;
-
+      > div {
+        display: inline-block;
+      }
+      > div:first-child {
+        margin-right: 4rem;
+      }
       .perfection,
       .clear {
         color: #49d893;
@@ -1694,18 +1694,15 @@
 
     .verification-head {
       padding: 0 0.75rem;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
       line-height: 2.5rem;
       border-bottom: 1px solid #eee;
       .verification-name {
         font-weight: 700;
         font-size: 0.75rem;
         color: #3a3a3a;
+      }
+      .verification-cancel {
+        float: right;
       }
     }
 
