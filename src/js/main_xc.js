@@ -36,11 +36,11 @@ $(function () {
       var distanceX = 0
       var distanceY = 0
       var isAjax = false
-      $('#machines').bind('touchstart', function (e) {
+      $('#machines, #loading').bind('touchstart', function (e) {
         startX = e.originalEvent.changedTouches[0].pageX
         startY = e.originalEvent.changedTouches[0].pageY
       })
-      $('#machines').bind('touchmove', function (e) {
+      $('#machines, #loading').bind('touchmove', function (e) {
         if (isAjax) {
           return false
         }
