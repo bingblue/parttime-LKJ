@@ -36,11 +36,11 @@ $(function () {
       var distanceX = 0
       var distanceY = 0
       var isAjax = false
-      $('#machines, #loading').bind('touchstart', function (e) {
+      $('#machines, #loading').on('touchstart', function (e) {
         startX = e.originalEvent.changedTouches[0].pageX
         startY = e.originalEvent.changedTouches[0].pageY
       })
-      $('#machines, #loading').bind('touchmove', function (e) {
+      $('#machines, #loading').on('touchmove', function (e) {
         if (isAjax) {
           return false
         }
@@ -56,7 +56,6 @@ $(function () {
           var scrollHeight =
           document.body.scrollTop || document.documentElement.scrollTop
           var mscrollHeight = $this.scrollTop()
-          console.log(scrollHeight, mscrollHeight)
           if (!scrollHeight && !mscrollHeight) {
             var $loading = $this.find('.machines-loading')
             $loading.show()
