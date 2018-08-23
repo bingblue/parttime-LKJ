@@ -663,10 +663,6 @@
           color: #3c97fd;
 }
 
-.xc-body .dressup-index-box .tips .tip .online a {
-            color: #3c97fd;
-          }
-
 .xc-body .dressup-index-box .tips .tip .notOnline {
           color: #d5d5d5;
 }
@@ -684,10 +680,6 @@
           color: #727272;
           line-height: 1.1rem;
 }
-
-.xc-body .dressup-index-box .tips .tip p a {
-            color: #727272;
-          }
 
 .xc-body .dressup-index-box.two {
   height: 5.5rem;
@@ -1258,8 +1250,8 @@
 .setting .setting-item .name-box .btn-wrap {
         position: absolute;
         width: 2.55rem;
-        height: 1.2rem;
-        border: 0.15rem solid #dbdbdb;
+        height: 1.4rem;
+        border: 0.075px solid #dbdbdb;
         right: 0;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -1271,13 +1263,13 @@
       }
 
 .setting .setting-item .name-box .btn-wrap .btn-inner {
-          width: 1.2rem;
-          height: 1.2rem;
+          width: 1.4rem;
+          height: 1.4rem;
           border-radius: 50%;
           background-color: #fff;
           box-shadow: 3px 0 2px -1px #e7e7e7;
           position: absolute;
-          right: 1.3rem;
+          right: 1.15rem;
           top: 50%;
           -webkit-transform: translateY(-50%);
                   transform: translateY(-50%);
