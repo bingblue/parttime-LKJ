@@ -27,6 +27,52 @@ $(function () {
       this.locations()
       this.settingPlan()
       this.selectLoad()
+      this.searchBody()
+      this.searchfilter()
+      this.searchLink()
+      this.settingLocation()
+      this.chooseLocation()
+    },
+    // 选择换装地点
+    chooseLocation: function () {
+      $('#setting-locations .setting-location').on('click', function () {
+        var location = $(this).text()
+        window.location.href = '/html/setting/review.html?location=' + location
+      })
+    },
+    // 版本复核设置-地点切换
+    settingLocation: function () {
+      var location = this.getUrlParms('location') || '百善站'
+      console.log(location)
+      var $location = $('#location')
+      $location.html(location)
+    },
+    // 查询机车
+    searchLink: function () {
+      $('#searchLink .search-link-item').on('click', function () {
+        var $this = $(this)
+        if (!$this.hasClass('active')) {
+          $this.addClass('active').siblings().removeClass('active')
+        }
+      })
+    },
+    // 查询条件
+    searchfilter: function () {
+      $('#searchfilter .search-item').on('click', function () {
+        var $this = $(this)
+        if (!$this.hasClass('condition')) {
+          $this.addClass('condition').siblings().removeClass('condition')
+        }
+      })
+    },
+    // 查询切换
+    searchBody: function () {
+      $('#search-body .search-item').on('click', function () {
+        var $this = $(this)
+        if (!$this.hasClass('active')) {
+          $this.addClass('active').siblings().removeClass('active')
+        }
+      })
     },
     selectLoad: function () {
       var startX = 0
@@ -485,6 +531,18 @@ $(function () {
       $('.version-review,.review-info-box,.review-box,.padding-machines').on('scroll', function (event) {
         event.stopPropagation()
       })
+    },
+    getUrlParms: function (name) {
+      var url = window.location.search // 获取url中"?"符后的字串
+      var theRequest = new Object()
+      if (url.indexOf('?') != -1) {
+        var str = url.substr(1)
+        strs = str.split('&')
+        for (var i = 0; i < strs.length; i++) {
+          theRequest[strs[i].split('=')[0]] = decodeURI(strs[i].split('=')[1])
+        }
+      }
+      return theRequest[name]
     }
   }
   commont.init()

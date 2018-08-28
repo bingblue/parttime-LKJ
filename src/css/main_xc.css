@@ -1117,9 +1117,17 @@
       line-height: 3rem;
     }
 
+.search-link .search-link-item .link-right {
+      display: none;
+    }
+
 .search-link .search-link-item.active {
   background: url('../img/search-item-bg.png') -0.75rem -0.75rem no-repeat;
   position: relative;
+}
+
+.search-link .search-link-item.active .search-link-status {
+        display: none;
 }
 
 .search-link .search-link-item.active .search-link-name {
@@ -1138,14 +1146,15 @@
         -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
         right: 0.65rem;
+        display: block;
 }
 
 .search-nodress {
-  padding: 0 0.75rem;
   background-color: #fff;
 }
 
 .search-nodress .search-nodress-item {
+    padding: 0 0.75rem;
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: justify;

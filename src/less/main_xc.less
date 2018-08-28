@@ -1165,11 +1165,15 @@
     .search-link-status {
       line-height: 3rem;
     }
-
+    .link-right {
+      display: none;
+    }
     &.active {
       background: url('../img/search-item-bg.png') -0.75rem -0.75rem no-repeat;
       position: relative;
-
+      .search-link-status {
+        display: none;
+      }
       .search-link-name {
         color: #fff;
         background-image: url('../img/search-link-active.png');
@@ -1187,16 +1191,16 @@
             -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
         right: 0.65rem;
+        display: block;
       }
     }
   }
 }
 
 .search-nodress {
-  padding: 0 0.75rem;
   background-color: #fff;
-
   .search-nodress-item {
+    padding: 0 0.75rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
