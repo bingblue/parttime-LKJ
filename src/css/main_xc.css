@@ -1279,6 +1279,7 @@
         z-index: 999;
         -webkit-transition: all linear 0.2s;
         transition: all linear 0.2s;
+        overflow: hidden;
       }
 
 .setting .setting-item .name-box .btn-wrap .btn-inner {
