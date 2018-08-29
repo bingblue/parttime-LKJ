@@ -1270,7 +1270,7 @@
         position: absolute;
         width: 2.55rem;
         height: 1.2rem;
-        border: 0.15rem solid #dbdbdb;
+        border: 0.15px solid #dbdbdb;
         right: 0;
         top: 50%;
         -webkit-transform: translateY(-50%);
