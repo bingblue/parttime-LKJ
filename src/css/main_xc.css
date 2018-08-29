@@ -1270,7 +1270,8 @@
         position: absolute;
         width: 2.55rem;
         height: 1.2rem;
-        border: 0.15px solid #dbdbdb;
+        background-color: #dbdbdb;
+        border: 0.98px solid #dbdbdb;
         right: 0;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -1279,7 +1280,6 @@
         z-index: 999;
         -webkit-transition: all linear 0.2s;
         transition: all linear 0.2s;
-        overflow: hidden;
       }
 
 .setting .setting-item .name-box .btn-wrap .btn-inner {
