@@ -33,17 +33,16 @@ $(function () {
       this.settingLocation()
       this.chooseLocation()
     },
-    // 选择换装地点
+    // 选择换装地点 - 点击之后跳转到选择页面地址栏参数 location
     chooseLocation: function () {
       $('#setting-locations .setting-location').on('click', function () {
         var location = $(this).text()
         window.location.href = '/html/setting/review.html?location=' + location
       })
     },
-    // 版本复核设置-地点切换
+    // 版本复核设置-地点切换 默认获取地址栏参数 location 没有参数百善站为默认站
     settingLocation: function () {
       var location = this.getUrlParms('location') || '百善站'
-      console.log(location)
       var $location = $('#location')
       $location.html(location)
     },
