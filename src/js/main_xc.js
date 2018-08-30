@@ -60,7 +60,9 @@ $(function () {
       $('#searchfilter .search-item').on('click', function () {
         var $this = $(this)
         if (!$this.hasClass('condition')) {
-          $this.addClass('condition').siblings().removeClass('condition')
+          $this.addClass('condition')
+        } else {
+          $this.removeClass('condition')
         }
       })
     },
