@@ -217,7 +217,8 @@
     .version-info {
       display: none;
       z-index: 930;
-      position: relative;
+      position: absolute;
+      top: 0;
       width: 100%;
       background-color: #fff;
 
@@ -227,6 +228,9 @@
         color: #3a3a3a;
         font-size: 0.7rem;
         border-bottom: 1px solid #eee;
+        &.active {
+          color: #007aff;
+        }
       }
     }
 
@@ -272,7 +276,7 @@
       overflow-y: scroll;
 
       .review-info-mark {
-        z-index: 920;
+        z-index: 999;
       }
 
       .review-clearBtn {
@@ -1480,7 +1484,9 @@
           & + .setting-review-local {
             border-top: 1px solid #eee;
           }
-
+          &.active {
+            color: #007aff;
+          }
           &.cancel {
             margin-top: 0.5rem;
             text-align: center;
@@ -1569,8 +1575,10 @@
     .setting-plan-choose {
       background-color: #fff;
       margin-bottom: 0.5rem;
-      padding: 0.75rem;
-
+      padding: 0.75rem 0;
+      > div {
+        padding: 0 0.75rem;
+      }
       .plan-choose-head {
         font-size: 0.75rem;
         color: #727272;
@@ -1583,7 +1591,7 @@
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-
+        position: relative;
         .plan-choose-name {
           color: #3a3a3a;
           font-weight: 400;
@@ -1592,6 +1600,35 @@
 
         .plan-choose-select {
           width: 0.7rem;
+          img {
+            transition: all linear 0.2s;
+            transform-origin: 50% 50%;
+          }
+        }
+        .select-items {
+          display: none;
+          width: 100%;
+          left: 0;
+          top: 2.15rem;
+          position: absolute;
+          background-color: #fff;
+          padding: 0 0.75rem; 
+          .active {
+            color: #007aff;
+          }
+          .select-item {
+            line-height: 2rem;
+          }
+        }
+        &.active {
+          .select-items {
+            display: block;
+          }
+          .plan-choose-select {
+            img {
+              transform: rotate(180deg)
+            }
+          }
         }
       }
     }

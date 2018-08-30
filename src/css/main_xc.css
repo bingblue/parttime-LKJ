@@ -213,7 +213,8 @@
 .xc-body .version-review .version-info {
       display: none;
       z-index: 930;
-      position: relative;
+      position: absolute;
+      top: 0;
       width: 100%;
       background-color: #fff;
     }
@@ -223,8 +224,12 @@
         line-height: 1rem;
         color: #3a3a3a;
         font-size: 0.7rem;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #eee
       }
+
+.xc-body .version-review .version-info li.active {
+  color: #007aff;
+}
 
 .xc-body .version-review .version-mark {
       position: fixed;
@@ -268,7 +273,7 @@
     }
 
 .xc-body .version-review .review-info-box .review-info-mark {
-        z-index: 920;
+        z-index: 999;
       }
 
 .xc-body .version-review .review-info-box .review-clearBtn {
@@ -1422,6 +1427,10 @@
   border-top: 1px solid #eee;
 }
 
+.setting .setting-server .setting-review-locals-box .setting-review-locals .setting-review-local.active {
+  color: #007aff;
+}
+
 .setting .setting-server .setting-review-locals-box .setting-review-locals .setting-review-local.cancel {
   margin-top: 0.5rem;
   text-align: center;
@@ -1504,8 +1513,12 @@
 .setting .setting-plan .setting-plan-choose {
       background-color: #fff;
       margin-bottom: 0.5rem;
-      padding: 0.75rem;
+      padding: 0.75rem 0;
     }
+
+.setting .setting-plan .setting-plan-choose > div {
+        padding: 0 0.75rem;
+      }
 
 .setting .setting-plan .setting-plan-choose .plan-choose-head {
         font-size: 0.75rem;
@@ -1517,6 +1530,7 @@
         display: flex;
         -webkit-box-pack: justify;
                 justify-content: space-between;
+        position: relative;
       }
 
 .setting .setting-plan .setting-plan-choose .plan-choose-body .plan-choose-name {
@@ -1528,6 +1542,40 @@
 .setting .setting-plan .setting-plan-choose .plan-choose-body .plan-choose-select {
           width: 0.7rem;
         }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-body .plan-choose-select img {
+            -webkit-transition: all linear 0.2s;
+            transition: all linear 0.2s;
+            -webkit-transform-origin: 50% 50%;
+                    transform-origin: 50% 50%;
+          }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-body .select-items {
+          display: none;
+          width: 100%;
+          left: 0;
+          top: 2.15rem;
+          position: absolute;
+          background-color: #fff;
+          padding: 0 0.75rem;
+        }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-body .select-items .active {
+            color: #007aff;
+          }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-body .select-items .select-item {
+            line-height: 2rem;
+          }
+
+.setting .setting-plan .setting-plan-choose .plan-choose-body.active .select-items {
+            display: block;
+}
+
+.setting .setting-plan .setting-plan-choose .plan-choose-body.active .plan-choose-select img {
+              -webkit-transform: rotate(180deg);
+                      transform: rotate(180deg)
+            }
 
 .setting .setting-plan .plan-choose-btn {
       background-color: #fff;

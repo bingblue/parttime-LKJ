@@ -32,6 +32,30 @@ $(function () {
       this.searchLink()
       this.settingLocation()
       this.chooseLocation()
+      this.choosePlan()
+    },
+    // 计划选择
+    choosePlan: function () {
+      $('#plan-choose-body').on('click', function (event) {
+        event.stopPropagation()
+        var $this = $(this)
+        if ($this.hasClass('active')) {
+          $this.removeClass('active')
+        } else {
+          $this.addClass('active')
+        }
+      })
+      $('#plan-choose-body .select-items li').on('click', function () {
+        var $this = $(this)
+        if (!$this.hasClass('acitve')) {
+          // 这里写请求 请求成功回调里面的方法改变样式即可
+          $this.addClass('active').siblings().removeClass('active')
+          $('#plan-choose-body .plan-choose-name').text($this.text())
+        }
+      })
+      $('body').on('click', function () {
+        $('#plan-choose-body').removeClass('active')
+      })
     },
     // 选择换装地点 - 点击之后跳转到选择页面地址栏参数 location
     chooseLocation: function () {
@@ -157,7 +181,7 @@ $(function () {
       })
     },
     /**
-     * 版本复核
+     * 版本复核-所属段切换
      */
     settingReview: function () {
       var $box = $('.setting-review-locals-box')
@@ -171,7 +195,9 @@ $(function () {
       $('.setting-review-locals-box .setting-review-local').on('click', function () {
         var $this = $(this)
         if (!$this.hasClass('cancel')) {
+          // 这里写请求，请求成功运行下面的js即可
           $('#setting-review-local').text($this.text())
+          $this.addClass('active').siblings().removeClass('active')
         }
         $box.hide()
       })
@@ -476,16 +502,22 @@ $(function () {
       var open = function () {
         $('.version-info,.version-mark').show()
         $('.comm-des img').addClass('active')
-        $('.signal-bluetooth-box').hide()
       }
       var close = function () {
         $('.version-mark, .version-info').hide()
         $('.comm-des img').removeClass('active')
-        $('.signal-bluetooth-box').show()
         $('#read').removeClass('active')
       }
       $('.version-mark').click(function () {
         close()
+      })
+      $('.version-info .version-info-item').on('click', function () {
+        var $this = $(this)
+        if (!$this.hasClass('active')) {
+          $this.addClass('active').siblings().removeClass('active')
+          $('#read').find('p').text($this.text())
+          $('#read').click()
+        }
       })
     },
     /**
