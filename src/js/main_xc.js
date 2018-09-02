@@ -33,6 +33,21 @@ $(function () {
       this.settingLocation()
       this.chooseLocation()
       this.choosePlan()
+      this.search()
+      this.searchversion()
+    },
+    // 版本信息
+    searchversion: function () {
+      var $searchversion = $('#searchversion')
+      var $name = this.getUrlParms('name')
+      $searchversion.text($name ? $name + '版本信息' : 'DF11-0311版本信息')
+    },
+    // 搜索
+    search: function () {
+      $('.search-cancle').on('click', function () {
+        var q = $('.search-input').val()
+        window.location.href = '/html/search/searchlink.html?q=' + q
+      })
     },
     // 计划选择
     choosePlan: function () {
