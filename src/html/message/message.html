@@ -19,13 +19,44 @@
 </head>
 
 <body class="wj-msg">
+  <div class="slider-bar">
+    <div class="slider-bar-inner">
+      <div class="slider-bar-item">
+        <a href="../setting/setting.html">
+          <img src="../../img/sliderbar-set.png" alt="设置">设置
+        </a>
+      </div>
+      <div class="slider-bar-item">
+        <a href="../schooltime/schooltime.html">
+          <img src="../../img/sliderbar-time.png" alt="校时">校时
+        </a>
+      </div>
+      <div class="slider-bar-item sign-out">
+        <a href="javascript:void(0)">
+          <img src="../../img/sliderbar-signOut.png" alt="退出登录">退出登录
+        </a>
+      </div>
+    </div>
+  </div>
   <div class="wrap">
     <div class="main">
-      <div class="header">
+      <div class="markBg"></div>
+      <header class="comm-header">
+        <div class="comm-operating comm-btn">
+          <img src="../../img/operating.png" alt="操作">
+        </div>
+        <div class="comm-des">
+          <p>消息</p>
+        </div>
+        <div class="comm-more comm-btn deleteall-btn">
+          <img src="../../img/deleteall.png" alt="更多">
+        </div>
+      </header>
+      <!-- <div class="header">
         <img src="../../img/return.png" alt="" class="return-img">
         消息
         <a href="javascript:;" class="deleteall-btn"><img src="../../img/deleteall.png" alt=""></a>
-      </div>
+      </div> -->
       <p class="date-txt">2018.06.05</p>
       <ul class="msg-ul">
         <li>
@@ -147,8 +178,8 @@
       </a>
     </div>
     <div class="footer-item active">
-        <img src="../../img/footer-message-active.png" alt="消息">
-        <p>消息</p>
+      <img src="../../img/footer-message-active.png" alt="消息">
+      <p>消息</p>
     </div>
   </footer>
   <script src="../../js/resize.js"></script>
@@ -156,4 +187,5 @@
   <script src="../../js/main_wj.js"></script>
   <script src="../../js/main_xc.js"></script>
 </body>
+
 </html>

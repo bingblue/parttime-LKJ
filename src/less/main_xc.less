@@ -676,7 +676,7 @@
 
         &.on,
         &.no {
-          background: url(../img/footer-dress.png) no-repeat 2.6rem 1.55rem;
+          background: url(../img/footer-dress.png) no-repeat 2.6rem 1.5rem;
           background-size: 0.5rem 0.65rem;
         }
         &.on {
@@ -1800,4 +1800,87 @@
   height: 1rem;
   z-index: 1002;
   opacity: 0;
+}
+.xc-dialog {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2000;
+  .xc-dialog-mk {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    z-index: 90000;
+  }
+  .xc-dialog-body {
+    width: 13.5rem;
+    position: fixed;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 90001;
+    .xc-dialog-head {
+      height: 4.95rem;
+      background: url('../img/update.png') no-repeat;
+      background-size: cover;
+      &.vs {
+        background-image: url('../img/testing.png');
+      }
+      &.file {
+        background-image: url('../img/file.png');
+      }
+    }
+    .xc-dialog-item {
+      background-color: #fff;
+      padding: 1.4rem;
+      text-align: center;
+      font-size: 0.85rem;
+      &.no-center {
+        text-align: left;
+      }
+    }
+    h2 {
+      font-size: 1rem;
+      color: #fff;
+      line-height: 1.2;
+      padding: 1.4rem 0 0 1.4rem;
+      p {
+        font-size: 0.85rem;
+      }
+    }
+    .dialog-warp {
+      width: 100%;
+      height: 0.25rem;
+      border-radius: 0.25rem;
+      background-color: #eeeeee;
+      margin-top: 0.2rem;
+      .dialog-inner {
+        border-radius: 0.25rem;
+        background-color: #49d893;
+        height: 100%;
+      }
+    }
+    .xc-footer {
+      color: #727272;
+      text-align: center;
+      background-color: #fff;
+      border-top: 1px solid #eee;
+      line-height: 2.5rem;
+      &.confirm {
+        display: flex;
+        > span {
+          flex: 1;
+          box-sizing: border-box;
+        }
+        .sure {
+          color: #007aff;
+          border-left: 1px solid #eee;
+        }
+      }
+    }
+  }
 }

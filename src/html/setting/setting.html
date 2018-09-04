@@ -23,7 +23,7 @@
   <div class="wrap">
     <header class="comm-header">
       <div class="comm-btn">
-        <a href="javascript:void(0)">
+        <a href="javascript:history.go(-1)">
           <img class="return" src="../../img/delete_icon.png" alt="操作">
         </a>
       </div>
@@ -143,7 +143,7 @@
             <div class="setting-item-img">
               <img class="img" src="../../img/upgrade.jpg" alt="检测升级">
             </div>
-            <div class="name-box">
+            <div class="name-box" id='settingUpdate'>
               <span>检测升级</span>
               <img class="right" src="../../img/setting-right.jpg" alt="打开">
             </div>
@@ -172,6 +172,43 @@
         </div>
       </div>
     </div>
+    <div class="xc-dialog" dialog='settingUpdate'>
+        <div class="xc-dialog-mk dialog-cancel"></div>
+        <div class="xc-dialog-body">
+            <div class="xc-dialog-head">
+                <h2>版本更新</h2>
+              </div>
+          <div class="xc-dialog-item no-center">正在下载更新文件，文件大小<span>40M</span>
+            <div class="dialog-warp">
+                <div class="dialog-inner" style="width: 20%">
+                </div>
+            </div>
+          </div>
+          <div class="xc-footer">
+            <span class="cancel dialog-cancel">暂不更新</span>
+          </div>
+        </div>
+      </div>
+      <div class="xc-dialog">
+          <div class="xc-dialog-mk dialog-cancel"></div>
+          <div class="xc-dialog-body">
+              <div class="xc-dialog-head file">
+                  <h2>正在读取文件</h2>
+                </div>
+            <div class="xc-dialog-item no-center">正在转储文件 2/3
+              <div class="dialog-warp">
+                  <div class="dialog-inner" style="width: 33%">
+                  </div>
+              </div>
+            </div>
+            <div class="xc-dialog-item no-center">文件下载进度 90%
+                <div class="dialog-warp">
+                    <div class="dialog-inner" style="width: 90%">
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
   </div>
   <script src="../../js/resize.js"></script>
   <script src="../../js/jquery-2.1.4.min.js"></script>

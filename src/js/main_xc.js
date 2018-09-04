@@ -35,6 +35,29 @@ $(function () {
       this.choosePlan()
       this.search()
       this.searchversion()
+      this.adddialog()
+      this.versionUpdate()
+      this.settingUpdate()
+    },
+    // 检测版本
+    settingUpdate: function () {
+      $('#settingUpdate').on('click', function () {
+        $(".xc-dialog[dialog='settingUpdate']").show()
+      })
+    },
+    // 版本复核更新
+    versionUpdate: function () {
+      $('#versionUpdate').show()
+      $('#versionUpdate .dialog-sure').on('click', function () {
+        $(this).parents('.xc-dialog').hide()
+        console.log('更新')
+      })
+    },
+    // dialog
+    adddialog: function () {
+      $('.xc-dialog .dialog-cancel').on('click', function () {
+        $(this).parents('.xc-dialog').hide()
+      })
     },
     // 版本信息
     searchversion: function () {
