@@ -30,13 +30,13 @@ $(function () {
       touchendX = 0
 
     $(el).on('touchstart', function (event) {
-      touchstartX = event.changedTouches[0].pageX
-      touchstartY = event.changedTouches[0].pageY
+      touchstartX = event.originalEvent.changedTouches[0].pageX
+      touchstartY = event.originalEvent.changedTouches[0].pageY
       // console.log(touchstartX, touchstartY)
     })
     $(el).on('touchmove', function (event) {
-      touchmoveX = event.changedTouches[0].pageX
-      touchmoveY = event.changedTouches[0].pageY
+      touchmoveX = event.originalEvent.changedTouches[0].pageX
+      touchmoveY = event.originalEvent.changedTouches[0].pageY
       var distanceX = Math.abs(touchmoveX - touchstartX)
       var distanceY = Math.abs(touchmoveY - touchstartY)
       // console.log(distanceX, distanceY)
@@ -46,7 +46,7 @@ $(function () {
     })
     var canslide = void 0 // 1代表可滑动 2代表上一个滑动的
     $(el).on('touchend', function (event) {
-      touchendX = event.changedTouches[0].pageX
+      touchendX = event.originalEvent.changedTouches[0].pageX
       var distanceX = touchendX - touchstartX
       $('.delete-btn').html('删除')
       if (distanceX > 0) {
