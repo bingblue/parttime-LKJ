@@ -1,4 +1,5 @@
 $(function () {
+  isAjax = false
   /**
    * 功能介绍,每个方法请写注释，按下面模板来写.
    * @author <作者>
@@ -26,7 +27,7 @@ $(function () {
       this.settingReview()
       this.locations()
       this.settingPlan()
-      this.selectLoad()
+      // this.selectLoad()
       this.searchBody()
       this.searchfilter()
       this.searchLink()
@@ -38,6 +39,52 @@ $(function () {
       this.adddialog()
       this.versionUpdate()
       this.settingUpdate()
+      // 上下拉加载实例
+      this.loadEvent('machines', this.addLoadImg, this.addLoadImg)
+    },
+    /**
+     * 上下拉 模拟添加加载动画 一秒后删除
+     */
+    addLoadImg: function (id, type) {
+      var $div = $('#' + id)
+      if (isAjax) {
+        return false
+      }
+      var $str = '<div class="machines-loading"><img src="../../img/read-loading.png" class="img music-ani" alt="加载中">加载中</div>'
+      var $imgBox = $($str)
+      if (type == 'top') {
+        $div.prepend($imgBox)
+      } else {
+        $div.append($imgBox)
+      }
+      isAjax = true
+      setTimeout(function () {
+        $imgBox.remove()
+        isAjax = false
+      }, 1000)
+    },
+    /**
+     * 添加上下拉加载
+     * @param {String} id 元素id
+     * @param {Function} bottomFun 下拉触发事件
+     * @param {Function} topFun 上拉触发事件
+     */
+    loadEvent: function (id, bottomFun, topFun) {
+      $('#' + id).mutouch({
+        offsetY: 50, // 上下滑动超过50px才触发事件
+        onSwipeTop: function () {
+          var parent = $('#' + id).parent()
+          if (parent.scrollTop() + parent.height() >= $('#' + id).height()) {
+            bottomFun && bottomFun(id)
+          }
+        },
+        onSwipeDown: function () {
+          var parent = $('#' + id).parent()
+          if (!parent.scrollTop()) {
+            topFun && topFun(id, 'top')
+          }
+        }
+      })
     },
     // 检测版本
     settingUpdate: function () {
