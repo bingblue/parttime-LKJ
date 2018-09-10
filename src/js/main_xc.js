@@ -37,7 +37,6 @@ $(function () {
       this.search()
       this.searchversion()
       this.adddialog()
-      this.versionUpdate()
       this.settingUpdate()
       // 上下拉加载实例
       this.loadEvent('machines', this.addLoadImg, this.addLoadImg)
@@ -89,15 +88,11 @@ $(function () {
     // 检测版本
     settingUpdate: function () {
       $('#settingUpdate').on('click', function () {
-        $(".xc-dialog[dialog='settingUpdate']").show()
+        $(".xc-dialog[dialog='title']").show()
       })
-    },
-    // 版本复核更新
-    versionUpdate: function () {
-      $('#versionUpdate').show()
-      $('#versionUpdate .dialog-sure').on('click', function () {
-        $(this).parents('.xc-dialog').hide()
-        console.log('更新')
+      $(".xc-dialog[dialog='title'] .dialog-sure").on('click', function () {
+        $(".xc-dialog[dialog='title']").hide()
+        $(".xc-dialog[dialog='pross']").show()
       })
     },
     // dialog
