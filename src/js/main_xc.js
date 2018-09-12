@@ -599,6 +599,10 @@ $(function () {
           $('#read').click()
         }
       })
+
+      $('#readFile').on('click', function () {
+        $(".xc-dialog[dialog='read']").show()
+      })
     },
     /**
      * 添加侧边栏事件
