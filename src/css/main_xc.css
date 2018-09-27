@@ -123,12 +123,17 @@
                 border-image: url('../img/border.png') 30 30 round;
       }
 
-.xc-body .wrap.login-wrap .login-form .login-input-close {
+.xc-body .wrap.login-wrap .login-form .login-input-close,
+      .xc-body .wrap.login-wrap .login-form .login-input-user-close {
         position: absolute;
         width: 0.8rem;
         right: 0;
         bottom: 0.4rem;
         display: none;
+      }
+
+.xc-body .wrap.login-wrap .login-form .login-input-user-close {
+        top: 2.4rem; 
       }
 
 .xc-body .wrap.login-wrap .login-form .btn-group {

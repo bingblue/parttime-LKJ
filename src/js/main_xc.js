@@ -111,7 +111,7 @@ $(function () {
     search: function () {
       $('.search-cancle').on('click', function () {
         var q = $('.search-input').val()
-        window.location.href = '/html/search/searchlink.html?q=' + q
+        window.location.href = '/html/search/searchversion.html?name=' + q
       })
     },
     // 计划选择
@@ -550,7 +550,7 @@ $(function () {
       $('.review-info-box .review-info-item .item-delete').click(function () {
         var $this = $(this)
         if ($this.hasClass('active')) {
-          console.log('确认删除!')
+          $(this).closest('.review-info-item').remove()
         } else {
           $this.addClass('active').html('确认删除')
         }
@@ -622,6 +622,7 @@ $(function () {
       var $reviewDom = $('#review')
       var $user = $('#user')
       var $close = $reviewDom.siblings('.login-input-close')
+      var $userclose = $reviewDom.siblings('.login-input-user-close')
       $reviewDom.keyup(function () {
         var $review = $(this).val().trim()
         if ($review) {
@@ -634,13 +635,19 @@ $(function () {
         $reviewDom.val('').focus()
         $(this).hide(200)
       })
+      $userclose.click(function () {
+        $user.val('').focus()
+        $(this).hide(200)
+      })
       $user.keyup(function () {
         var $this = $(this)
         var user = $this.val().trim()
         if (user) {
           $this.addClass('active')
+          $userclose.show(200)
         } else {
           $this.removeClass('active')
+          $userclose.hide(200)
         }
       })
     },
