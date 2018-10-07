@@ -21,11 +21,30 @@
 .none {
   display: none;
 }
+.wj-tab {
+  width: 200%;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform linear 0.2s;
+  transition: -webkit-transform linear 0.2s;
+  transition: transform linear 0.2s;
+  transition: transform linear 0.2s, -webkit-transform linear 0.2s;
+}
+.wj-tab > div {
+    width: 50%;
+    float: left;
+  }
+.wj-tab.m-right {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
 
+.leftside {
+  -webkit-transition: display linear 0.2s;
+  transition: display linear 0.2s;
+}
 .wj-msg .main {
     padding-bottom: 4.29rem;
   }
-
 .wj-msg .header {
     background: -webkit-gradient(linear, left top, right top, from(#68aef1), to(#3b74ee));
     background: -webkit-linear-gradient(left, #68aef1, #3b74ee);
@@ -37,24 +56,20 @@
     font-size: 0.85rem;
     color: #fff;
   }
-
 .wj-msg .header .return-img {
       width: 3%;
       position: absolute;
       left: 3.45%;
       top: 12px;
     }
-
 .wj-msg .header .deleteall-btn {
       position: absolute;
       right: 3.45%;
       width: 4.3%;
     }
-
 .wj-msg .header .deleteall-btn img {
         width: 100%;
       }
-
 .wj-msg .date-txt {
     height: 35px;
     line-height: 35px;
@@ -64,45 +79,37 @@
     color: #c0bfbf;
     margin-top: 2.2rem;
   }
-
 .wj-msg .msg-ul {
     width: 100%;
     background: #fff;
   }
-
 .wj-msg .msg-ul li {
       font-size: 0.75rem;
       overflow: hidden;
       width: 100%;
       position: relative;
     }
-
 .wj-msg .msg-ul .left-title {
       margin-bottom: 0.6rem;
       color: #3a3a3a;
     }
-
 .wj-msg .msg-ul .right-date {
       float: right;
       font-size: 0.75rem;
       color: #727272;
     }
-
 .wj-msg .msg-ul .warn-txt {
       font-size: 0.75rem;
       color: #727272;
     }
-
 .wj-msg .warn-icon {
     width: 0.7rem;
     vertical-align: text-top;
     margin-top: 0.1rem;
   }
-
 .wj-msg .warn2-icon {
     width: 0.7rem;
   }
-
 .wj-msg .li-wp-fa {
     display: inline-block;
     width: 100%;
@@ -110,7 +117,6 @@
     position: relative;
     z-index: 1;
   }
-
 .wj-msg .list-wp {
     width: 92%;
     padding-top: 0.75rem;
@@ -118,7 +124,6 @@
     margin: 0 auto;
     border-bottom: 1px solid #eee;
   }
-
 .wj-msg .delete-btn {
     width: 4.45rem;
     text-align: center;
@@ -131,7 +136,6 @@
     right: 0;
     top: 0;
   }
-
 .wj-msg .kown .left-title,
     .wj-msg .kown .warn-txt,
     .wj-msg .kown .right-date {

@@ -176,6 +176,14 @@ $(function () {
         var $this = $(this)
         if (!$this.hasClass('active')) {
           $this.addClass('active').siblings().removeClass('active')
+          $('.search-input').val($this.find('.name').text())
+        }
+      })
+      $('.search-nodress-item').on('click', function () {
+        var $this = $(this)
+        if (!$this.hasClass('active')) {
+          $this.addClass('active').siblings().removeClass('active')
+          $('.search-input').val($this.find('.search-nodress-name').text())
         }
       })
     },
@@ -328,6 +336,17 @@ $(function () {
        * 服务器设置错误弹窗
        */
       $('.setting-server .setting-server-error').on('click', function () {
+        $(this).hide()
+      })
+      $('.setting-server-val .setting-server-input').on('keyup', function () {
+        if ($(this).val().length) {
+          $(this).siblings('.close').show()
+        } else {
+          $(this).siblings('.close').hide()
+        }
+      })
+      $('.setting-server-val .close').on('click', function () {
+        $(this).siblings('input').val('')
         $(this).hide()
       })
     },

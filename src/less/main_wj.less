@@ -21,7 +21,22 @@
 .none {
   display: none;
 }
+.wj-tab {
+  width: 200%;
+  overflow: hidden;
+  transition: transform linear 0.2s;
+  > div {
+    width: 50%;
+    float: left;
+  }
+  &.m-right {
+    transform: translateX(-50%);
+  }
+}
 
+.leftside {
+  transition: display linear 0.2s;
+}
 .wj-msg {
   .main {
     padding-bottom: 4.29rem;

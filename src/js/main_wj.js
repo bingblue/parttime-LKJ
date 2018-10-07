@@ -110,14 +110,12 @@ $(function () {
    */
   $('.left-tab').click(function () {
     $(this).addClass('tab-active')
-    $('.leftside').removeClass('none')
-    $('.rightside').addClass('none')
+    $('.wj-tab').removeClass('m-right')
     $('.right-tab').removeClass('tab-active')
   })
   $('.right-tab').click(function () {
     $(this).addClass('tab-active')
-    $('.rightside').removeClass('none')
-    $('.leftside').addClass('none')
+    $('.wj-tab').addClass('m-right')
     $('.left-tab').removeClass('tab-active')
   })
   /**

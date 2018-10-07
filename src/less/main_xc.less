@@ -1224,6 +1224,12 @@
     & + .search-nodress-item {
       border-top: 1px solid #eee;
     }
+    &.active {
+      color: #007aff;
+      .search-nodress-time {
+        color: #007aff;
+      }
+    }
   }
 }
 
@@ -1405,7 +1411,11 @@
         .setting-server-val {
           line-height: 2.15rem;
           color: #3a3a3a;
-
+          .setting-server-input {
+            width: 14rem;
+            border: none;
+            background: none;
+          }
           .close,
           .review-select {
             float: right;
