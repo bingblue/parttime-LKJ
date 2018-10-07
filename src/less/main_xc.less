@@ -9,17 +9,6 @@
     background-color: #fff;
   }
 
-  &.dressup {
-    .wrap {
-      background: #f8f9fc url('../img/dressup-bg.png') no-repeat;
-      background-size: 100% 8rem;
-    }
-
-    .comm-header {
-      background-color: transparent;
-    }
-  }
-
   .padding-review {
     top: 2.17rem;
     bottom: 4.75rem;
@@ -173,6 +162,7 @@
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       padding: 0 2.75rem;
+      padding-top: 2.2rem;
       background-color: #e9f1fc;
       > div {
         display: inline-block;
@@ -571,7 +561,7 @@
     background-color: #fff;
     width: 16.625rem;
     height: 12.75rem;
-    top: 3rem;
+    top: 5rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -722,7 +712,7 @@
 
     &.two {
       height: 5.5rem;
-      top: 16.25rem;
+      top: 18.25rem;
 
       .tips {
         border-top: none;
@@ -1816,7 +1806,7 @@
 }
 .xc-dialog {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   width: 100%;
@@ -1894,6 +1884,35 @@
           border-left: 1px solid #eee;
         }
       }
+    }
+  }
+}
+.xc-tab {
+  width: 100%;
+  position: relative;
+  z-index: 2000;
+  .xc-tab-item {
+    display: none;
+    width: 100%;
+    overflow-y: scroll;
+    &.active {
+      display: block;
+      width: 100%;
+    }
+    &.search-item {
+      position: fixed;
+      top: 0rem;
+      bottom: 2.8rem;
+      background: #f8f9fc url('../img/dressup-bg.png') no-repeat;
+      background-size: 100% 8rem;
+      .comm-header {
+        background-color: transparent;
+      }
+    }
+    &.message {
+      position: fixed;
+      top: 0rem;
+      bottom: 2.8rem;
     }
   }
 }

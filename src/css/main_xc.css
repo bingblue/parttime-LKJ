@@ -10,20 +10,11 @@
     background-color: #fff;
   }
 
-.xc-body.dressup .wrap {
-      background: #f8f9fc url('../img/dressup-bg.png') no-repeat;
-      background-size: 100% 8rem;
-}
-
-.xc-body.dressup .comm-header {
-      background-color: transparent;
-}
-
 .xc-body .padding-review {
     top: 2.17rem;
     bottom: 4.75rem;
     position: absolute;
-}
+  }
 
 .xc-body .padding-machines,
   .xc-body .setting-main {
@@ -31,19 +22,19 @@
     top: 2.2rem;
     bottom: 3rem;
     overflow-y: scroll;
-}
+  }
 
 .xc-body .setting-main {
     bottom: 0;
     background-color: #f8f9fc;
-}
+  }
 
 .xc-body .padding-machinesdetail {
     position: absolute;
     top: 2.2rem;
     bottom: 0;
-    overflow-y: scroll;
-}
+    overflow-y: scroll
+  }
 
 .xc-body .padding-machinesdetail.color {
   background-color: #f8f9fc;
@@ -61,7 +52,7 @@
     left: 0;
     top: 0;
     opacity: 0.2;
-}
+  }
 
 .xc-body .btn {
     height: 2.65rem;
@@ -72,17 +63,17 @@
     color: #3895fe;
     box-shadow: #3895fe 0 0 30px -5px;
     font-size: 0.8rem;
-}
+  }
 
 .xc-body .btn.primary {
     background-color: #3895fe;
     color: #fff;
-}
+  }
 
 .xc-body .wrap.login-wrap {
     background: #fff url('../img/login-bg.png') bottom no-repeat;
     background-size: contain;
-}
+  }
 
 .xc-body .wrap.login-wrap .login-logo {
       width: 5.5rem;
@@ -149,7 +140,7 @@
     position: absolute;
     right: 0.75rem;
     bottom: 0.75rem;
-}
+  }
 
 .xc-body .read-box img {
       width: 100%;
@@ -159,7 +150,7 @@
     background-color: #f8f9fc;
     height: 100%;
     overflow-y: scroll;
-}
+  }
 
 .xc-body .version-review img {
       margin-bottom: 0.2rem;
@@ -172,6 +163,7 @@
       font-size: 0.8rem;
       box-sizing: border-box;
       padding: 0 2.75rem;
+      padding-top: 2.2rem;
       background-color: #e9f1fc;
     }
 
@@ -353,7 +345,7 @@
 .xc-body .review-box {
     height: 100%;
     overflow-y: scroll;
-}
+  }
 
 .xc-body .review-box .review-confirm {
       position: fixed;
@@ -531,7 +523,7 @@
     -webkit-box-pack: justify;
             justify-content: space-between;
     background-color: #fff;
-}
+  }
 
 .xc-body .review-footer .review-btn {
       line-height: 2.25rem;
@@ -558,7 +550,7 @@
     background-color: #fff;
     width: 16.625rem;
     height: 12.75rem;
-    top: 3rem;
+    top: 5rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -566,7 +558,7 @@
     box-sizing: border-box;
     border-radius: 0.2rem;
     box-shadow: 0px 2px 14px 1px #eee;
-}
+  }
 
 .xc-body .dressup-index-box h2 {
       font-size: 0.9rem;
@@ -703,7 +695,7 @@
 
 .xc-body .dressup-index-box.two {
   height: 5.5rem;
-  top: 16.25rem;
+  top: 18.25rem;
 }
 
 .xc-body .dressup-index-box.two .tips {
@@ -1763,7 +1755,7 @@
 }
 .xc-dialog {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   width: 100%;
@@ -1846,4 +1838,33 @@
 .xc-dialog .xc-dialog-body .xc-footer.confirm .sure {
           color: #007aff;
           border-left: 1px solid #eee;
+}
+.xc-tab {
+  width: 100%;
+  position: relative;
+  z-index: 2000;
+}
+.xc-tab .xc-tab-item {
+    display: none;
+    width: 100%;
+    overflow-y: scroll
+  }
+.xc-tab .xc-tab-item.active {
+  display: block;
+  width: 100%;
+}
+.xc-tab .xc-tab-item.search-item {
+  position: fixed;
+  top: 0rem;
+  bottom: 2.8rem;
+  background: #f8f9fc url('../img/dressup-bg.png') no-repeat;
+  background-size: 100% 8rem;
+}
+.xc-tab .xc-tab-item.search-item .comm-header {
+        background-color: transparent;
+}
+.xc-tab .xc-tab-item.message {
+  position: fixed;
+  top: 0rem;
+  bottom: 2.8rem;
 }

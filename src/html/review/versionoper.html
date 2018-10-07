@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="../../css/style.css">
 </head>
 
-<body class="xc-body" style="overflow-x: hidden">
+<body class="xc-body wj-msg" style="overflow-x: hidden">
   <!-- build:slidebar -->
   <div class="slider-bar">
     <div class="slider-bar-inner">
@@ -45,160 +45,432 @@
 
   <div class="wrap">
     <div class="main padding-main">
-      <div class="markBg"></div>
-      <!-- build:head -->
-      <header class="comm-header">
-        <div class="comm-operating comm-btn">
-          <img src="../../img/operating.png" alt="操作">
-        </div>
-        <div class="comm-des" id="read">
-          <p>配合手持机测试201611sssss</p>
-          <img class="comm-selcet" src="../../img/select.png" alt="下拉" />
-        </div>
-        <div class="comm-more comm-btn">
-          <img src="../../img/more.png" alt="更多">
-        </div>
-      </header>
-      <!-- endbuild -->
+      <div class="xc-tab">
+        <div class="xc-tab-item active search-item">
+          <div class="markBg"></div>
+          <!-- build:head -->
+          <header class="comm-header">
+            <div class="comm-operating comm-btn">
+              <img src="../../img/operating.png" alt="操作">
+            </div>
+            <div class="comm-des" id="read">
+              <p>配合手持机测试201611sssss</p>
+              <img class="comm-selcet" src="../../img/select.png" alt="下拉" />
+            </div>
+            <div class="comm-more comm-btn">
+              <img src="../../img/more.png" alt="更多">
+            </div>
+          </header>
+          <!-- endbuild -->
 
 
 
-      <!-- 版本复核start -->
-      <div class="version-review">
-        <div class="signal-bluetooth-box">
-          <!-- 网络通畅 -->
-          <!-- <div class="signal clear">
-            <img src="../../img/signal-clear.png" alt="网络状态"><span class="status signal-status">通畅</span>
-          </div> -->
-          <!-- 网络很差 -->
-          <div class="signal danger">
-            <img src="../../img/signal-danger.png" alt="网络状态">
-            <span class="status signal-status">很差</span>
-          </div>
-          <!-- 网络无信号 -->
-          <!-- <div class="signal no">
-            <img src="../../img/signal-no.png" alt="网络状态"><span class="status signal-status">无信号</span>
-          </div> -->
-          <!-- 网络较通畅 -->
-          <!-- <div class="signal weekClear">
-            <img src="../../img/signal-weekClear.png" alt="网络状态"><span class="status signal-status">较通畅</span>
-          </div> -->
-          <!-- 蓝牙已经链接 -->
-          <!-- <div class="bluetooth perfection">
-            <img src="../../img/bluetooth-perfection.png" alt="蓝牙状态"><span class="status bluetooth-status">已链接</span>
-          </div> -->
-          <!-- 蓝牙链接中 -->
-          <!-- <div class="bluetooth processing">
-            <img src="../../img/bluetooth-processing.png" alt="蓝牙状态"><span class="status bluetooth-status">链接中</span>
-          </div> -->
-          <!-- 蓝牙未链接 -->
-          <div class="bluetooth undone">
-            <img src="../../img/bluetooth-undone.png" alt="蓝牙状态">
-            <span class="status bluetooth-status">未连接</span>
-          </div>
-        </div>
-        <div class="read-box">
-          <img class="read" style="width: 3.5rem" src="../../img/read.png" alt="读取" id="readFile">
-        </div>
-        <!-- loading -->
-        <div class="read-loading-box">
-          <div class="read-loading">
-            <img class="music-ani" src="../../img/read-loading.png" alt="读取中">
-            <p>读取中</p>
-          </div>
-        </div>
-        <!-- loading end -->
-        <div class="review-info-box">
-          <div class="review-info">
-            <div class="review-info-item">
-              <div class="item-name">DF11-0335</div>
-              <div class="item-time">05-16</div>
-              <div class="item-oper no">未复核</div>
-              <div class="item-delete">删除</div>
+          <!-- 版本复核start -->
+          <div class="version-review">
+            <div class="signal-bluetooth-box">
+              <!-- 网络通畅 -->
+              <!-- <div class="signal clear">
+                  <img src="../../img/signal-clear.png" alt="网络状态"><span class="status signal-status">通畅</span>
+                </div> -->
+              <!-- 网络很差 -->
+              <div class="signal danger">
+                <img src="../../img/signal-danger.png" alt="网络状态">
+                <span class="status signal-status">很差</span>
+              </div>
+              <!-- 网络无信号 -->
+              <!-- <div class="signal no">
+                  <img src="../../img/signal-no.png" alt="网络状态"><span class="status signal-status">无信号</span>
+                </div> -->
+              <!-- 网络较通畅 -->
+              <!-- <div class="signal weekClear">
+                  <img src="../../img/signal-weekClear.png" alt="网络状态"><span class="status signal-status">较通畅</span>
+                </div> -->
+              <!-- 蓝牙已经链接 -->
+              <!-- <div class="bluetooth perfection">
+                  <img src="../../img/bluetooth-perfection.png" alt="蓝牙状态"><span class="status bluetooth-status">已链接</span>
+                </div> -->
+              <!-- 蓝牙链接中 -->
+              <!-- <div class="bluetooth processing">
+                  <img src="../../img/bluetooth-processing.png" alt="蓝牙状态"><span class="status bluetooth-status">链接中</span>
+                </div> -->
+              <!-- 蓝牙未链接 -->
+              <div class="bluetooth undone">
+                <img src="../../img/bluetooth-undone.png" alt="蓝牙状态">
+                <span class="status bluetooth-status">未连接</span>
+              </div>
             </div>
-            <div class="review-info-item">
-              <div class="item-name">DF11-0300</div>
-              <div class="item-time">05-16</div>
-              <div class="item-oper primary">复核正确</div>
-              <div class="item-delete">删除</div>
+            <div class="read-box">
+              <img class="read" style="width: 3.5rem" src="../../img/read.png" alt="读取" id="readFile">
             </div>
-            <div class="review-info-item">
-              <div class="item-name">DF11-0311</div>
-              <div class="item-time">05-16</div>
-              <div class="item-oper error">复核错误</div>
-              <div class="item-delete">删除</div>
+            <!-- loading -->
+            <div class="read-loading-box">
+              <div class="read-loading">
+                <img class="music-ani" src="../../img/read-loading.png" alt="读取中">
+                <p>读取中</p>
+              </div>
+            </div>
+            <!-- loading end -->
+            <div class="review-info-box">
+              <div class="review-info">
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0335</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper no">未复核</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0300</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper primary">复核正确</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0311</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper error">复核错误</div>
+                  <div class="item-delete">删除</div>
+                </div>
+              </div>
+              <div class="review-info-mark mk">
+              </div>
+              <div class="review-clearBtn">全部清除</div>
+            </div>
+            <div class="version-info" style="display: none;">
+              <ul class="version-info-box">
+                <li class="version-info-item">防洪、限速、珞璜-赶水北（机车0409）</li>
+                <li class="version-info-item">机车0425（贵阳修正）</li>
+                <li class="version-info-item">被贵阳委托0425版贵阳南至都拉营双线开通</li>
+              </ul>
+            </div>
+            <div class="version-mark" style="display: none;"></div>
+          </div>
+          <div class="xc-dialog" dialog='read'>
+            <div class="xc-dialog-mk dialog-cancel"></div>
+            <div class="xc-dialog-body">
+              <div class="xc-dialog-head file">
+                <h2>正在读取文件</h2>
+              </div>
+              <div class="xc-dialog-item no-center">正在转储文件 2/3
+                <div class="dialog-warp">
+                  <div class="dialog-inner" style="width: 33%">
+                  </div>
+                </div>
+              </div>
+              <div class="xc-dialog-item no-center">文件下载进度 90%
+                <div class="dialog-warp">
+                  <div class="dialog-inner" style="width: 90%">
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="review-info-mark mk">
-          </div>
-          <div class="review-clearBtn">全部清除</div>
         </div>
-        <div class="version-info" style="display: none;">
-          <ul class="version-info-box">
-            <li class="version-info-item">防洪、限速、珞璜-赶水北（机车0409）</li>
-            <li class="version-info-item">机车0425（贵阳修正）</li>
-            <li class="version-info-item">被贵阳委托0425版贵阳南至都拉营双线开通</li>
+        <div class="xc-tab-item search-item">
+          <div class="markBg"></div>
+          <header class="comm-header" style="background: none">
+            <div class="comm-operating comm-btn">
+              <img src="../../img/operating.png" alt="操作">
+            </div>
+            <div class="comm-des">
+              <p>配合手持机测试201611sssss</p>
+              <img class="comm-selcet" src="../../img/select.png" alt="下拉" />
+            </div>
+            <div class="comm-more comm-btn">
+              <a href="../search/search.html">
+                <img src="../../img/dressup-sreach.png" alt="搜索">
+              </a>
+            </div>
+          </header>
+          <!-- 远程换装start -->
+          <div class="dressup-index">
+            <div class="dressup-index-box">
+              <h2>远程换装机车</h2>
+              <div class="circleProgress_wrapper">
+                <div class="wrapper right">
+                  <div class="circleProgress rightcircle"></div>
+                </div>
+                <div class="wrapper left">
+                  <div class="circleProgress leftcircle"></div>
+                </div>
+                <div class="tip">
+                  <span>18</span>
+                  <p>机车数量</p>
+                </div>
+              </div>
+              <div class="tips">
+                <div class="tip">
+                  <span class="online">12</span>
+                  <p><a href="../machines/machinesonline.html">在线</a></p>
+                </div>
+                <div class="tip">
+                  <span class="notOnline">6</span>
+                  <p><a href="../machines/machinesoffline.html">离线</a></p>
+                </div>
+                <div class="tip">
+                  <span class="onUp">6</span>
+                  <p><a href="../machines/machinesupload.html">已上载</a></p>
+                </div>
+                <div class="tip">
+                  <span class="onStart">0</span>
+                  <p><a href="../machines/machinesstart.html">已启用</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 远程换装end-->
+        </div>
+        <div class="xc-tab-item search-item">
+          <div class="markBg"></div>
+          <header class="comm-header" style="background: none">
+            <div class="comm-operating comm-btn">
+              <img src="../../img/operating.png" alt="操作">
+            </div>
+            <div class="comm-des">
+              <p>配合手持机测试201611sssss</p>
+              <img class="comm-selcet" src="../../img/select.png" alt="下拉" />
+            </div>
+            <div class="comm-more comm-btn">
+              <a href="./search.html"><img src="../../img/dressup-sreach.png" alt="搜索"></a>
+            </div>
+          </header>
+          <!-- 远程换装start -->
+          <div class="dressup-index">
+            <div class="dressup-index-box">
+              <h2>计划换装机车</h2>
+              <div class="circleProgress_wrapper">
+                <div class="wrapper right">
+                  <div class="circleProgress rightcircle"></div>
+                </div>
+                <div class="wrapper left">
+                  <div class="circleProgress leftcircle"></div>
+                </div>
+                <div class="tip">
+                  <span>18</span>
+                  <p>机车数量</p>
+                </div>
+              </div>
+              <div class="tips">
+                <div class="tip on">
+                  <span class="online">13</span>
+                  <p><a href="../search/searchdress.html">已换</a></p>
+                </div>
+                <div class="tip no">
+                  <span class="notOnline">5</span>
+                  <p><a href="../search/searchnodress.html">未换</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="dressup-index-box two">
+              <h2>远程换装机车</h2>
+              <div class="tips">
+                <div class="tip">
+                  <span class="online">12</span>
+                  <p><a href="../machines/machinesonline.html">在线</a></p>
+                  <span class="line online"></span>
+                </div>
+                <div class="tip">
+                  <span class="notOnline">2</span>
+                  <p><a href="../machines/machinesoffline.html">离线</a></p>
+                  <span class="line notOnline"></span>
+                </div>
+                <div class="tip">
+                  <span class="onUp">6</span>
+                  <p><a href="../machines/machinesupload.html">已上载</a></p>
+                  <span class="line onUp"></span>
+                </div>
+                <div class="tip">
+                  <span class="onStart">10</span>
+                  <p><a href="../machines/machinesstart.html">已启用</a></p>
+                  <span class="line onStart"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="xc-tab-item search-item">
+          <div class="markBg"></div>
+          <header class="comm-header">
+            <div class="comm-operating comm-btn">
+              <img src="../../img/operating.png" alt="操作">
+            </div>
+            <div class="comm-des">
+              <p>紧急任务</p>
+            </div>
+          </header>
+          <div class="version-review">
+            <div class="signal-bluetooth-box">
+              <!-- 网络通畅 -->
+              <div class="signal clear">
+                <img src="../../img/signal-clear.png" alt="网络状态">
+                <span class="status signal-status">通畅</span>
+              </div>
+              <!-- 网络很差 -->
+              <!-- <div class="signal danger">
+                  <img src="../../img/signal-danger.png" alt="网络状态"><span class="status signal-status">很差</span>
+                </div> -->
+              <!-- 网络无信号 -->
+              <!-- <div class="signal no">
+                  <img src="../../img/signal-no.png" alt="网络状态"><span class="status signal-status">无信号</span>
+                </div> -->
+              <!-- 网络较通畅 -->
+              <!-- <div class="signal weekClear">
+                  <img src="../../img/signal-weekClear.png" alt="网络状态"><span class="status signal-status">较通畅</span>
+                </div> -->
+              <!-- 蓝牙已经链接 -->
+              <div class="bluetooth perfection">
+                <img src="../../img/bluetooth-perfection.png" alt="蓝牙状态">
+                <span class="status bluetooth-status">已链接</span>
+              </div>
+              <!-- 蓝牙链接中 -->
+              <!-- <div class="bluetooth processing">
+                  <img src="../../img/bluetooth-processing.png" alt="蓝牙状态"><span class="status bluetooth-status">链接中</span>
+                </div> -->
+              <!-- 蓝牙未链接 -->
+              <!-- <div class="bluetooth undone">
+                  <img src="../../img/bluetooth-undone.png" alt="蓝牙状态"><span class="status bluetooth-status">未连接</span>
+                </div> -->
+            </div>
+            <div class="read-box">
+              <img style="width: 3.5rem" class="read" src="../../img/read.png" alt="读取">
+            </div>
+          </div>
+        </div>
+        <div class="xc-tab-item message">
+          <div class="markBg"></div>
+          <header class="comm-header">
+            <div class="comm-operating comm-btn">
+              <img src="../../img/operating.png" alt="操作">
+            </div>
+            <div class="comm-des">
+              <p>消息</p>
+            </div>
+            <div class="comm-more comm-btn deleteall-btn">
+              <img src="../../img/deleteall.png" alt="更多">
+            </div>
+          </header>
+          <!-- <div class="header">
+              <img src="../../img/return.png" alt="" class="return-img">
+              消息
+              <a href="javascript:;" class="deleteall-btn"><img src="../../img/deleteall.png" alt=""></a>
+            </div> -->
+          <p class="date-txt">2018.06.05</p>
+          <ul class="msg-ul">
+            <li>
+              <a href="javascript:;" class="li-wp-fa" data-canslide="1">
+                <div class="list-wp">
+                  <div class="msg-title clearfix">
+                    <div class="left left-title">
+                      <img src="../../img/warn_icon.png" alt="报警信息" class="warn-icon"> 报警信息
+                    </div>
+                    <div class="right-date">12:23:12</div>
+                  </div>
+                  <p class="warn-txt">报警信息</p>
+                </div>
+              </a>
+              <a href="javascript:;" class="delete-btn">删除</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="li-wp-fa" data-canslide="1">
+                <div class="list-wp">
+                  <div class="msg-title clearfix">
+                    <div class="left left-title">
+                      <img src="../../img/cue_icon.png" alt="提示信息" class="warn-icon"> 提示信息
+                    </div>
+                    <div class="right-date">12:23:12</div>
+                  </div>
+                  <p class="warn-txt">提示信息</p>
+                </div>
+              </a>
+              <a href="javascript:;" class="delete-btn">删除</a>
+            </li>
+            <li>
+              <a href="javascript:;" class="li-wp-fa" data-canslide="1">
+                <div class="list-wp">
+                  <div class="msg-title clearfix">
+                    <div class="left left-title">
+                      <img src="../../img/triangle_icon.png" alt="警告信息" class="warn2-icon"> 警告信息
+                    </div>
+                    <div class="right-date">12:23:12</div>
+                  </div>
+                  <p class="warn-txt">警告信息</p>
+                </div>
+              </a>
+              <a href="javascript:;" class="delete-btn">删除</a>
+            </li>
+          </ul>
+          <!-- 已读消息 start -->
+          <p class="date-txt">2018.06.05</p>
+          <ul class="msg-ul">
+            <li class="kown">
+              <a href="javascript:;" class="li-wp-fa" data-canslide="1">
+                <div class="list-wp">
+                  <div class="msg-title clearfix">
+                    <div class="left left-title">
+                      <img src="../../img/warn_icon_grey.png" alt="报警信息" class="warn-icon"> 报警信息
+                    </div>
+                    <div class="right-date">12:23:12</div>
+                  </div>
+                  <p class="warn-txt">报警信息</p>
+                </div>
+              </a>
+              <a href="javascript:;" class="delete-btn">删除</a>
+            </li>
+            <li class="kown">
+              <a href="javascript:;" class="li-wp-fa" data-canslide="1">
+                <div class="list-wp">
+                  <div class="msg-title clearfix">
+                    <div class="left left-title">
+                      <img src="../../img/cue_icon_grey.png" alt="提示信息" class="warn-icon"> 提示信息
+                    </div>
+                    <div class="right-date">12:23:12</div>
+                  </div>
+                  <p class="warn-txt">提示信息</p>
+                </div>
+              </a>
+              <a href="javascript:;" class="delete-btn">删除</a>
+            </li>
+            <li class="kown">
+              <a href="javascript:;" class="li-wp-fa" data-canslide="1">
+                <div class="list-wp">
+                  <div class="msg-title clearfix">
+                    <div class="left left-title">
+                      <img src="../../img/triangle_icon_grey.png" alt="警告信息" class="warn2-icon"> 警告信息
+                    </div>
+                    <div class="right-date">12:23:12</div>
+                  </div>
+                  <p class="warn-txt">警告信息</p>
+                </div>
+              </a>
+              <a href="javascript:;" class="delete-btn">删除</a>
+            </li>
           </ul>
         </div>
-        <div class="version-mark" style="display: none;"></div>
       </div>
       <!-- 版本复核end -->
       <footer class="comm-footer">
-        <div class="footer-item active" >
-            <img src="../../img/footer-version-active.jpg" alt="版本复核">
-            <p>版本复核</p>
+        <div class="footer-item footer-version active">
+          <p>版本复核</p>
         </div>
-        <div class="footer-item">
-          <a href="../machines/machinesindex.html">
-            <img src="../../img/footer-dress.png" alt="远程换装">
-            <p>远程换装</p>
-          </a>
+        <div class="footer-item footer-dress">
+          <p>远程换装</p>
         </div>
-        <div class="footer-item">
-          <a href="../search/searchindex.html">
-            <img src="../../img/footer-search.png" alt="查询">
-            <p>查询</p>
-          </a>
+        <div class="footer-item footer-search">
+          <p>查询</p>
         </div>
-        <div class="footer-item">
+        <div class="footer-item footer-task">
           <img src="../../img/circle.png" class="tit">
-          <a href="../talk/task.html">
-            <img src="../../img/footer-task.png" alt="紧急任务">
-            <p>紧急任务</p>
-          </a>
+          <p>紧急任务</p>
         </div>
-        <div class="footer-item">
-          <a href="../message/message.html">
-            <img src="../../img/footer-message.png" alt="消息">
-            <p>消息</p>
-          </a>
+        <div class="footer-item footer-message">
+          <p>消息</p>
         </div>
       </footer>
-    </div>
-    <div class="xc-dialog" dialog='read'>
-      <div class="xc-dialog-mk dialog-cancel"></div>
-      <div class="xc-dialog-body">
-          <div class="xc-dialog-head file">
-              <h2>正在读取文件</h2>
-            </div>
-        <div class="xc-dialog-item no-center">正在转储文件 2/3
-          <div class="dialog-warp">
-              <div class="dialog-inner" style="width: 33%">
-              </div>
-          </div>
-        </div>
-        <div class="xc-dialog-item no-center">文件下载进度 90%
-            <div class="dialog-warp">
-                <div class="dialog-inner" style="width: 90%">
-                </div>
-            </div>
-          </div>
-      </div>
     </div>
   </div>
   <script src="../../js/resize.js"></script>
   <script src="../../js/jquery-2.1.4.min.js"></script>
   <script src="../../js/main_xc.js"></script>
+  <script src="../../js/main_wj.js"></script>
 </body>
 
 </html>

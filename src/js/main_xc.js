@@ -27,6 +27,7 @@ $(function () {
       this.settingReview()
       this.locations()
       this.settingPlan()
+      this.footerTab()
       // this.selectLoad()
       this.searchBody()
       this.searchfilter()
@@ -40,6 +41,16 @@ $(function () {
       this.settingUpdate()
       // 上下拉加载实例
       this.loadEvent('machines', this.addLoadImg, this.addLoadImg)
+    },
+    footerTab: function () {
+      $('.comm-footer .footer-item').on('click', function () {
+        var $this = $(this)
+        if (!$this.hasClass('active')) {
+          $this.addClass('active').siblings().removeClass('active')
+          var $index = $this.index()
+          $('.xc-tab .xc-tab-item').eq($index).addClass('active').siblings().removeClass('active')
+        }
+      })
     },
     /**
      * 上下拉 模拟添加加载动画 一秒后删除
