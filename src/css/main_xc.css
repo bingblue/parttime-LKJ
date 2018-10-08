@@ -146,6 +146,39 @@
       width: 100%;
     }
 
+.xc-body .version-info {
+    display: none;
+    z-index: 930;
+    position: absolute;
+    top: 2.2rem;
+    width: 100%;
+    background-color: #fff;
+  }
+
+.xc-body .version-info li {
+      padding: 0.75rem;
+      line-height: 1rem;
+      color: #3a3a3a;
+      font-size: 0.7rem;
+      border-bottom: 1px solid #eee
+    }
+
+.xc-body .version-info li.active {
+  color: #007aff;
+}
+
+.xc-body .version-mark {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    left: 0;
+    top: 0;
+    opacity: 0.2;
+    z-index: 920;
+    display: none;
+  }
+
 .xc-body .version-review {
     background-color: #f8f9fc;
     height: 100%;
@@ -206,39 +239,6 @@
 .xc-body .version-review .signal-bluetooth-box .bluetooth img {
           width: 0.6rem;
         }
-
-.xc-body .version-review .version-info {
-      display: none;
-      z-index: 930;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      background-color: #fff;
-    }
-
-.xc-body .version-review .version-info li {
-        padding: 0.75rem;
-        line-height: 1rem;
-        color: #3a3a3a;
-        font-size: 0.7rem;
-        border-bottom: 1px solid #eee
-      }
-
-.xc-body .version-review .version-info li.active {
-  color: #007aff;
-}
-
-.xc-body .version-review .version-mark {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: #000;
-      left: 0;
-      top: 0;
-      opacity: 0.2;
-      z-index: 920;
-      display: none;
-    }
 
 .xc-body .version-review .read-loading-box {
       display: none;
@@ -1399,9 +1399,9 @@
       color: #fff;
       width: 15rem;
       left: 50%;
-      top: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
+      bottom: 0%;
+      -webkit-transform: translate(-50%, -0%);
+              transform: translate(-50%, -0%);
       font-size: 0.85rem;
       padding: 0 1.5rem;
       box-sizing: border-box;

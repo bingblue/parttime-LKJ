@@ -382,5 +382,5 @@ html{
   background: url('../img/footer-message.png') no-repeat center 0.2rem;
 }
 .footer-message.active {
-  background-image: url('../img/footer-message.png');
+  background-image: url('../img/footer-message-active.png');
 }

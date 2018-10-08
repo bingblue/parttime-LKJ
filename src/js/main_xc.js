@@ -599,7 +599,7 @@ $(function () {
      * 添加读取事件
      */
     addReadEvent: function () {
-      var $read = $('#read')
+      var $read = $('.read-btn')
       $read.click(function () {
         if ($(this).hasClass('active')) {
           close()
@@ -616,7 +616,7 @@ $(function () {
       var close = function () {
         $('.version-mark, .version-info').hide()
         $('.comm-des img').removeClass('active')
-        $('#read').removeClass('active')
+        $('.read-btn').removeClass('active')
       }
       $('.version-mark').click(function () {
         close()
@@ -625,11 +625,11 @@ $(function () {
         var $this = $(this)
         if (!$this.hasClass('active')) {
           $this.addClass('active').siblings().removeClass('active')
-          $('#read').find('p').text($this.text())
-          $('#read').click()
+          var $readBtn = $this.closest('.xc-tab-item').find('.read-btn')
+          $readBtn.find('p').text($this.text())
+          $readBtn.click()
         }
       })
-
       $('#readFile').on('click', function () {
         $(".xc-dialog[dialog='read']").show()
       })
@@ -650,7 +650,7 @@ $(function () {
      */
     addLoginEvent: function () {
       var $reviewDom = $('#review')
-      var $user = $('#user')
+      var $user = $('.user-input')
       var $close = $reviewDom.siblings('.login-input-close')
       var $userclose = $reviewDom.siblings('.login-input-user-close')
       $reviewDom.keyup(function () {
@@ -662,11 +662,11 @@ $(function () {
         }
       })
       $close.click(function () {
-        $reviewDom.val('').focus()
+        $reviewDom.val('').focus().removeClass('active')
         $(this).hide(200)
       })
       $userclose.click(function () {
-        $user.val('').focus()
+        $user.val('').focus().removeClass('active')
         $(this).hide(200)
       })
       $user.keyup(function () {

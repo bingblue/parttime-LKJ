@@ -105,6 +105,16 @@ $(function () {
       }
     })
   })
+  $('.delete-review-btn').click(function () {
+    bomb({
+      title: '确认清空复核数据吗?'
+    }, function (data) {
+      console.log(data)
+      if (data === '1') {
+        $('.version-review .review-info-item').remove()
+      }
+    })
+  })
   /**
    * 校时页面切换tab
    */

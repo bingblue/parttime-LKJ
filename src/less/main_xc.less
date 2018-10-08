@@ -144,7 +144,36 @@
       width: 100%;
     }
   }
+  .version-info {
+    display: none;
+    z-index: 930;
+    position: absolute;
+    top: 2.2rem;
+    width: 100%;
+    background-color: #fff;
 
+    li {
+      padding: 0.75rem;
+      line-height: 1rem;
+      color: #3a3a3a;
+      font-size: 0.7rem;
+      border-bottom: 1px solid #eee;
+      &.active {
+        color: #007aff;
+      }
+    }
+  }
+  .version-mark {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    left: 0;
+    top: 0;
+    opacity: 0.2;
+    z-index: 920;
+    display: none;
+  }
   .version-review {
     background-color: #f8f9fc;
     height: 100%;
@@ -206,39 +235,6 @@
         }
       }
     }
-
-    .version-info {
-      display: none;
-      z-index: 930;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      background-color: #fff;
-
-      li {
-        padding: 0.75rem;
-        line-height: 1rem;
-        color: #3a3a3a;
-        font-size: 0.7rem;
-        border-bottom: 1px solid #eee;
-        &.active {
-          color: #007aff;
-        }
-      }
-    }
-
-    .version-mark {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: #000;
-      left: 0;
-      top: 0;
-      opacity: 0.2;
-      z-index: 920;
-      display: none;
-    }
-
     .read-loading-box {
       display: none;
       height: 100%;
@@ -1450,10 +1446,10 @@
       color: #fff;
       width: 15rem;
       left: 50%;
-      top: 50%;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
+      bottom: 0%;
+      -webkit-transform: translate(-50%, -0%);
+          -ms-transform: translate(-50%, -0%);
+              transform: translate(-50%, -0%);
       font-size: 0.85rem;
       padding: 0 1.5rem;
       -webkit-box-sizing: border-box;
