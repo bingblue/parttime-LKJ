@@ -103,6 +103,17 @@
   <script src="../../js/resize.js"></script>
   <script src="../../js/jquery-2.1.4.min.js"></script>
   <script src="../../js/main_xc.js"></script>
+  <script>
+    $(function(){
+      commont.loadEvent('machines', function(){
+        //上拉事件
+        alert('上拉事件')
+      }, function(){
+        //下拉事件
+        alert('下拉事件')
+      })
+    })
+  </script>
 </body>
 
 </html>

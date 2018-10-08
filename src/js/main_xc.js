@@ -8,7 +8,7 @@ $(function () {
    * @param {object} option 配置信息.
    * @return {Number} 返回值描述.
    */
-  var commont = {
+  commont = {
     /**
      * 初始化
      */
