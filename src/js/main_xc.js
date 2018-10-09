@@ -41,6 +41,8 @@ $(function () {
       this.settingUpdate()
       // 上下拉加载实例
       this.loadEvent('machines', this.addLoadImg, this.addLoadImg)
+      this.toastEvent()
+      this.searchSelect()
     },
     footerTab: function () {
       $('.comm-footer .footer-item').on('click', function () {
@@ -51,6 +53,24 @@ $(function () {
           $('.xc-tab .xc-tab-item').eq($index).addClass('active').siblings().removeClass('active')
         }
       })
+    },
+    /**
+     * @param { String } message 内容
+     * @param { Number } time 消失时间 默认3000
+     * @param { String } color 背景颜色
+     * @param { String } position 位置 top center bottom
+     */
+    toast: function (message, time, color, position) {
+      time = time || 3000
+      color = color || 'rgba(0, 0, 0, .6)'
+      position = position || 'center'
+      var $p = $("<p class='xc-toast " + position + "'>" + message + '</p>')
+      $('.xc-toast').remove()
+      $p.css({ backgroundColor: color })
+      $('body').append($p)
+      setTimeout(function () {
+        $p.remove()
+      }, time)
     },
     /**
      * 上下拉 模拟添加加载动画 一秒后删除
@@ -482,6 +502,9 @@ $(function () {
           checkIsAll()
         }
       })
+      $infoItem.on('click', 'a', function (e) {
+        e.stopPropagation()
+      })
       $allBtn.on('click', function () {
         var $notDisabled = $('.machines .machines-info-item:not(.disabled)')
         var $this = $(this)
@@ -697,6 +720,30 @@ $(function () {
         }
       }
       return theRequest[name]
+    },
+    toastEvent: function () {
+      $('body').on('click', '.xc-toast', function () {
+        $(this).remove()
+      })
+    },
+    searchSelect: function () {
+      $('.search-select').click(function () {
+        var $this = $(this)
+        if ($this.hasClass('active')) {
+          $this.removeClass('active')
+        } else {
+          $this.addClass('active')
+        }
+      })
+      $('.search-select .search-select-group li').click(function (e) {
+        var $this = $(this)
+        if (!$this.hasClass('active')) {
+          $this.addClass('active').siblings().removeClass('active')
+          $this.closest('.search-select').removeClass('active')
+            .find('.search-select-name').text($this.text())
+        }
+        e.stopPropagation()
+      })
     }
   }
   commont.init()
