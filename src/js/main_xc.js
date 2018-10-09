@@ -152,7 +152,7 @@ $(function () {
     chooseLocation: function () {
       $('#setting-locations .setting-location').on('click', function () {
         var location = $(this).text()
-        window.location.href = '/html/setting/review.html?location=' + location
+        window.location.href = './review.html?location=' + location
       })
     },
     // 版本复核设置-地点切换 默认获取地址栏参数 location 没有参数百善站为默认站
