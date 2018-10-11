@@ -73,6 +73,48 @@ $(function () {
       }, time)
     },
     /**
+     * @param { String } message 内容
+     * @param { Number } time 消失时间 默认3000
+     * @param { String } color 背景颜色
+     * @param { String } position 位置 top center bottom
+     */
+    toast2: function (message, time, color) {
+      time = time || 3000
+      color = color || '#fff'
+      var position = 'center'
+      var $p = $("<div class='xc-toast2-box'><div class='xc-toast2 " + position + "'><img class='music-ani' src='/img/read-loading.png'/>" + message + '</p><div>')
+      $('.xc-toast2-box').remove()
+      $p.find('.xc-toast2').css({ backgroundColor: color })
+      $('body').append($p)
+      setTimeout(function () {
+        $p.remove()
+      }, time)
+      $('.xc-toast2-box').on('click', function () {
+        $(this).remove()
+      })
+    },
+    /**
+     * @param { String } message 内容
+     * @param { Number } time 消失时间 默认3000
+     * @param { String } color 背景颜色
+     * @param { String } position 位置 top center bottom
+     */
+    toast3: function (message, time) {
+      time = time || 3000
+      // color = color || '#fff'
+      var position = 'center'
+      var $p = $("<div class='xc-toast3 " + position + "'><img class='music-ani' src='/img/load.png'/>" + message + '</div>')
+      $('.xc-toast3').remove()
+      // $p.css({ backgroundColor: color })
+      $('body').append($p)
+      setTimeout(function () {
+        $p.remove()
+      }, time)
+      $('.xc-toast3').on('click', function () {
+        $(this).remove()
+      })
+    },
+    /**
      * 上下拉 模拟添加加载动画 一秒后删除
      */
     addLoadImg: function (id, type) {
@@ -727,14 +769,14 @@ $(function () {
       })
     },
     searchSelect: function () {
-      $('.search-select').click(function () {
-        var $this = $(this)
-        if ($this.hasClass('active')) {
-          $this.removeClass('active')
-        } else {
-          $this.addClass('active')
-        }
-      })
+      // $('.search-select').click(function () {
+      //   var $this = $(this)
+      //   if ($this.hasClass('active')) {
+      //     $this.removeClass('active')
+      //   } else {
+      //     $this.addClass('active')
+      //   }
+      // })
       $('.search-select .search-select-group li').click(function (e) {
         var $this = $(this)
         if (!$this.hasClass('active')) {

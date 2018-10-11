@@ -192,7 +192,7 @@
             </div>
           </div>
         </div>
-        <div class="xc-tab-item search-item">
+        <div class="xc-tab-item search-item" id="huanIndex">
           <div class="markBg"></div>
           <header class="comm-header" style="background: none">
             <div class="comm-operating comm-btn">
@@ -281,7 +281,7 @@
           <div class="version-mark" style="display: none;"></div>
           <!-- 远程换装end-->
         </div>
-        <div class="xc-tab-item search-item">
+        <div class="xc-tab-item search-item" id='searchIndex'>
           <div class="markBg"></div>
           <header class="comm-header" style="background: none">
             <div class="comm-operating comm-btn">
@@ -292,7 +292,7 @@
               <img class="comm-selcet" src="../../img/select.png" alt="下拉" />
             </div>
             <div class="comm-more comm-btn">
-              <a href="../search/search.html"><img src="../../img/dressup-sreach.png" alt="搜索"></a>
+              <a href="../search/searchlist.html"><img src="../../img/dressup-sreach.png" alt="搜索"></a>
             </div>
           </header>
           <!-- 远程换装start -->
@@ -568,6 +568,22 @@
   <script src="../../js/jquery-2.1.4.min.js"></script>
   <script src="../../js/main_xc.js"></script>
   <script src="../../js/main_wj.js"></script>
+  <script>
+    $(function() {
+      commont.toast2('正在登录', 2000, '')
+      commont.loadEvent('searchIndex', function(){
+        commont.toast3('正在加载', 2000, '')
+      }, function() {
+        commont.toast3('正在加载', 2000, '')
+      })
+      commont.loadEvent('huanIndex', function(){
+        commont.toast3('正在加载', 2000, '')
+      }, function() {
+        commont.toast3('正在加载', 2000, '')
+      })
+    })
+    $(function() {})
+  </script>
 </body>
 
 </html>

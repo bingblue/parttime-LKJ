@@ -550,7 +550,7 @@
     background-color: #fff;
     width: 16.625rem;
     height: 12.75rem;
-    top: 5rem;
+    top: 6rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1909,6 +1909,53 @@
   top: 2.2rem;
   bottom: 2.8rem;
 }
+.xc-toast2-box {
+  position: absolute;
+  width: 100%;
+  z-index: 9999999;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .6);
+}
+.xc-toast2 {
+  position: fixed;
+  background-color: #fff;
+  color: #000000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 0.85rem;
+  box-sizing: border-box;
+  line-height: 1.2rem;
+  border-radius: 1rem;
+  padding: 2rem 2rem 1rem;
+}
+.xc-toast2 img {
+    display: block;
+    width: 2rem;
+    margin: 0 auto 1rem;
+  }
+.xc-toast3 {
+  position: fixed;
+  color: #fff;
+  position: fixed;
+  top: 11%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 0.85rem;
+  box-sizing: border-box;
+  line-height: 1.2rem;
+  border-radius: 1rem;
+  z-index: 999999;
+}
+.xc-toast3 img {
+    display: block;
+    width: 2rem;
+    margin: 0 auto 0.5rem;
+  }
 .xc-toast {
   position: fixed;
   background-color: rgba(0, 0, 0, .6);
@@ -1923,10 +1970,10 @@
   padding: 0.5rem 1.5rem
 }
 .xc-toast.top {
-  top: 0;
+  top: 2rem;
 }
 .xc-toast.bottom {
-  bottom: 0;
+  bottom: 2rem;
 }
 .xc-toast.center {
   top: 50%;
