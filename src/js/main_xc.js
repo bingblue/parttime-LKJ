@@ -82,7 +82,7 @@ $(function () {
       time = time || 3000
       color = color || '#fff'
       var position = 'center'
-      var $p = $("<div class='xc-toast2-box'><div class='xc-toast2 " + position + "'><img class='music-ani' src='/img/read-loading.png'/>" + message + '</p><div>')
+      var $p = $("<div class='xc-toast2-box'><div class='xc-toast2 " + position + "'><img class='music-ani' src='../../img/read-loading.png'/>" + message + '</p><div>')
       $('.xc-toast2-box').remove()
       $p.find('.xc-toast2').css({ backgroundColor: color })
       $('body').append($p)
@@ -103,7 +103,7 @@ $(function () {
       time = time || 3000
       // color = color || '#fff'
       var position = 'center'
-      var $p = $("<div class='xc-toast3 " + position + "'><img class='music-ani' src='/img/load.png'/>" + message + '</div>')
+      var $p = $("<div class='xc-toast3 " + position + "'><img class='music-ani' src='../../img/load.png'/>" + message + '</div>')
       $('.xc-toast3').remove()
       // $p.css({ backgroundColor: color })
       $('body').append($p)
