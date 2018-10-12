@@ -432,7 +432,10 @@
             </div>
           </div>
         </div>
-        <div class="xc-tab-item message">
+        <div class="xc-tab-item message" id="message">
+          <div class="machines-loading" style="display: none">
+            <img src="../../img/read-loading.png" class="img music-ani" alt="加载中">加载中
+          </div>
           <div class="markBg"></div>
           <header class="comm-header">
             <div class="comm-operating comm-btn">
@@ -581,8 +584,14 @@
       }, function() {
         commont.toast3('正在加载', 2000, '')
       })
+      commont.loadEvent('message', function(){
+        //上拉事件
+        console.log('上拉事件')
+      }, function(){
+        //下拉事件
+        console.log('下拉事件')
+      })
     })
-    $(function() {})
   </script>
 </body>
 

@@ -41,6 +41,7 @@ $(function () {
       this.settingUpdate()
       // 上下拉加载实例
       this.loadEvent('machines', this.addLoadImg, this.addLoadImg)
+      this.loadEvent('message', this.addLoadImg, this.addLoadImg)
       this.toastEvent()
       this.searchSelect()
     },

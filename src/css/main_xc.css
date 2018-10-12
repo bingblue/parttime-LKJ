@@ -844,14 +844,14 @@
   background-color: #48d893;
 }
 
-.machines .machines-loading {
+.machines-loading {
     text-align: center;
     padding: 0.75rem 0;
     background-color: #f8f9fc;
     color: #727272;
   }
 
-.machines .machines-loading .img {
+.machines-loading .img {
       width: 1.5rem;
       margin-right: 0.5rem;
     }
