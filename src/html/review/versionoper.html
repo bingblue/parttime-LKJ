@@ -573,16 +573,27 @@
   <script src="../../js/main_wj.js"></script>
   <script>
     $(function() {
+      // 登录toast 实例
       commont.toast2('正在登录', 2000, '')
-      commont.loadEvent('searchIndex', function(){
+      // 关闭登录toast 实例
+      setTimeout(function(){
+        commont.closeToast2()
+      }, 2000)
+      // 查询加载实例
+      commont.loadEvent('searchIndex','', function(){
         commont.toast3('正在加载', 2000, '')
-      }, function() {
-        commont.toast3('正在加载', 2000, '')
+        // 关闭查询加载实例
+        setTimeout(function() {
+          commont.closeToast3()
+        }, 2000)
       })
-      commont.loadEvent('huanIndex', function(){
+      // 远程换装加载实例
+      commont.loadEvent('huanIndex', '',function(){
         commont.toast3('正在加载', 2000, '')
-      }, function() {
-        commont.toast3('正在加载', 2000, '')
+        // 关闭远程换装加载实例
+        setTimeout(function() {
+          commont.closeToast3()
+        }, 2000)
       })
       commont.loadEvent('message', function(){
         //上拉事件

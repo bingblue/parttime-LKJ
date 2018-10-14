@@ -844,18 +844,6 @@
   background-color: #48d893;
 }
 
-.machines-loading {
-    text-align: center;
-    padding: 0.75rem 0;
-    background-color: #f8f9fc;
-    color: #727272;
-  }
-
-.machines-loading .img {
-      width: 1.5rem;
-      margin-right: 0.5rem;
-    }
-
 .machines .machines-start-comfirm {
     position: fixed;
     width: 100%;
@@ -893,6 +881,7 @@
     height: 100%;
     z-index: 1200;
     background-color: rgba(0, 0, 0, .2);
+    display: none;
   }
 
 .machines .machines-changeType-box .machines-change-type {
@@ -912,6 +901,10 @@
 
 .machines .machines-changeType-box .machines-change-type .machines-change-types h2 {
           color: #727272;
+        }
+
+.machines .machines-changeType-box .machines-change-type .machines-change-types li.active {
+          color: #007aff;
         }
 
 .machines .machines-changeType-box .machines-change-type ul li {
@@ -950,7 +943,16 @@
     -webkit-transform: translate(-50%, -70%);
             transform: translate(-50%, -70%);
   }
-
+.machines-loading {
+  text-align: center;
+  padding: 0.75rem 0;
+  background-color: #f8f9fc;
+  color: #727272;
+}
+.machines-loading .img {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+  }
 .machines-footer {
   padding: 0.625rem 0.75rem;
   background-color: #fff;
@@ -962,11 +964,9 @@
   box-sizing: border-box;
   font-size: 0.8rem
 }
-
 .machines-footer.not {
   box-shadow: none;
 }
-
 .machines-footer .all-btn {
     line-height: 1.75rem;
     color: #3a3a3a;
@@ -975,11 +975,9 @@
     background: url('../img/machines-nocheck.png') no-repeat left center;
     background-size: 0.75rem 0.75rem;
 }
-
 .machines-footer .all-btn.active {
   background-image: url('../img/machines-check.png');
 }
-
 .machines-footer .machines-btns {
     width: 13.05rem;
     float: right;
@@ -988,7 +986,6 @@
     -webkit-box-pack: justify;
             justify-content: space-between;
 }
-
 .machines-footer .machines-btns .machines-btn {
       width: 4.2rem;
       box-sizing: border-box;
@@ -996,17 +993,14 @@
       line-height: 1.7rem;
       border-radius: 0.2rem;
     }
-
 .machines-footer .machines-btns .machines-upLoad {
       border: 1px solid #49d893;
       color: #49d893;
     }
-
 .machines-footer .machines-btns .machines-end {
       border: 1px solid #f89303;
       color: #f89303;
     }
-
 .machines-footer .machines-btns .machines-start {
       border: 1px solid #3895fe;
       background-color: #3895fe;
@@ -1040,6 +1034,10 @@
       position: absolute;
       right: 0;
       top: 0;
+    }
+
+.search-header .search-select .a {
+      color: #fff;
     }
 
 .search-header .search-select .search-select-group {
@@ -1967,7 +1965,9 @@
   box-sizing: border-box;
   line-height: 1.2rem;
   border-radius: 1rem;
-  padding: 0.5rem 1.5rem
+  padding: 0.5rem 1.5rem;
+  max-width: 100%;
+  white-space: nowrap
 }
 .xc-toast.top {
   top: 2rem;

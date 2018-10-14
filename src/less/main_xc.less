@@ -900,6 +900,7 @@
     height: 100%;
     z-index: 1200;
     background-color: rgba(0, 0, 0, 0.2);
+    display: none;
 
     .machines-change-type {
       position: absolute;
@@ -916,6 +917,9 @@
 
         h2 {
           color: #727272;
+        }
+        li.active {
+          color: #007aff;
         }
       }
 
@@ -1066,6 +1070,9 @@
       position: absolute;
       right: 0;
       top: 0;
+    }
+    .a {
+      color: #fff;
     }
     .search-select-group {
       display: none;
@@ -2001,6 +2008,8 @@
   line-height: 1.2rem;
   border-radius: 1rem;
   padding: 0.5rem 1.5rem;
+  max-width: 100%;
+  white-space: nowrap;
   &.top {
     top: 2rem;
   }

@@ -32,12 +32,12 @@
         </div>
         <div class="comm-more comm-btn carry">完成</div>
       </header>
-      <div class="machines" id="machines">
+      <div class="machines" id="searchfilterLoad">
         <div class="machines-loading" style="display: none">
           <img src="../../img/read-loading.png" class="img music-ani" alt="加载中">加载中
         </div>
         <div class="search-body" id='searchfilter'>
-          <div class="search-item">
+          <div class="search-item all">
             <p class="name">全部</p>
             <p class="number">20</p>
           </div>
@@ -124,6 +124,13 @@
   <script src="../../js/resize.js"></script>
   <script src="../../js/jquery-2.1.4.min.js"></script>
   <script src="../../js/main_xc.js"></script>
+  <script>
+    // 上下拉加载实例
+    $(function() {
+      // 三个参数分别为 上下拉操作元素的id 、 上拉回调(type function) 、下拉回调 （commont.addLoadImg、commont.addLoadImg 见main_xc.js）
+      commont.loadEvent('searchfilterLoad', commont.addLoadImg, commont.addLoadImg)
+    })
+  </script>
 </body>
 
 </html>

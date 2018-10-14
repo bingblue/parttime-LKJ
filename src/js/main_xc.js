@@ -75,45 +75,35 @@ $(function () {
     },
     /**
      * @param { String } message 内容
-     * @param { Number } time 消失时间 默认3000
      * @param { String } color 背景颜色
      * @param { String } position 位置 top center bottom
      */
-    toast2: function (message, time, color) {
-      time = time || 3000
+    toast2: function (message, color) {
       color = color || '#fff'
       var position = 'center'
       var $p = $("<div class='xc-toast2-box'><div class='xc-toast2 " + position + "'><img class='music-ani' src='../../img/read-loading.png'/>" + message + '</p><div>')
       $('.xc-toast2-box').remove()
       $p.find('.xc-toast2').css({ backgroundColor: color })
       $('body').append($p)
-      setTimeout(function () {
-        $p.remove()
-      }, time)
-      $('.xc-toast2-box').on('click', function () {
-        $(this).remove()
-      })
+      // $('.xc-toast2-box').on('click', function () {
+      //   $(this).remove()
+      // })
+    },
+    closeToast2: function () {
+      $('.xc-toast2-box').remove()
     },
     /**
      * @param { String } message 内容
-     * @param { Number } time 消失时间 默认3000
      * @param { String } color 背景颜色
-     * @param { String } position 位置 top center bottom
      */
     toast3: function (message, time) {
-      time = time || 3000
-      // color = color || '#fff'
       var position = 'center'
       var $p = $("<div class='xc-toast3 " + position + "'><img class='music-ani' src='../../img/load.png'/>" + message + '</div>')
       $('.xc-toast3').remove()
-      // $p.css({ backgroundColor: color })
       $('body').append($p)
-      setTimeout(function () {
-        $p.remove()
-      }, time)
-      $('.xc-toast3').on('click', function () {
-        $(this).remove()
-      })
+    },
+    closeToast3: function () {
+      $('.xc-toast3').remove()
     },
     /**
      * 上下拉 模拟添加加载动画 一秒后删除
@@ -228,8 +218,15 @@ $(function () {
     searchLink: function () {
       $('#searchLink .search-link-item').on('click', function () {
         var $this = $(this)
-        if (!$this.hasClass('active')) {
-          $this.addClass('active').siblings().removeClass('active')
+        $('#searchLink').hide()
+        $('.searchLink-input').val($this.find('.search-link-name').text())
+        // if (!$this.hasClass('active')) {
+        //   $this.addClass('active').siblings().removeClass('active')
+        // }
+      })
+      $('.searchLink-input').on('keyup', function () {
+        if (!$(this).val()) {
+          $('#searchLink').hide().show()
         }
       })
     },
@@ -239,7 +236,15 @@ $(function () {
         var $this = $(this)
         if (!$this.hasClass('condition')) {
           $this.addClass('condition')
+          if ($this.hasClass('all')) {
+            $this.siblings().addClass('condition')
+          }
         } else {
+          if ($this.hasClass('all')) {
+            $this.siblings().removeClass('condition')
+          } else {
+            $this.siblings('.all').removeClass('condition')
+          }
           $this.removeClass('condition')
         }
       })
@@ -572,8 +577,19 @@ $(function () {
       $('.machines-changeType-box, .machines-changeType-box .machines-change-btn').on('click', function () {
         $('.machines-changeType-box').hide()
       })
+      $('.machines-upLoad').click(function () {
+        $('.machines-changeType-box').show()
+      })
       $('.machines-changeType-box .machines-change-type').on('click', function (event) {
         event.stopPropagation()
+      })
+      $('.machines-change-types li').on('click', function () {
+        var $this = $(this)
+        if (!$this.hasClass('active')) {
+          $this.addClass('active').siblings().removeClass('active')
+          $('.machines-changeType-box').hide()
+          commont.toast('换装类型：' + $this.text(), 2000)
+        }
       })
       $('.machines-footer .machines-start').on('click', function () {
         $('.machines-start-comfirm').show()
