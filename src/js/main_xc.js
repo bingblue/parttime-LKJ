@@ -251,11 +251,15 @@ $(function () {
     },
     // 查询切换
     searchBody: function () {
+      $(".js-search-list").click(function(){
+        $('.machines.none').removeClass('none')
+      })
       $('#search-body .search-item').on('click', function () {
         var $this = $(this)
         if (!$this.hasClass('active')) {
           $this.addClass('active').siblings().removeClass('active')
-          $('.search-input').val($this.find('.name').text())
+          $('.search-select-name').text($this.find('.name').text())
+          $('.machines').addClass('none')
         }
       })
       $('.search-nodress-item').on('click', function () {
