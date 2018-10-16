@@ -432,7 +432,8 @@
             </div>
           </div>
         </div>
-        <div class="xc-tab-item message" id="message">
+        <div class="xc-tab-item message">
+          <div id="message">
           <div class="machines-loading" style="display: none">
             <img src="../../img/read-loading.png" class="img music-ani" alt="加载中">加载中
           </div>
@@ -544,6 +545,7 @@
               <a href="javascript:;" class="delete-btn">删除</a>
             </li>
           </ul>
+          </div>
         </div>
       </div>
       <!-- 版本复核end -->
@@ -591,16 +593,23 @@
       commont.loadEvent('huanIndex', '',function(){
         commont.toast3('正在加载', 2000, '')
         // 关闭远程换装加载实例
-        setTimeout(function() {
-          commont.closeToast3()
-        }, 2000)
+        // setTimeout(function() {
+        //   commont.closeToast3()
+        // }, 2000)
       })
       commont.loadEvent('message', function(){
         //上拉事件
         console.log('上拉事件')
+        // 关闭loading图标
+        setTimeout(function() {
+          commont.closeLoading()
+        }, 2000)
       }, function(){
         //下拉事件
         console.log('下拉事件')
+        setTimeout(function() {
+          commont.closeLoading()
+        }, 2000)
       })
     })
   </script>

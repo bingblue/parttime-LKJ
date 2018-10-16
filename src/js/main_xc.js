@@ -92,6 +92,10 @@ $(function () {
     closeToast2: function () {
       $('.xc-toast2-box').remove()
     },
+    closeLoading: function () {
+      isAjax = false
+      $('div.machines-loading').remove()
+    },
     /**
      * @param { String } message 内容
      * @param { String } color 背景颜色
@@ -124,7 +128,7 @@ $(function () {
       setTimeout(function () {
         $imgBox.remove()
         isAjax = false
-      }, 1000)
+      }, 100000)
     },
     /**
      * 添加上下拉加载
