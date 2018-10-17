@@ -108,9 +108,15 @@
       commont.loadEvent('machines', function(){
         //上拉事件
         console.log('上拉事件')
+        setTimeout(function() {
+          commont.closeLoading()
+        }, 2000)
       }, function(){
         //下拉事件
         console.log('下拉事件')
+        setTimeout(function() {
+          commont.closeLoading()
+        }, 2000)
       })
     })
   </script>
