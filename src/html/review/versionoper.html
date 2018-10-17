@@ -577,6 +577,10 @@
     $(function() {
       // 登录toast 实例
       commont.toast2('正在登录', 2000, '')
+      setTimeout(function(){
+        commont.toast('账号密码错误', '', '', 'bottom')
+      }, 3000)
+      
       // 关闭登录toast 实例
       setTimeout(function(){
         commont.closeToast2()

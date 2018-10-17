@@ -65,7 +65,7 @@ $(function () {
       time = time || 3000
       color = color || 'rgba(0, 0, 0, .6)'
       position = position || 'center'
-      var $p = $("<p class='xc-toast " + position + "'>" + message + '</p>')
+      var $p = $("<p style='z-index:9999;' class='xc-toast " + position + "'>" + message + '</p>')
       $('.xc-toast').remove()
       $p.css({ backgroundColor: color })
       $('body').append($p)
