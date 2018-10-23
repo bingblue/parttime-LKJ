@@ -765,7 +765,8 @@
   }
 }
 
-.machines {
+.machines,
+.machines2 {
   background-color: #fff;
 
   .machines-info-items {
@@ -1062,6 +1063,7 @@
   overflow: visible;
   position: fixed;
   width: 92%;
+  z-index: 20;
   .search-select {
     width: 4rem;
     position: relative;
@@ -1206,19 +1208,20 @@
       display: none;
     }
     &.active {
-      background: url('../img/search-item-bg.png') -0.75rem -0.75rem no-repeat;
+      /* background: url('../img/search-item-bg.png') -0.75rem -0.75rem no-repeat;*/
       position: relative;
       .search-link-status {
-        display: none;
+        /* display: none; */
+        margin-right: 50px;
       }
-      .search-link-name {
+      /*.search-link-name {
         color: #fff;
         background-image: url('../img/search-link-active.png');
-      }
+      }*/
 
-      .search-link-tip {
-        color: #fff;
-      }
+      /*.search-link-tip {
+        color: #fff; 
+      }*/
 
       .link-right {
         width: 2rem;

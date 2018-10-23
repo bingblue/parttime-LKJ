@@ -747,15 +747,16 @@
     top: 2.17rem;
   }
 
-.machines {
+.machines,
+.machines2 {
   background-color: #fff;
 }
 
-.machines .machines-info-items {
+.machines .machines-info-items, .machines2 .machines-info-items {
     padding: 0 0.75rem;
   }
 
-.machines .machines-info-items .machines-info-item {
+.machines .machines-info-items .machines-info-item, .machines2 .machines-info-items .machines-info-item {
       display: -webkit-box;
       display: flex;
       -webkit-box-pack: justify;
@@ -769,7 +770,7 @@
       position: relative;
     }
 
-.machines .machines-info-items .machines-info-item > a {
+.machines .machines-info-items .machines-info-item > a, .machines2 .machines-info-items .machines-info-item > a {
         position: absolute;
         width: 15.5rem;
         height: 100%;
@@ -778,48 +779,48 @@
         display: inline-block;
       }
 
-.machines .machines-info-items .machines-info-item.start {
+.machines .machines-info-items .machines-info-item.start, .machines2 .machines-info-items .machines-info-item.start {
   background-image: none;
 }
 
-.machines .machines-info-items .machines-info-item.disabled {
+.machines .machines-info-items .machines-info-item.disabled, .machines2 .machines-info-items .machines-info-item.disabled {
   background-image: none;
   color: #c0bfbf;
 }
 
-.machines .machines-info-items .machines-info-item.active {
+.machines .machines-info-items .machines-info-item.active, .machines2 .machines-info-items .machines-info-item.active {
   background-image: url('../img/machines-check.png');
 }
 
-.machines .machines-info-items .machines-info-item .machines-info-name {
+.machines .machines-info-items .machines-info-item .machines-info-name, .machines2 .machines-info-items .machines-info-item .machines-info-name {
         width: 5.5rem;
         box-sizing: border-box;
         padding-left: 1.2rem;
 }
 
-.machines .machines-info-items .machines-info-item .machines-info-control {
+.machines .machines-info-items .machines-info-item .machines-info-control, .machines2 .machines-info-items .machines-info-item .machines-info-control {
         width: 3.2rem;
 }
 
-.machines .machines-info-items .machines-info-item .machines-info-status {
+.machines .machines-info-items .machines-info-item .machines-info-status, .machines2 .machines-info-items .machines-info-item .machines-info-status {
         width: 2.4rem;
 }
 
-.machines .machines-info-items .machines-info-item .machines-info-mode {
+.machines .machines-info-items .machines-info-item .machines-info-mode, .machines2 .machines-info-items .machines-info-item .machines-info-mode {
         width: 4rem;
         height: 3rem;
         position: relative;
 }
 
-.machines .machines-info-items .machines-info-item .machines-info-mode.end {
+.machines .machines-info-items .machines-info-item .machines-info-mode.end, .machines2 .machines-info-items .machines-info-item .machines-info-mode.end {
   color: #f89303;
 }
 
-.machines .machines-info-items .machines-info-item .machines-info-mode.start {
+.machines .machines-info-items .machines-info-item .machines-info-mode.start, .machines2 .machines-info-items .machines-info-item .machines-info-mode.start {
   color: #3895fe;
 }
 
-.machines .machines-info-items .machines-info-item .machines-info-mode .progress-box {
+.machines .machines-info-items .machines-info-item .machines-info-mode .progress-box, .machines2 .machines-info-items .machines-info-item .machines-info-mode .progress-box {
           position: absolute;
           width: 100%;
           left: 0;
@@ -831,20 +832,20 @@
           border-radius: 0.125rem;
 }
 
-.machines .machines-info-items .machines-info-item .machines-info-mode .progress-bar {
+.machines .machines-info-items .machines-info-item .machines-info-mode .progress-bar, .machines2 .machines-info-items .machines-info-item .machines-info-mode .progress-bar {
           border-radius: 0.125rem;
           height: 100%;
 }
 
-.machines .machines-info-items .machines-info-item .machines-info-mode .progress-bar.success {
+.machines .machines-info-items .machines-info-item .machines-info-mode .progress-bar.success, .machines2 .machines-info-items .machines-info-item .machines-info-mode .progress-bar.success {
   background-color: #3895ff;
 }
 
-.machines .machines-info-items .machines-info-item .machines-info-mode .progress-bar.info {
+.machines .machines-info-items .machines-info-item .machines-info-mode .progress-bar.info, .machines2 .machines-info-items .machines-info-item .machines-info-mode .progress-bar.info {
   background-color: #48d893;
 }
 
-.machines .machines-start-comfirm {
+.machines .machines-start-comfirm, .machines2 .machines-start-comfirm {
     position: fixed;
     width: 100%;
     left: 0;
@@ -855,7 +856,7 @@
     display: none;
   }
 
-.machines .machines-start-comfirm .start-comfirm {
+.machines .machines-start-comfirm .start-comfirm, .machines2 .machines-start-comfirm .start-comfirm {
       background-color: #fff;
       position: absolute;
       width: 13.5rem;
@@ -869,11 +870,11 @@
       color: #3a3a3a;
     }
 
-.machines .machines-start-comfirm .start-comfirm .img {
+.machines .machines-start-comfirm .start-comfirm .img, .machines2 .machines-start-comfirm .start-comfirm .img {
         width: 5.5rem;
       }
 
-.machines .machines-changeType-box {
+.machines .machines-changeType-box, .machines2 .machines-changeType-box {
     position: fixed;
     width: 100%;
     left: 0;
@@ -884,7 +885,7 @@
     display: none;
   }
 
-.machines .machines-changeType-box .machines-change-type {
+.machines .machines-changeType-box .machines-change-type, .machines2 .machines-changeType-box .machines-change-type {
       position: absolute;
       width: 100%;
       left: 0;
@@ -893,47 +894,47 @@
       line-height: 3rem;
     }
 
-.machines .machines-changeType-box .machines-change-type .machines-change-types {
+.machines .machines-changeType-box .machines-change-type .machines-change-types, .machines2 .machines-changeType-box .machines-change-type .machines-change-types {
         padding: 0 0.75rem;
         background-color: #fff;
         margin-bottom: 0.5rem;
       }
 
-.machines .machines-changeType-box .machines-change-type .machines-change-types h2 {
+.machines .machines-changeType-box .machines-change-type .machines-change-types h2, .machines2 .machines-changeType-box .machines-change-type .machines-change-types h2 {
           color: #727272;
         }
 
-.machines .machines-changeType-box .machines-change-type .machines-change-types li.active {
+.machines .machines-changeType-box .machines-change-type .machines-change-types li.active, .machines2 .machines-changeType-box .machines-change-type .machines-change-types li.active {
           color: #007aff;
         }
 
-.machines .machines-changeType-box .machines-change-type ul li {
+.machines .machines-changeType-box .machines-change-type ul li, .machines2 .machines-changeType-box .machines-change-type ul li {
           border-top: 1px solid #eee;
         }
 
-.machines .machines-changeType-box .machines-change-type .machines-change-btn {
+.machines .machines-changeType-box .machines-change-type .machines-change-btn, .machines2 .machines-changeType-box .machines-change-type .machines-change-btn {
         line-height: 3rem;
         text-align: center;
         background-color: #fff;
       }
 
-.machines .machinesdetail-list {
+.machines .machinesdetail-list, .machines2 .machinesdetail-list {
     padding: 0 0.75rem;
     line-height: 2.5rem;
   }
 
-.machines .machinesdetail-list .machinesdetail-list-item {
+.machines .machinesdetail-list .machinesdetail-list-item, .machines2 .machinesdetail-list .machinesdetail-list-item {
       display: -webkit-box;
       display: flex;
       -webkit-box-pack: justify;
               justify-content: space-between
     }
 
-.machines .machinesdetail-list .machinesdetail-list-item + .machinesdetail-list-item {
+.machines .machinesdetail-list .machinesdetail-list-item + .machinesdetail-list-item, .machines2 .machinesdetail-list .machinesdetail-list-item + .machinesdetail-list-item {
   border-top: 1px solid #eee;
 }
 
-.machines .no-more {
+.machines .no-more, .machines2 .no-more {
     position: fixed;
     width: 12.9rem;
     color: #c0bfbf;
@@ -1022,12 +1023,18 @@
   overflow: visible;
   position: fixed;
   width: 92%;
+  z-index: 20;
 }
 
 .search-header .search-select {
     width: 4rem;
     position: relative;
   }
+
+.search-header .search-select .search-select-name {
+      text-align: center;
+      max-width: 75px;
+    }
 
 .search-header .search-select .select-img {
       width: 0.5rem;
@@ -1037,10 +1044,7 @@
       right: 0;
       top: 0;
     }
-    .search-header .search-select .search-select-name {
-      text-align: center;
-      max-width: 75px;
-    }
+
 .search-header .search-select .a {
       color: #fff;
     }
@@ -1097,6 +1101,7 @@
     }
 
 .search-body {
+  display: none;
   padding: 0.75rem;
   display: -webkit-box;
   display: flex;
@@ -1168,22 +1173,22 @@
     }
 
 .search-link .search-link-item.active {
-  background: url('../img/search-item-bg.png') -0.75rem -0.75rem no-repeat;
+  /* background: url('../img/search-item-bg.png') -0.75rem -0.75rem no-repeat; */
   position: relative;
+  /* .search-link-name {
+        color: #fff;
+        background-image: url('../img/search-link-active.png');
+      } */
 }
 
 .search-link .search-link-item.active .search-link-status {
-        display: none;
+        /* display: none; */
+        margin-right: 50px;
 }
 
-.search-link .search-link-item.active .search-link-name {
-        color: #fff;
-        background-image: url('../img/search-link-active.png');
-}
-
-.search-link .search-link-item.active .search-link-tip {
-        color: #fff;
-}
+/* .search-link-tip {
+        color: #fff; 
+      } */
 
 .search-link .search-link-item.active .link-right {
         width: 2rem;

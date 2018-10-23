@@ -177,10 +177,11 @@ $(function () {
     },
     // 搜索
     search: function () {
-      $('.search-cancle').on('click', function () {
-        var q = $('.search-input').val()
-        window.location.href = '/html/search/searchversion.html?name=' + q
-      })
+      console.log('')
+      // $('.search-cancle').on('click', function () {
+      //   var q = $('.search-input').val()
+      //   window.location.href = '/html/search/searchversion.html?name=' + q
+      // })
     },
     // 计划选择
     choosePlan: function () {
@@ -220,19 +221,19 @@ $(function () {
     },
     // 查询机车
     searchLink: function () {
-      $('#searchLink .search-link-item').on('click', function () {
-        var $this = $(this)
-        $('#searchLink').hide()
-        $('.searchLink-input').val($this.find('.search-link-name').text())
-        // if (!$this.hasClass('active')) {
-        //   $this.addClass('active').siblings().removeClass('active')
-        // }
-      })
-      $('.searchLink-input').on('keyup', function () {
-        if (!$(this).val()) {
-          $('#searchLink').hide().show()
-        }
-      })
+      // $('#searchLink .search-link-item').on('click', function () {
+      //   var $this = $(this)
+      //   $('#searchLink').hide()
+      //   $('.searchLink-input').val($this.find('.search-link-name').text())
+      //   // if (!$this.hasClass('active')) {
+      //   //   $this.addClass('active').siblings().removeClass('active')
+      //   // }
+      // })
+      // $('.searchLink-input').on('keyup', function () {
+      //   if (!$(this).val()) {
+      //     $('#searchLink').hide().show()
+      //   }
+      // })
     },
     // 查询条件
     searchfilter: function () {
@@ -255,8 +256,12 @@ $(function () {
     },
     // 查询切换
     searchBody: function () {
-      $(".js-search-list").click(function(){
-        $('.machines.none').removeClass('none')
+      $('.js-search-list').click(function () {
+        if ($('.machines').hasClass('none')) {
+          $('.machines.none').removeClass('none')
+        } else {
+          $('.machines').addClass('none')
+        }
       })
       $('#search-body .search-item').on('click', function () {
         var $this = $(this)
