@@ -257,6 +257,7 @@ $(function () {
     // 查询切换
     searchBody: function () {
       $('.js-search-list').click(function () {
+        $('.machines2').hide()
         if ($('.machines').hasClass('none')) {
           $('.machines.none').removeClass('none')
         } else {
