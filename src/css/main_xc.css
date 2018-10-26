@@ -110,8 +110,8 @@
       }
 
 .xc-body .wrap.login-wrap .login-form input.active {
-        -webkit-border-image: url('../img/border.png') 30 30 round;
-                border-image: url('../img/border.png') 30 30 round;
+        -webkit-border-image: url('../img/border.png') 30 30 stretch;
+                border-image: url('../img/border.png') 30 30 stretch;
       }
 
 .xc-body .wrap.login-wrap .login-form .login-input-close,
