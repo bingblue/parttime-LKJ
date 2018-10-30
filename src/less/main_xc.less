@@ -1446,7 +1446,7 @@
           line-height: 2.15rem;
           color: #3a3a3a;
           .setting-server-input {
-            width: 14rem;
+            width: 16rem;
             border: none;
             background: none;
           }
@@ -1516,7 +1516,10 @@
       bottom: 0;
       background-color: rgba(0, 0, 0, 0.2);
       display: none;
-
+      .setting-review-locals-x {
+        max-height: 15rem;
+        overflow-x: scroll;
+      }
       .setting-review-locals {
         position: absolute;
         width: 100%;
@@ -1660,6 +1663,8 @@
           position: absolute;
           background-color: #fff;
           padding: 0 0.75rem; 
+          max-height: 10rem;
+          overflow-x: scroll;
           .active {
             color: #007aff;
           }

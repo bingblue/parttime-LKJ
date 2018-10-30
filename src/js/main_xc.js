@@ -736,9 +736,15 @@ $(function () {
     addSliderBarEvent: function () {
       $('.comm-header .comm-operating').click(function () {
         $('body').addClass('slider-bar-open')
+        return false
       })
       $('.wrap .markBg').click(function () {
         $('body').removeClass('slider-bar-open')
+      })
+      $('.wrap').click(function () {
+        if ($('body').hasClass('slider-bar-open')) {
+          $('body').removeClass('slider-bar-open')
+        }
       })
     },
     /**

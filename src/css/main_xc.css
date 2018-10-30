@@ -1404,7 +1404,7 @@
         }
 
 .setting .setting-server .setting-server-items .setting-server-item .setting-server-val .setting-server-input {
-            width: 14rem;
+            width: 16rem;
             border: none;
             background: none;
           }
@@ -1470,6 +1470,11 @@
       background-color: rgba(0, 0, 0, .2);
       display: none;
     }
+
+.setting .setting-server .setting-review-locals-box .setting-review-locals-x {
+        max-height: 15rem;
+        overflow-x: scroll;
+      }
 
 .setting .setting-server .setting-review-locals-box .setting-review-locals {
         position: absolute;
@@ -1618,7 +1623,9 @@
           top: 2.15rem;
           position: absolute;
           background-color: #fff;
-          padding: 0 0.75rem;
+          padding: 0 0.75rem; 
+          max-height: 10rem;
+          overflow-x: scroll;
         }
 
 .setting .setting-plan .setting-plan-choose .plan-choose-body .select-items .active {
