@@ -1407,6 +1407,8 @@
             width: 16rem;
             border: none;
             background: none;
+            height: 2rem;
+            line-height: 2rem;
           }
 
 .setting .setting-server .setting-server-items .setting-server-item .setting-server-val .close,
