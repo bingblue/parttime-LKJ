@@ -64,7 +64,23 @@
     box-shadow: #3895fe 0 0 30px -5px;
     font-size: 0.8rem;
   }
-
+  .xc-svg {
+    position: relative;
+    transform: rotate(-54deg);
+    .tip {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform-origin: 50% 50%;
+      transform: rotate(54deg) translate(-10%, -35%);
+      color: #3a3a3a;
+      span {
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+    }
+  }
   .btn.primary {
     background-color: #3895fe;
     color: #fff;

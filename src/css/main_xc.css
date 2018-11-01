@@ -65,6 +65,29 @@
     font-size: 0.8rem;
   }
 
+.xc-body .xc-svg {
+    position: relative;
+    -webkit-transform: rotate(-54deg);
+            transform: rotate(-54deg);
+  }
+
+.xc-body .xc-svg .tip {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-transform: rotate(54deg) translate(-10%, -35%);
+              transform: rotate(54deg) translate(-10%, -35%);
+      color: #3a3a3a;
+    }
+
+.xc-body .xc-svg .tip span {
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+
 .xc-body .btn.primary {
     background-color: #3895fe;
     color: #fff;
