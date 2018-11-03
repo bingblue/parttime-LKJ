@@ -1407,6 +1407,8 @@
             width: 14rem;
             border: none;
             background: none;
+            height: 2rem;
+            line-height: 2rem;
           }
 
 .setting .setting-server .setting-server-items .setting-server-item .setting-server-val .close,
@@ -1470,6 +1472,11 @@
       background-color: rgba(0, 0, 0, .2);
       display: none;
     }
+
+.setting .setting-server .setting-review-locals-box .setting-review-locals-x {
+        max-height: 15rem;
+        overflow-x: scroll;
+      }
 
 .setting .setting-server .setting-review-locals-box .setting-review-locals {
         position: absolute;
@@ -1631,6 +1638,8 @@
 
 .setting .setting-plan .setting-plan-choose .plan-choose-body.active .select-items {
             display: block;
+            overflow-x: scroll;
+            max-height: 10rem;
 }
 
 .setting .setting-plan .setting-plan-choose .plan-choose-body.active .plan-choose-select img {

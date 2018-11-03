@@ -1449,6 +1449,8 @@
             width: 14rem;
             border: none;
             background: none;
+            height: 2rem;
+            line-height: 2rem;
           }
           .close,
           .review-select {
@@ -1516,7 +1518,10 @@
       bottom: 0;
       background-color: rgba(0, 0, 0, 0.2);
       display: none;
-
+      .setting-review-locals-x {
+        max-height: 15rem;
+        overflow-x: scroll;
+      }
       .setting-review-locals {
         position: absolute;
         width: 100%;
@@ -1659,7 +1664,7 @@
           top: 2.15rem;
           position: absolute;
           background-color: #fff;
-          padding: 0 0.75rem; 
+          padding: 0 0.75rem;
           .active {
             color: #007aff;
           }
@@ -1670,6 +1675,8 @@
         &.active {
           .select-items {
             display: block;
+            overflow-x: scroll;
+            max-height: 10rem;
           }
           .plan-choose-select {
             img {
