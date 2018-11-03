@@ -135,7 +135,6 @@
 .xc-body .wrap.login-wrap .login-form input.active {
         -webkit-border-image: url('../img/border.png') 30 30 stretch;
                 border-image: url('../img/border.png') 30 30 stretch;
-                border-top: 0;
       }
 
 .xc-body .wrap.login-wrap .login-form .login-input-close,
@@ -1947,9 +1946,8 @@
 }
 .xc-tab .xc-tab-item.message {
   position: fixed;
-  top: 0;
+  top: 2.2rem;
   bottom: 2.8rem;
-  padding-top: 2.2rem;
 }
 .xc-toast2-box {
   position: absolute;
