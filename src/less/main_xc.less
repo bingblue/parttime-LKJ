@@ -64,23 +64,7 @@
     box-shadow: #3895fe 0 0 30px -5px;
     font-size: 0.8rem;
   }
-  .xc-svg {
-    position: relative;
-    transform: rotate(-54deg);
-    .tip {
-      text-align: center;
-      position: absolute;
-      width: 100%;
-      top: 50%;
-      transform-origin: 50% 50%;
-      transform: rotate(54deg) translate(-10%, -35%);
-      color: #3a3a3a;
-      span {
-        font-size: 1.3rem;
-        font-weight: 400;
-      }
-    }
-  }
+
   .btn.primary {
     background-color: #3895fe;
     color: #fff;
@@ -127,6 +111,7 @@
         -webkit-border-image: url('../img/border.png') 30 30 stretch;
              -o-border-image: url('../img/border.png') 30 30 stretch;
                 border-image: url('../img/border.png') 30 30 stretch;
+                border-top: 0;
       }
 
       .login-input-close,
@@ -1461,11 +1446,9 @@
           line-height: 2.15rem;
           color: #3a3a3a;
           .setting-server-input {
-            width: 16rem;
+            width: 14rem;
             border: none;
             background: none;
-            height: 2rem;
-            line-height: 2rem;
           }
           .close,
           .review-select {
@@ -1533,10 +1516,7 @@
       bottom: 0;
       background-color: rgba(0, 0, 0, 0.2);
       display: none;
-      .setting-review-locals-x {
-        max-height: 15rem;
-        overflow-x: scroll;
-      }
+
       .setting-review-locals {
         position: absolute;
         width: 100%;
@@ -1680,8 +1660,6 @@
           position: absolute;
           background-color: #fff;
           padding: 0 0.75rem; 
-          max-height: 10rem;
-          overflow-x: scroll;
           .active {
             color: #007aff;
           }
@@ -1977,8 +1955,9 @@
     }
     &.message {
       position: fixed;
-      top: 2.2rem;
+      top: 0;
       bottom: 2.8rem;
+      padding-top: 2.2rem;
     }
   }
 }
