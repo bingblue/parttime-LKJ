@@ -2023,3 +2023,6 @@
 .font-white {
   color: white;
 }
+.msg-list{
+  overflow-x: scroll;
+}

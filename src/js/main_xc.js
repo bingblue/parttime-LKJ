@@ -51,6 +51,12 @@ $(function () {
         if (!$this.hasClass('active')) {
           $this.addClass('active').siblings().removeClass('active')
           var $index = $this.index()
+          if ($index == 4) {
+            var h = $(document).height() - $('.comm-header').height() - $('.comm-footer').height() + 'px'
+            $('.msg-list').css({
+              maxHeight: h
+            })
+          }
           $('.xc-tab .xc-tab-item').eq($index).addClass('active').siblings().removeClass('active')
         }
       })
@@ -706,7 +712,12 @@ $(function () {
         }
       })
       var open = function () {
+        var h = $(document).height() - $('.comm-header').height() + 'px'
         $('.version-info,.version-mark').show()
+        $('.version-info-box').css({
+          maxHeight: h,
+          overflow: 'auto'
+        })
         $('.comm-des img').addClass('active')
       }
       var close = function () {

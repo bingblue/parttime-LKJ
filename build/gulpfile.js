@@ -18,15 +18,18 @@ const config = require('./config')
  * 使用postcss编译css
  */
 gulp.task('postcss', () => {
-  return gulp.src(config.css.src)
-    .pipe(postcss([
-      precss(),
-      cssnext({
-        warnForDuplicates: false
-      })
-    ]))
-    .pipe(rename({extname: '.css'}))
-    .pipe(gulp.dest(config.css.dest))
+  // return gulp.src(config.css.src)
+  //   .pipe(postcss([
+  //     precss(),
+  //     cssnext({
+  //       warnForDuplicates: false
+  //     })
+  //   ]))
+  //   .pipe(rename({extname: '.css'}))
+  //   .pipe(gulp.dest(config.css.dest))
+  console.log('注意：直接改CSS,不改LESS了！！！！！！！！！！')
+  console.log('注意：直接改CSS,不改LESS了！！！！！！！！！！')
+  console.log('注意：直接改CSS,不改LESS了！！！！！！！！！！')
 })
 /**
  * 检测js语法
