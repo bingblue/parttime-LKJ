@@ -2024,5 +2024,5 @@
   color: white;
 }
 .msg-list{
-  overflow-x: scroll;
+  overflow-y: scroll;
 }

@@ -176,7 +176,7 @@ audio {
 }
 .comm-header .comm-des {
   position: relative;
-  padding-right: 0.85rem;
+  padding-right: 1rem;
   margin: 0 auto;
   height: 100%;
   display: inline-block;
