@@ -46,7 +46,7 @@
   <div class="wrap">
     <div class="main padding-main">
       <div class="xc-tab">
-        <div class="xc-tab-item active search-item">
+        <div class="xc-tab-item active search-item xm-tab1">
           <div class="markBg"></div>
           <!-- build:head -->
           <header class="comm-header">
@@ -116,6 +116,102 @@
                   <div class="item-name">DF11-0335</div>
                   <div class="item-time">05-16</div>
                   <div class="item-oper no">未复核</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0300</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper primary">复核正确</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0311</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper error">复核错误</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0300</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper primary">复核正确</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0311</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper error">复核错误</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0300</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper primary">复核正确</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0311</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper error">复核错误</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0300</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper primary">复核正确</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0311</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper error">复核错误</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0300</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper primary">复核正确</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0311</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper error">复核错误</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0300</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper primary">复核正确</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0311</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper error">复核错误</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0300</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper primary">复核正确</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0311</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper error">复核错误</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0300</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper primary">复核正确</div>
+                  <div class="item-delete">删除</div>
+                </div>
+                <div class="review-info-item">
+                  <div class="item-name">DF11-0311</div>
+                  <div class="item-time">05-16</div>
+                  <div class="item-oper error">复核错误</div>
                   <div class="item-delete">删除</div>
                 </div>
                 <div class="review-info-item">
@@ -577,6 +673,14 @@
   <script src="../../js/main_wj.js"></script>
   <script>
     $(function() {
+      var rih = $(document).height() - $('.comm-header').height() - Math.abs($('.signal-bluetooth-box').height()) - $('.comm-footer').height()
+      var riw = $(document).width()
+      $('.review-info-box').css({
+        maxHeight: (rih - 20) + 'px',
+        width: riw+'px',
+        paddingBottom: '20px',
+        overflowX: 'hidden'
+      })
       // 登录toast 实例
       commont.toast2('正在登录', 2000, '')
       setTimeout(function(){
