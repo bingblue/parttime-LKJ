@@ -46,8 +46,15 @@ $(function () {
       this.searchSelect()
     },
     footerTab: function () {
+      var that = this
       $('.comm-footer .footer-item').on('click', function () {
         var $this = $(this)
+        $('.version-mark, .version-info').hide()
+        $('.comm-des img').removeClass('active')
+        $('.read-btn').removeClass('active')
+        that.closeLoading()
+        that.closeToast2()
+        that.closeToast3()
         if (!$this.hasClass('active')) {
           $this.addClass('active').siblings().removeClass('active')
           var $index = $this.index()
@@ -702,7 +709,11 @@ $(function () {
      */
     addReadEvent: function () {
       var $read = $('.read-btn')
+      var that = this
       $read.click(function () {
+        that.closeLoading()
+        that.closeToast2()
+        that.closeToast3()
         if ($(this).hasClass('active')) {
           close()
           $(this).removeClass('active')
@@ -712,7 +723,7 @@ $(function () {
         }
       })
       var open = function () {
-        var h = $(document).height() - $('.comm-header').height() + 'px'
+        var h = $(document).height() - $('.comm-header').height() - $('.comm-footer').height() + 'px'
         $('.version-info,.version-mark').show()
         $('.version-info-box').css({
           maxHeight: h,
