@@ -568,8 +568,8 @@
       height: 5rem;
       margin: 1rem auto;
       position: relative;
-      -webkit-transform: rotate(210deg);
-              transform: rotate(210deg);
+      /* -webkit-transform: rotate(210deg);
+              transform: rotate(210deg); */
     }
 
 .xc-body .dressup-index-box .circleProgress_wrapper .wrapper {
@@ -609,8 +609,8 @@
 
 .xc-body .dressup-index-box .circleProgress_wrapper .tip {
         text-align: center;
-        -webkit-transform: rotate(-210deg) translate(0.725rem, -50%);
-                transform: rotate(-210deg) translate(0.725rem, -50%);
+        -webkit-transform: translate(0, 80%);
+                transform: translate(0, 80%);
         line-height: 1rem;
       }
 
@@ -2029,4 +2029,126 @@
 }
 .xm-tab1{
   background: #fff !important;
+}
+
+.circleProgress_wrapper{
+  width: 109px !important;
+  height: 109px !important;
+  margin: 1rem auto !important;
+  position: relative !important;
+}
+
+.wrapper{
+  width: 55px !important;
+  height: 109px !important;
+  position: absolute !important;
+  top:0 !important;
+  overflow: hidden !important;
+}
+.right{
+  right:0 !important;
+}
+.left{
+  left:0 !important;
+}
+.circleProgress{
+  width: 89px !important;
+  height: 89px !important;
+  border:10px solid #e7e7e7 !important;
+  border-radius: 50% !important;
+  position: absolute !important;
+  top:0 !important;
+}
+.rightcircle{
+  border-top:10px solid #3c97fd !important;
+  border-right:10px solid #3c97fd !important;
+  right:0 !important;
+  -webkit-transform: rotate(45deg) !important;
+  transform: rotate(45deg) !important;
+}
+.leftcircle{
+  border-bottom:10px solid #3c97fd !important;
+  border-left:10px solid #3c97fd !important;
+  left:0 !important;
+  -webkit-transform: rotate(-30deg) !important;
+  transform: rotate(-30deg) !important;
+}
+
+.progress1 .rightcircle{
+  -webkit-transform: rotate(-99deg) !important;
+  transform: rotate(-99deg) !important;
+}
+.progress1 .leftcircle{
+  -webkit-transform: rotate(224deg) !important;
+  transform: rotate(224deg) !important;
+}
+.progress2 .rightcircle{
+  -webkit-transform: rotate(-63deg) !important;
+  transform: rotate(-63deg) !important;
+}
+.progress2 .leftcircle{
+  -webkit-transform: rotate(224deg) !important;
+  transform: rotate(224deg) !important;
+}
+.progress3 .rightcircle{
+  -webkit-transform: rotate(-27deg) !important;
+  transform: rotate(-27deg) !important;
+}
+.progress3 .leftcircle{
+  -webkit-transform: rotate(224deg) !important;
+  transform: rotate(224deg) !important;
+}
+.progress4 .rightcircle{
+  -webkit-transform: rotate(9deg) !important;
+  transform: rotate(9deg) !important;
+}
+.progress4 .leftcircle{
+  -webkit-transform: rotate(224deg) !important;
+  transform: rotate(224deg) !important;
+}
+.progress5 .rightcircle{
+  -webkit-transform: rotate(45deg) !important;
+  transform: rotate(45deg) !important;
+}
+.progress5 .leftcircle{
+  -webkit-transform: rotate(224deg) !important;
+  transform: rotate(224deg) !important;
+}
+.progress6 .rightcircle{
+  -webkit-transform: rotate(45deg) !important;
+  transform: rotate(45deg) !important;
+}
+.progress6 .leftcircle{
+  -webkit-transform: rotate(260deg) !important;
+  transform: rotate(260deg) !important;
+}
+.progress7 .rightcircle{
+  -webkit-transform: rotate(45deg) !important;
+  transform: rotate(45deg) !important;
+}
+.progress7 .leftcircle{
+  -webkit-transform: rotate(296deg) !important;
+  transform: rotate(296deg) !important;
+}
+.progress8 .rightcircle{
+  -webkit-transform: rotate(45deg) !important;
+  transform: rotate(45deg) !important;
+}
+.progress8 .leftcircle{
+  -webkit-transform: rotate(332deg) !important;
+  transform: rotate(332deg) !important;
+}
+.progress9 .rightcircle{
+  -webkit-transform: rotate(45deg) !important;
+  transform: rotate(45deg) !important;
+}
+.progress9 .leftcircle{
+  -webkit-transform: rotate(368deg) !important;
+  transform: rotate(368deg) !important;
+}
+.progress10 .circleProgress{
+  border: 10px solid #3c97fd !important;
+}
+.progress0 .circleProgress{
+  border: 10px solid #e7e7e7 !important;
 }
