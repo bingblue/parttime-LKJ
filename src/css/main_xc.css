@@ -2032,18 +2032,19 @@
 }
 
 .circleProgress_wrapper{
-  width: 109px !important;
-  height: 109px !important;
+  width: 110px !important;
+  height: 111px !important;
   margin: 1rem auto !important;
   position: relative !important;
+  overflow: auto;
 }
 
 .wrapper{
   width: 55px !important;
-  height: 109px !important;
+  height: 111px !important;
   position: absolute !important;
   top:0 !important;
-  overflow: hidden !important;
+  overflow: auto;
 }
 .right{
   right:0 !important;
@@ -2052,24 +2053,24 @@
   left:0 !important;
 }
 .circleProgress{
-  width: 89px !important;
-  height: 89px !important;
+  width: 90px !important;
+  height: 90px !important;
   border:10px solid #e7e7e7 !important;
   border-radius: 50% !important;
   position: absolute !important;
-  top:0 !important;
+  top:1px !important;
 }
 .rightcircle{
   border-top:10px solid #3c97fd !important;
   border-right:10px solid #3c97fd !important;
-  right:0 !important;
+  right:1px !important;
   -webkit-transform: rotate(45deg) !important;
   transform: rotate(45deg) !important;
 }
 .leftcircle{
   border-bottom:10px solid #3c97fd !important;
   border-left:10px solid #3c97fd !important;
-  left:0 !important;
+  left:1px !important;
   -webkit-transform: rotate(-30deg) !important;
   transform: rotate(-30deg) !important;
 }
