@@ -40,8 +40,8 @@ $(function () {
       this.adddialog()
       this.settingUpdate()
       // 上下拉加载实例
-      this.loadEvent('machines', this.addLoadImg, this.addLoadImg)
-      this.loadEvent('msgList', this.addLoadImg, this.addLoadImg)
+      // this.loadEvent('machines', this.addLoadImg, this.addLoadImg)
+      // this.loadEvent('msgList', this.addLoadImg, this.addLoadImg)
       this.toastEvent()
       this.searchSelect()
     },
@@ -103,6 +103,7 @@ $(function () {
       // })
     },
     closeToast2: function () {
+      isAjax = false
       $('.xc-toast2-box').remove()
     },
     closeLoading: function () {
@@ -120,6 +121,7 @@ $(function () {
       $('body').append($p)
     },
     closeToast3: function () {
+      isAjax = false
       $('.xc-toast3').remove()
     },
     /**
@@ -150,18 +152,27 @@ $(function () {
      * @param {Function} topFun 上拉触发事件
      */
     loadEvent: function (id, bottomFun, topFun) {
+      var that = this
       $('#' + id).mutouch({
         offsetY: 50, // 上下滑动超过50px才触发事件
         onSwipeTop: function () {
+          if (isAjax) {
+		        return false
+		      }
           var parent = $('#' + id).parent()
           if (parent.scrollTop() + parent.height() >= $('#' + id).height()) {
-            bottomFun && bottomFun(id)
+            that.addLoadImg(id)
+            bottomFun()
           }
         },
         onSwipeDown: function () {
+          if (isAjax) {
+		        return false
+		      }
           var parent = $('#' + id).parent()
           if (!parent.scrollTop()) {
-            topFun && topFun(id, 'top')
+            that.addLoadImg(id, 'top')
+            topFun()
           }
         }
       })
