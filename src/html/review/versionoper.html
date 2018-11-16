@@ -550,7 +550,7 @@
               消息
               <a href="javascript:;" class="deleteall-btn"><img src="../../img/deleteall.png" alt=""></a>
             </div> -->
-          <div class="msg-list">
+          <div class="msg-list" id="msgList">
             <p class="date-txt">2018.06.05</p>
             <ul class="msg-ul">
               <li>
@@ -707,7 +707,7 @@
         //   commont.closeToast3()
         // }, 2000)
       })
-      commont.loadEvent('message', function(){
+      commont.loadEvent('msgList', function(){
         //上拉事件
         console.log('上拉事件')
         // 关闭loading图标
