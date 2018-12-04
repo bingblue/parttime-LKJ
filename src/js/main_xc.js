@@ -151,7 +151,7 @@ $(function () {
      * @param {Function} bottomFun 下拉触发事件
      * @param {Function} topFun 上拉触发事件
      */
-    loadEvent: function (id, bottomFun, topFun) {
+    loadEvent: function (id, bottomFun, topFun ,isAni) {
       var that = this
       $('#' + id).mutouch({
         offsetY: 50, // 上下滑动超过50px才触发事件
@@ -161,8 +161,8 @@ $(function () {
 		      }
           var parent = $('#' + id).parent()
           if (parent.scrollTop() + parent.height() >= $('#' + id).height()) {
-            that.addLoadImg(id)
-            bottomFun()
+            if(!isAni) that.addLoadImg(id)
+            bottomFun && bottomFun()
           }
         },
         onSwipeDown: function () {
@@ -171,8 +171,8 @@ $(function () {
 		      }
           var parent = $('#' + id).parent()
           if (!parent.scrollTop()) {
-            that.addLoadImg(id, 'top')
-            topFun()
+            if(!isAni) that.addLoadImg(id, 'top')
+            topFun && topFun()
           }
         }
       })
