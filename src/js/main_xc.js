@@ -44,6 +44,7 @@ $(function () {
       // this.loadEvent('msgList', this.addLoadImg, this.addLoadImg)
       this.toastEvent()
       this.searchSelect()
+      this.addPassWordConfirm()
     },
     footerTab: function () {
       var that = this
@@ -151,7 +152,7 @@ $(function () {
      * @param {Function} bottomFun 下拉触发事件
      * @param {Function} topFun 上拉触发事件
      */
-    loadEvent: function (id, bottomFun, topFun ,isAni) {
+    loadEvent: function (id, bottomFun, topFun, isAni) {
       var that = this
       $('#' + id).mutouch({
         offsetY: 50, // 上下滑动超过50px才触发事件
@@ -161,7 +162,7 @@ $(function () {
 		      }
           var parent = $('#' + id).parent()
           if (parent.scrollTop() + parent.height() >= $('#' + id).height()) {
-            if(!isAni) that.addLoadImg(id)
+            if (!isAni) that.addLoadImg(id)
             bottomFun && bottomFun()
           }
         },
@@ -171,7 +172,7 @@ $(function () {
 		      }
           var parent = $('#' + id).parent()
           if (!parent.scrollTop()) {
-            if(!isAni) that.addLoadImg(id, 'top')
+            if (!isAni) that.addLoadImg(id, 'top')
             topFun && topFun()
           }
         }
@@ -663,6 +664,30 @@ $(function () {
       $confirm.find('.primary').on('click', function () {
         console.log('确定')
         $confirm.hide()
+        $('.review-box .password-confirm').show()
+      })
+    },
+    addPassWordConfirm: function () {
+      var that = this
+      var $confirm = $('.review-box .password-confirm')
+      $confirm.on('click', function () {
+        $(this).hide()
+      })
+      $confirm.find('.password-inner').on('click', function (event) {
+        event.stopPropagation()
+      })
+      $confirm.find('.cancel').on('click', function () {
+        $confirm.hide()
+        $confirm.find('input').val('')
+      })
+      $confirm.find('.primary').on('click', function () {
+        var password = $confirm.find('input').val()
+        if (!password) {
+          that.toast('密码不能为空!', 2000)
+          return false
+        }
+        $confirm.hide()
+        $confirm.find('input').val('')
       })
     },
     /**

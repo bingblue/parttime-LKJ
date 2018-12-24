@@ -399,7 +399,60 @@
 .xc-body .review-box .review-confirm .review-confirm-inner .review-confirm-btns .review-confirm-btn:first-child {
   border-right: 1px solid #eee;
 }
+.xc-body .review-box .password-confirm {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  display: none;
+  background-color: rgba(0, 0, 0, .2);
+}
 
+.xc-body .review-box .password-confirm .password-inner {
+    position: absolute;
+    width: 14rem;
+    height: 7.5rem;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 1200;
+    background-color: #fff;
+    border-radius: 0.2rem;
+  }
+
+.xc-body .review-box .password-confirm .password-inner .password-body {
+      padding: 1.475rem 2.45rem;
+      line-height: 1rem;
+      text-align: center;
+    }
+
+.xc-body .review-box .password-confirm .password-inner .password-btns {
+      display: -webkit-box;
+      display: flex;
+      border-top: 1px solid #eee;
+    }
+
+.xc-body .review-box .password-confirm .password-inner .password-btns .password-btn {
+        -webkit-box-flex: 1;
+                flex: 1;
+        line-height: 2.5rem;
+        text-align: center
+      }
+
+.xc-body .review-box .password-confirm .password-inner .password-btns .password-btn.primary {
+color: #3895fe;
+}
+
+.xc-body .review-box .password-confirm .password-inner .password-btns .password-btn.cancel {
+color: #727272;
+}
+
+.xc-body .review-box .password-confirm .password-inner .password-btns .password-btn:first-child {
+border-right: 1px solid #eee;
+}
 .xc-body .review-box .review-data,
     .xc-body .review-box .review-personnel {
       padding: 0 0.75rem;
@@ -2152,4 +2205,20 @@
 }
 .progress0 .circleProgress{
   border: 10px solid #e7e7e7 !important;
+}
+.password-confirm h2{
+  line-height: 2.5rem;
+  font-size: rem;
+  font-weight: bold;
+  text-indent: 1rem;
+}
+.password-inner input {
+  margin: 0.5rem 1rem; 
+  width: 12rem;
+  color: #000;
+  height: 1.05rem;
+  line-height: 1.05rem;
+  border: none;
+  border-bottom: 0.1rem solid #eee;
+  margin-bottom: 0.8rem;
 }
